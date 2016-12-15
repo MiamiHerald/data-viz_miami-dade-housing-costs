@@ -1,0 +1,20 @@
+{
+  "COPY": {
+    "key": "value",
+    "sig": "Real Estate",
+    "label": "The housing market",
+    "headline": "Finding affordable housing in Miami-Dade and Broward counties",
+    "reporter_name": "Chris Alcantara",
+    "reporter_name_two": "Nicholas Nehamas",
+    "email": "calcantara",
+    "date": "Sept. 18, 2015",
+    "sources": "Zillow, Florida Department of Education and ESRI",
+    "seo_description": "Skyrocketing real estate prices make finding an affordable home difficult for many South Floridians. The Miami Herald built a tool that helps you see where you can afford a house or condo in South Florida.",
+    "key_words": "real estate, affordable housing, condos, single-family homes, townhouses, south florida, miami-dade county, broward county, zipcodes",
+    "fb_img_url": "pubsys.miamiherald.com/static/media/projects/2015/affordable-homes/img/fb.jpg",
+    "url": "pubsys.miamiherald.com/static/media/projects/2015/affordable-homes",
+    "fbShareLink": "https://www.facebook.com/sharer/sharer.php?u=http%3A//pubsys.miamiherald.com/static/media/projects/2015/affordable-homes/",
+    "twShareLink": "https://twitter.com/home?status=GRAPHIC%3A%20See%20where%20you%20can%20afford%20a%20house%20or%20condo/townhouse%20in%20South%20Florida.%20%7C%20http%3A//hrld.us/affordable-homes%20",
+    "gpShareLink": "https://plus.google.com/share?url=https%3A//www.facebook.com/sharer/sharer.php?u=http%253A//hrld.us/affordable-homes"
+  }
+}

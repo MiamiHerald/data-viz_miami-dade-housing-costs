@@ -1,0 +1,50 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/chriswilliams/.nvm/versions/node/v5.12.0/bin/node',
+1 verbose cli   '/Users/chriswilliams/.nvm/versions/node/v5.12.0/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'fetch/spreadsheet' ]
+2 info using npm@3.10.9
+3 info using node@v5.12.0
+4 verbose run-script [ 'prefetch/spreadsheet',
+4 verbose run-script   'fetch/spreadsheet',
+4 verbose run-script   'postfetch/spreadsheet' ]
+5 info lifecycle herald-app-template@1.0.0~prefetch/spreadsheet: herald-app-template@1.0.0
+6 silly lifecycle herald-app-template@1.0.0~prefetch/spreadsheet: no script for prefetch/spreadsheet, continuing
+7 info lifecycle herald-app-template@1.0.0~fetch/spreadsheet: herald-app-template@1.0.0
+8 verbose lifecycle herald-app-template@1.0.0~fetch/spreadsheet: unsafe-perm in lifecycle true
+9 verbose lifecycle herald-app-template@1.0.0~fetch/spreadsheet: PATH: /Users/chriswilliams/.nvm/versions/node/v5.12.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/chriswilliams/Sites/miami-herald/data-viz/data-viz_miami-dade-housing-costs/node_modules/.bin:/Users/chriswilliams/Sites/miami-herald/data-viz/data-viz_miami-dade-housing-costs/node_modules/.bin:/Users/chriswilliams/.nvm/versions/node/v5.12.0/bin:/Users/chriswilliams/.rvm/gems/ruby-2.2.1/bin:/Users/chriswilliams/.rvm/gems/ruby-2.2.1@global/bin:/Users/chriswilliams/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/chriswilliams/.rvm/bin
+10 verbose lifecycle herald-app-template@1.0.0~fetch/spreadsheet: CWD: /Users/chriswilliams/Sites/miami-herald/data-viz/data-viz_miami-dade-housing-costs
+11 silly lifecycle herald-app-template@1.0.0~fetch/spreadsheet: Args: [ '-c', 'node ./bin/fetch_spreadsheet.js' ]
+12 silly lifecycle herald-app-template@1.0.0~fetch/spreadsheet: Returned: code: 1  signal: null
+13 info lifecycle herald-app-template@1.0.0~fetch/spreadsheet: Failed to exec fetch/spreadsheet script
+14 verbose stack Error: herald-app-template@1.0.0 fetch/spreadsheet: `node ./bin/fetch_spreadsheet.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/Users/chriswilliams/.nvm/versions/node/v5.12.0/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at EventEmitter.emit (events.js:185:7)
+14 verbose stack     at ChildProcess.<anonymous> (/Users/chriswilliams/.nvm/versions/node/v5.12.0/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at ChildProcess.emit (events.js:185:7)
+14 verbose stack     at maybeClose (internal/child_process.js:850:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
+15 verbose pkgid herald-app-template@1.0.0
+16 verbose cwd /Users/chriswilliams/Sites/miami-herald/data-viz/data-viz_miami-dade-housing-costs
+17 error Darwin 16.3.0
+18 error argv "/Users/chriswilliams/.nvm/versions/node/v5.12.0/bin/node" "/Users/chriswilliams/.nvm/versions/node/v5.12.0/bin/npm" "run" "fetch/spreadsheet"
+19 error node v5.12.0
+20 error npm  v3.10.9
+21 error code ELIFECYCLE
+22 error herald-app-template@1.0.0 fetch/spreadsheet: `node ./bin/fetch_spreadsheet.js`
+22 error Exit status 1
+23 error Failed at the herald-app-template@1.0.0 fetch/spreadsheet script 'node ./bin/fetch_spreadsheet.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the herald-app-template package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./bin/fetch_spreadsheet.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs herald-app-template
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls herald-app-template
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
