@@ -563,24 +563,17 @@ hr {
   height: 91.5vh;
   display: block;
   position: relative !important; }
-  #map-container #interface-container {
-    position: absolute;
-    bottom: 40px;
-    right: 75px;
-    max-width: 315px;
-    height: 125px;
-    z-index: 10000; }
-    #map-container #interface-container ul {
-      position: relative;
-      top: 11px;
-      right: 40px;
-      z-index: 2; }
-    #map-container #interface-container .price-explainer {
-      font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-      font-size: 14px;
-      line-height: 18px; }
-    #map-container #interface-container .percent-year {
-      display: none; }
+  #map-container #interface-container ul {
+    position: relative;
+    top: 11px;
+    right: 40px;
+    z-index: 2; }
+  #map-container #interface-container .price-explainer {
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 18px; }
+  #map-container #interface-container .percent-year {
+    display: none; }
   #map-container .interface-selector {
     background: #EEE;
     font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;

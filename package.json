@@ -43,6 +43,7 @@
   },
   "homepage": "https://github.com/chrisalcantara/herald-app-template#readme",
   "devDependencies": {
+    "gulp-autoprefixer": "^3.1.1",
     "stream-browserify": "^2.0.1"
   }
 }

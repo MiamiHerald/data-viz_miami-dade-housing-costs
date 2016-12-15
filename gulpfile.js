@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     reload = browserSync.reload,
     shell = require('gulp-shell');
+    autoprefixer = require('gulp-autoprefixer');
 
 //========
 // FILES
@@ -38,6 +39,10 @@ var src = {
 gulp.task('sass', function() {
     return gulp.src(src.scss)
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest(src.css))
         .pipe(reload({stream: true}));
 });
