@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     shell = require('gulp-shell');
 
 //========
-// FILES  
+// FILES
 //========
 
 var src = {
@@ -53,11 +53,11 @@ gulp.task('render', function () {
         nunjuckified = map(function(code){
            return nj.renderString(code.toString(), data);
         }),
-        
+
         env = nj.configure('app', {watch: false});
 
     nunjucksRender.nunjucks.configure(['app/templates/']);
-    
+
     return gulp.src(src.indexTemplate)
         .pipe(nunjuckified)
         .pipe(nunjucksRender())
@@ -95,7 +95,7 @@ gulp.task('serve', ['sass', 'render'], function() {
 
 // Copy files from /app to /build
 gulp.task('copy', function() {
-    
+
     // Grab file paths
     var buildSrc = {
         html: 'app/*.html',
@@ -105,19 +105,19 @@ gulp.task('copy', function() {
         jsLibs: 'app/js/libs/**/*.js',
         img: 'app/img/*.jpg',
         png: 'app/img/*.png',
-        dataCSV: 'app/js/libs/data/*.csv', 
+        dataCSV: 'app/js/libs/data/*.csv',
         dataJSON:'app/js/libs/data/*.json',
         dataGeoJSON:'app/js/libs/data/*.geojson'
     };
 
     // Group them into files var
     var files = [
-        buildSrc.html, 
-        buildSrc.css, 
+        buildSrc.html,
+        buildSrc.css,
         buildSrc.cssLibs,
         buildSrc.js,
         buildSrc.img,
-        buildSrc.png, 
+        buildSrc.png,
         buildSrc.jsLibs,
         buildSrc.dataCSV,
         buildSrc.dataJSON,
@@ -128,19 +128,13 @@ gulp.task('copy', function() {
         .pipe(copy('build/'));
 });
 
-// Download Google Sheet data 
-// and update data.json
-gulp.task('fetch', shell.task([
-  'npm run fetch/spreadsheet',
-]));
-
 //====================
-// COMMAND LINE TASKS  
+// COMMAND LINE TASKS
 //====================
 
 // Run server for development
-gulp.task('default', ['fetch', 'serve']);
+gulp.task('default', ['serve']);
 
-// Build all files into 
+// Build all files into
 // deployable 'build' folder
 gulp.task('build', ['copy']);
