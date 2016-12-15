@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     copy = require('gulp-copy'),
     jshint = require('gulp-jshint'),
     reload = browserSync.reload,
-    shell = require('gulp-shell');
+    shell = require('gulp-shell'),
     autoprefixer = require('gulp-autoprefixer');
 
 //========
