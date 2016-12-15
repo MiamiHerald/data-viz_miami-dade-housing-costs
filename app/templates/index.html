@@ -1,80 +1,76 @@
-{% extends "templates/base.html" %}
+<% extends "templates/base.html" %>
 
-{% block content %}
+<% block content %>
 
-<div class="container">
-	<div id="map-info">
-		<span class="graphic-label">{{ COPY.label }}</span>
+<div class="container" ng-app="housingApp">
+
+	<div id="map-info" ng-controller="HousingFormController">
+		<span class="graphic-label">{$ COPY.label $}</span>
 		<div class="headline">What will your money buy?</div>
 		<div class="byline">
-			<span class="name">By <span class="upper"><a href="mailto:calcantara@miamiherald.com">{{ COPY.reporter_name }}</a></span> and <span class="upper"><a href="mailto:nnehamas@miamiherald.com">{{ COPY.reporter_name_two }}</a></span></span>
-			<span class="date">Published: {{ COPY.date }}</span>
+			<span class="name">By <span class="upper"><a href="mailto:calcantara@miamiherald.com">{$ COPY.reporter_name $}</a></span> and <span class="upper"><a href="mailto:nnehamas@miamiherald.com">{$ COPY.reporter_name_two $}</a></span></span>
+			<span class="date">Published: {$ COPY.date $}</span>
 		</div>
 
 		<div id="button-container">
-
 			<p class="readout">Skyrocketing real estate prices make finding an affordable home difficult for many South Floridians. This tool shows where you can afford a home and how school quality, safety and annual value growth compare. Here's how to use it:</p>
 
 			<div class="tool-list readout">
-
 				<span class='item'>
-						1. Select 
-						<span id="check-button-house">
-							<label>
-								<input class='house' type="checkbox" checked="checked" value="1">
-									<span><i class="fa fa-home"></i> single-family home</span>
-				</label>
-				</span> or
-				<span id="check-button-condo">
-						   	<label>
-						   		<input class='condo' type="checkbox" value="1">
-						   	<span><i class="fa fa-building"></i> condo/townhouse</span>
-				</label>
-				</span>
-				</span>
-
-
-				<hr class="dotted dotted-mobile">
-
-
-				<span class='item'>
-						2. Select
-					   <span id="check-button-income">
-					   	<label>
-					   		<input class='income' type="checkbox" checked ='checked' value="1">
-					   	<span><i class="fa fa-briefcase"></i> annual household income</span>
-				</label>
-				</span> or
-				<span id="check-button-savings">
-						   	<label>
-						   		<input class='savings' type="checkbox" value="1">
-						   	<span><i class="fa fa-money"></i> price</span>
-				</label>
-				</span>
+					I'd like to by a...
+					<span id="check-button-house">
+						<label>
+							<input class='house' type="checkbox" ng-model="houseTypeChecked" value="1">
+							<span><i class="fa fa-home"></i> single-family home</span>
+						</label>
+					</span>
+					or
+					<span id="check-button-condo">
+						<label>
+							<input class='condo' type="checkbox" ng-model="houseTypeChecked" value="1">
+							<span><i class="fa fa-building"></i> condo/townhouse</span>
+						</label>
+					</span>
 				</span>
 
+				<!-- <hr class="dotted dotted-mobile"> -->
 
+				<span ng-show="houseTypeChecked" class="item ng-hide">
+					Show ZIP codes I can afford based on...
+					<span id="check-button-income">
+						<label>
+							<input class='income' type="checkbox" ng-model="incomeTypeChecked" value="1">
+							<span><i class="fa fa-briefcase"></i> annual household income</span>
+						</label>
+					</span>
+					or
+					<span id="check-button-savings">
+				   	<label>
+					   	<input class='savings' type="checkbox" ng-model="incomeTypeChecked" value="1">
+					   	<span><i class="fa fa-money"></i> price</span>
+						</label>
+					</span>
+				</span>
 			</div>
+
 			<p class="readout">
 				<span class="hover-instructions">Hover over a ZIP code for more information.</span>
 			</p>
 
-		</div>
+			<div id="input-container" ng-show="incomeTypeChecked" class="ng-hide">
+				<div class="input-holder">
+					<input name="income-box" class="income-box" type="text" placeholder="$">
+				</div>
 
-		<hr class="dotted dotted-mobile">
+				<div class="button-holder">
+					<button class='income-button income-btn' type="button" value="Execute">Submit</button>
 
-		<div id="input-container">
-			<div class="input-holder">
-				<span class="dollar-sign">$ </span>
-				<input name="income-box" class="income-box" type="text" placeholder="Enter income" />
-			</div>
-
-			<div class="button-holder">
-				<button class='income-button income-btn' type="button" value="Execute">Submit</button>
-
-				<button class='reset income-btn' type="button" value="Reset">Reset</button>
+					<button class='reset income-btn' type="button" value="Reset" ng-click="incomeTypeChecked = false; houseTypeChecked = false">Reset</button>
+				</div>
 			</div>
 		</div>
+
+		<!-- <hr class="dotted dotted-mobile"> -->
 
 		<div class="clearfix"></div>
 		<div class="error">
@@ -223,4 +219,4 @@
 		</div>
 	</div>
 </div><!-- END MAP -->
-{% endblock %}
+<% endblock %>

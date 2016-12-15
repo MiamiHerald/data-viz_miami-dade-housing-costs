@@ -10,19 +10,19 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 <html>
   <head>
     <!-- META TAGS and CSS -->
-    {% include 'templates/includes/_head.html' %}
-    <title>{{ COPY.headline }} | Miami Herald</title>
+    <% include 'templates/includes/_head.html' %>
+    <title>{$ COPY.headline $} | Miami Herald</title>
   </head>
   <body>
       <!-- NAVBAR -->
-      {% include 'templates/includes/_nav.html' %}
+      <% include 'templates/includes/_nav.html' %>
       <!-- CONTENT -->
-      {% block content %}{% endblock %} 
+      <% block content %><% endblock %> 
       <div class="container">
-       <!--  {% include 'templates/includes/_source.html' %} -->
-        {% include 'templates/includes/_footer.html' %}
+       <!--  <% include 'templates/includes/_source.html' %> -->
+        <% include 'templates/includes/_footer.html' %>
       </div>
       <!-- JS LIBRARIES -->
-      {% include 'templates/includes/_js-libs.html' %}
+      <% include 'templates/includes/_js-libs.html' %>
   </body>
 </html>

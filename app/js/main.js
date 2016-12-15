@@ -347,7 +347,7 @@
 		setDefaultMap();
 	}
 
-	// ACTIVATE!	
+	// ACTIVATE!
 	$(document).ready(function() {
 		init();
 	});

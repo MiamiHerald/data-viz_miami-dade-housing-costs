@@ -54,7 +54,17 @@ gulp.task('render', function () {
            return nj.renderString(code.toString(), data);
         }),
 
-        env = nj.configure('app', {watch: false});
+        env = nj.configure('app', {
+          watch: false,
+          tags: {
+            blockStart: '<%',
+            blockEnd: '%>',
+            variableStart: '{$',
+            variableEnd: '$}',
+            commentStart: '<#',
+            commentEnd: '#>'
+          }
+        });
 
     nunjucksRender.nunjucks.configure(['app/templates/']);
 
