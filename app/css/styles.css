@@ -274,9 +274,6 @@ hr {
   margin: 0 0 0.3em;
   text-align: center;
   vertical-align: middle;
-  -webkit-transition: border-color .218s;
-  -moz-transition: border .218s;
-  -o-transition: border-color .218s;
   transition: border-color .218s;
   background: #006DBD;
   color: #ffffff;
@@ -284,8 +281,6 @@ hr {
   padding: 7px 12px; }
   .button:active, .button:hover {
     background-color: rgba(0, 109, 189, 0.7);
-    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
 
 .ghost-button {
@@ -299,9 +294,6 @@ hr {
   margin: 0 0 0.3em;
   text-align: center;
   vertical-align: middle;
-  -webkit-transition: border-color .218s;
-  -moz-transition: border .218s;
-  -o-transition: border-color .218s;
   transition: border-color .218s;
   background: transparent;
   border: 2px solid #666;
@@ -309,8 +301,6 @@ hr {
   padding: 7px 12px; }
   .ghost-button:active, .ghost-button:hover {
     background-color: rgba(102, 102, 102, 0.05);
-    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
 
 @media (max-width: 768px) {
@@ -425,8 +415,6 @@ hr {
       font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
       font-weight: bold; }
       #map-info #input-container .income-btn:hover {
-        -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
     #map-info #input-container .reset {
       display: none; }
@@ -480,8 +468,6 @@ hr {
     #map-info #check-button-condo:hover,
     #map-info #check-button-income:hover,
     #map-info #check-button-savings:hover {
-      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
     #map-info #check-button-house label,
     #map-info #check-button-condo label,
@@ -548,8 +534,6 @@ hr {
       font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
       font-weight: bold; }
       #map-info .explainer .reset:hover {
-        -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
 
 .leaflet-bottom.leaflet-left {
@@ -849,8 +833,6 @@ footer {
       margin: 0; }
       #map-info #check-button-house:hover,
       #map-info #check-button-condo:hover {
-        -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
       #map-info #check-button-house label,
       #map-info #check-button-condo label {
@@ -916,8 +898,6 @@ footer {
       font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
       font-weight: bold; }
       #map-info #input-container .income-btn:hover {
-        -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
     #map-info #input-container .income-box {
       font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
@@ -983,8 +963,6 @@ footer {
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
         font-size: 14px; }
         .mobile-readout .close-button-wrapper .hover-box-close:hover {
-          -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-          -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
   .leaflet-bottom.leaflet-right {
     display: none; }
