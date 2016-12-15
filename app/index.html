@@ -1,9 +1,9 @@
 <!---
   _______ _____  ________  _      _____   ____  __ _________  ____
  / ___/ // / _ \/  _/ __/ | | /| / / _ | / __/ / // / __/ _ \/ __/
-/ /__/ _  / , __/ /_\ \   | |/ |/ / __ |_\ \  / _  / _// , _/ _/  
-\___/_//_/_/|_/___/___/   |__/|__/_/ |_/___/ /_//_/___/_/|_/___/  
-                                                                                                                            
+/ /__/ _  / , __/ /_\ \   | |/ |/ / __ |_\ \  / _  / _// , _/ _/
+\___/_//_/_/|_/___/___/   |__/|__/_/ |_/___/ /_//_/___/_/|_/___/
+
 Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
  -->
 <!DOCTYPE html>
@@ -42,9 +42,6 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
     <title>Finding affordable housing in Miami-Dade and Broward counties | Miami Herald</title>
   </head>
   <body>
-      <!-- NAVBAR -->
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><a class="navbar-brand-img large-img" href="http://miamiherald.com"><img src="http://pubsys.miamiherald.com/static/media/projects/libraries/images/logo_b.png" class="logo"></a> <a class="navbar-brand-img mobile-img" href="http://miamiherald.com"><img src="http://pubsys.miamiherald.com/static/media/projects/libraries/images/h_b.png" class="logo"></a> <a class="navbar-brand sig">Real Estate</a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//pubsys.miamiherald.com/static/media/projects/2015/affordable-homes/"><i class="fa fa-facebook"></i></a></li><li><a onclick="popUp=window.open('https://twitter.com/home?status=GRAPHIC%3A%20See%20where%20you%20can%20afford%20a%20house%20or%20condo/townhouse%20in%20South%20Florida.%20%7C%20http%3A//hrld.us/affordable-homes%20','popupwindow','scrollbars=yes,width=500,height=320');popUp.focus();return false"><i class="fa fa-twitter"></i></a></li><li><a href="https://plus.google.com/share?url=https%3A//www.facebook.com/sharer/sharer.php?u=http%253A//hrld.us/affordable-homes"><i class="fa fa-google-plus"></i></a></li></ul></div></nav>
-
       <!-- CONTENT -->
       
 
@@ -104,6 +101,12 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 			</p>
 
 			<div id="input-container" ng-show="incomeTypeChecked" class="ng-hide">
+				<div ng-if="priceType() === 'income'">
+					My annual household income is:
+				</div>
+				<div ng-if="priceType() === 'savings'">
+					My maximum price is:
+				</div>
 				<div class="input-holder">
 					<input name="income-box" class="income-box" type="text" placeholder="$">
 				</div>
@@ -265,7 +268,7 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 		</div>
 	</div>
 </div><!-- END MAP -->
- 
+
       <div class="container">
        <!--  <div id="sources">
 	<p>Sources: Zillow, Florida Department of Education and ESRI</p>

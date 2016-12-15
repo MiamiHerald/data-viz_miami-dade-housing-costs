@@ -58,6 +58,12 @@
 			</p>
 
 			<div id="input-container" ng-show="incomeTypeChecked" class="ng-hide">
+				<div ng-if="priceType() === 'income'">
+					My annual household income is:
+				</div>
+				<div ng-if="priceType() === 'savings'">
+					My maximum price is:
+				</div>
 				<div class="input-holder">
 					<input name="income-box" class="income-box" type="text" placeholder="$">
 				</div>
