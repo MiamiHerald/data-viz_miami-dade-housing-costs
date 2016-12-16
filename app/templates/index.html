@@ -4,7 +4,7 @@
 
 <div class="container" ng-app="housingApp">
 
-	<div id="map-info" ng-controller="HousingFormController">
+	<div class="map-info-container" id="map-info" ng-controller="HousingFormController">
 		<span class="graphic-label">{$ COPY.label $}</span>
 		<div class="headline">What will your money buy?</div>
 		<div class="byline">
@@ -15,17 +15,17 @@
 		<div id="button-container">
 			<p class="readout">Skyrocketing real estate prices make finding an affordable home difficult for many South Floridians. This tool shows where you can afford a home and how school quality, safety and annual value growth compare. Here's how to use it:</p>
 
-			<div class="tool-list readout">
+			<div class="tool-list-container readout">
 				<span class='item'>
 					I'd like to by a...
-					<span id="check-button-house">
+					<span class="check-button" id="check-button-house">
 						<label>
 							<input class='house' type="checkbox" ng-model="houseTypeChecked" value="1">
 							<span><i class="fa fa-home"></i> single-family home</span>
 						</label>
 					</span>
 					or
-					<span id="check-button-condo">
+					<span class="check-button" id="check-button-condo">
 						<label>
 							<input class='condo' type="checkbox" ng-model="houseTypeChecked" value="1">
 							<span><i class="fa fa-building"></i> condo/townhouse</span>
@@ -37,14 +37,14 @@
 
 				<span ng-show="houseTypeChecked" class="item ng-hide">
 					Show ZIP codes I can afford based on...
-					<span id="check-button-income">
+					<span class="check-button" id="check-button-income">
 						<label>
 							<input class='income' type="checkbox" ng-model="incomeTypeChecked" value="1">
 							<span><i class="fa fa-briefcase"></i> annual household income</span>
 						</label>
 					</span>
 					or
-					<span id="check-button-savings">
+					<span class="check-button" id="check-button-savings">
 				   	<label>
 					   	<input class='savings' type="checkbox" ng-model="incomeTypeChecked" value="1">
 					   	<span><i class="fa fa-money"></i> price</span>

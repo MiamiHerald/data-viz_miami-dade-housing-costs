@@ -1,0 +1,50 @@
+.headline {
+    font-size: 25px;
+    text-align: left;
+}
+
+.byline {
+    font-size: $xs;
+    text-align: left;
+    line-height: 15px;
+    .name a {
+        color: $text-gray;
+    }
+    .date {
+        font-size: $xs;
+    }
+}
+
+.readout {
+    font-size: $sm;
+    text-align: left;
+    line-height: 18px;
+}
+
+.graphic-label {
+    text-align: left;
+}
+
+.question {
+    font-family: $sans-serif-condensed;
+    font-weight: bold;
+    font-size: $base;
+}
+
+.dollar-sign {
+    font-size: 20px;
+    vertical-align: 10px;
+}
+
+.error {
+    height: 20px;
+    width: 100%;
+    display: none;
+    margin: 1px auto;
+    text-align: center;
+    font-family: $sans-serif;
+    font-size: 12px !important;
+    .alert {
+        padding: 2px !important;
+    }
+}
