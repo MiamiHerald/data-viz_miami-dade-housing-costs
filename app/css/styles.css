@@ -128,7 +128,7 @@ body, html {
   font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
   font-size: 50px;
   line-height: 1em;
-  margin: 5px auto 10px auto;
+  margin: 5px 0px;
   font-weight: 700;
   text-align: center;
   max-width: 775px; }
@@ -363,59 +363,6 @@ hr {
     margin: 0.5em 0px;
     text-align: center; }
 
-#input-container {
-  height: 50px;
-  margin: 0.5em auto; }
-  #input-container h3 {
-    text-align: center; }
-  #input-container .input-holder {
-    text-align: center;
-    float: left;
-    display: inline-block;
-    margin: 0.5em 1em; }
-  #input-container .button-holder {
-    text-align: center;
-    float: right;
-    display: inline-block;
-    margin-top: 0.25em; }
-  #input-container .income-btn {
-    margin: 5px auto;
-    background-color: #EFEFEF;
-    border-radius: 4px;
-    border: 1px solid #D0D0D0;
-    overflow: hidden;
-    width: 100px;
-    height: 30px;
-    display: inline-block;
-    font-size: 16px;
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-    font-weight: bold; }
-    #input-container .income-btn:hover {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
-  #input-container .reset {
-    display: none; }
-  #input-container .income-box {
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-    font-size: 18px;
-    border-bottom: 1px dashed #ccc;
-    border-bottom-style: dashed;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    width: 135px;
-    padding: 0.25em 0.5em;
-    text-align: left;
-    vertical-align: 10px; }
-    #input-container .income-box::-webkit-input-placeholder {
-      font-weight: 300;
-      text-align: left;
-      line-height: 1.75em;
-      font-size: 18px; }
-    #input-container .income-box:focus {
-      outline: 0; }
-      #input-container .income-box:focus::-webkit-input-placeholder {
-        color: #fff; }
-
 input.income {
   font-weight: bold;
   color: #2ca25f; }
@@ -556,67 +503,68 @@ footer {
     font-size: 16px;
     font-weight: bold; }
 
-#button-container {
+.button-container {
   margin-bottom: 0.25em;
   height: auto; }
-  #button-container .check-button {
+  .button-container .check-button {
     border-radius: 4px;
     border: 1px solid #D0D0D0;
     overflow: hidden;
     display: block; }
-    #button-container .check-button label {
+    .button-container .check-button label {
       float: left;
       width: 100%;
       margin-bottom: 0; }
-      #button-container .check-button label span {
+      .button-container .check-button label span {
         display: block;
         font-size: 14px;
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
         line-height: 0px;
         padding: 2rem; }
-      #button-container .check-button label input {
+      .button-container .check-button label input {
         display: none; }
-        #button-container .check-button label input:checked + span {
+        .button-container .check-button label input:checked + span {
           background-color: #aaa;
           color: #000; }
-  #button-container .explainer {
-    display: none;
-    font-size: 14px;
-    line-height: 18px;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-    background: whitesmoke;
-    padding: 5px 5px 0.15px 5px;
-    text-align: center;
-    border-radius: 0.25em; }
-    #button-container .explainer .first-graf {
-      font-size: 16px; }
-    #button-container .explainer .income-only {
-      font-size: 10px;
-      font-style: italic;
-      width: 85%;
-      display: block;
-      margin: 0px auto;
-      line-height: 14px; }
-    #button-container .explainer .fa-level-down {
-      display: none; }
-    #button-container .explainer .reset {
-      margin: 5px auto;
-      background-color: #EFEFEF;
-      border-radius: 4px;
-      border: 1px solid #D0D0D0;
-      overflow: hidden;
-      width: 100%;
-      height: 30px;
-      display: inline-block;
-      font-size: 16px;
-      font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-      font-weight: bold; }
-      #button-container .explainer .reset:hover {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
+
+.explainer {
+  display: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+  background: whitesmoke;
+  padding: 5px 5px 0.15px 5px;
+  text-align: center;
+  border-radius: 0.25em; }
+  .explainer .first-graf {
+    font-size: 16px; }
+  .explainer .income-only {
+    font-size: 10px;
+    font-style: italic;
+    width: 85%;
+    display: block;
+    margin: 0px auto;
+    line-height: 14px; }
+  .explainer .fa-level-down {
+    display: none; }
+  .explainer .reset {
+    margin: 5px auto;
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    border: 1px solid #D0D0D0;
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+    font-weight: bold; }
+    .explainer .reset:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
 
 #map-container {
   width: 100%;
-  height: 91.5vh;
+  height: 300px;
   display: block;
   position: relative !important; }
 

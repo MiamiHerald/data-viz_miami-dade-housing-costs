@@ -100,7 +100,7 @@ var $defaultLayer = L.geoJson($zipData, {
 // ========================
 
 
-//HELPERS 
+//HELPERS
 
 function getDefaultOpacity(d) {
 	if (d > 1) {
@@ -447,60 +447,60 @@ function getHouseColor(d) {
 
 		if (income >= d) {
 			return '#1b7837';
-		} 
-	} 
+		}
+	}
 
 	else if ((d >= 425551) && (d <= 601800)) {
-		
+
 		if (income >= d) {
 			return '#5aae61';
-		} 
-		
-	} 
+		}
+
+	}
 
 	else if ((d >= 319526) && (d <= 425550)) {
-		
+
 		if (income >= d) {
 			return '#a6dba0';
-		} 
-	} 
+		}
+	}
 
 
 	else if ((d >= 284101) && (d <= 319525)) {
-		
+
 		if (income >= d) {
 			return '#d9f0d3';
-		} 	
-	} 
+		}
+	}
 
 	else if ((d >= 237051) && (d <= 284100)) {
-		
+
 		if (income >= d) {
 			return '#e7d4e8';
-		} 
-		
-	} 
+		}
+
+	}
 
 	else if ((d >= 200751) && (d <= 237050)) {
-		
+
 		if (income >= d) {
 			return '#c2a5cf';
 		}
-	} 
+	}
 
 
 	else if ((d >= 157876) && (d <= 200750)) {
-		
+
 		if (income >= d) {
 			return '#9970ab';
-		} 	
-	} 
+		}
+	}
 
 	else if ((d >= 1) && (d <= 157875)) {
-		
+
 		if (income >= d) {
 			return '#762a83';
-		} 	
+		}
 	} else {
 		return '#fff';
 	}
@@ -528,60 +528,60 @@ function getCondoColor(d) {
 
 		if (income >= d) {
 			return '#1b7837';
-		} 
-	} 
+		}
+	}
 
 	else if ((d >= 214401) && (d <= 298700)) {
-		
+
 		if (income >= d) {
 			return '#5aae61';
-		} 
-		
-	} 
+		}
+
+	}
 
 	else if ((d >= 152051) && (d <= 214400)) {
-		
+
 		if (income >= d) {
 			return '#a6dba0';
-		} 
-	} 
+		}
+	}
 
 
 	else if ((d >= 138601) && (d <= 152050)) {
-		
+
 		if (income >= d) {
 			return '#d9f0d3';
-		} 	
-	} 
+		}
+	}
 
 	else if ((d >= 100601) && (d <= 138600)) {
-		
+
 		if (income >= d) {
 			return '#e7d4e8';
-		} 
-		
-	} 
+		}
+
+	}
 
 	else if ((d >= 100601) && (d <= 100600)) {
-		
+
 		if (income >= d) {
 			return '#c2a5cf';
-		} 
-	} 
+		}
+	}
 
 
 	else if ((d >= 85826) && (d <= 100600)) {
-		
+
 		if (income >= d) {
 			return '#9970ab';
-		} 	
-	} 
+		}
+	}
 
 	else if ((d >= 1) && (d <= 85825)) {
-		
+
 		if (income >= d) {
 			return '#762a83';
-		} 	
+		}
 	}
 
 	else {
@@ -666,7 +666,7 @@ function getCondoPercentColor(price, d) {
 		return '#9ecae1';
 	} else {
 		return '#fff';
-	} 
+	}
 }
 
 function condoPercentStyle(features, layer) {
@@ -693,7 +693,7 @@ function getBuiltCrimeOpacity(house, condo, crime) {
 	var houseCheck = (houseCheckbox.is(':checked'));
 	var condoCheck = (condoCheckbox.is(':checked'));
 
-	// CEHCK IF HOUSE OR CONDO IS CHECKED 	
+	// CEHCK IF HOUSE OR CONDO IS CHECKED
 	if ((houseCheck === true) && (condoCheck === false)) {
 
 		if ((income >= house) && ((crime > 0))) {
@@ -718,7 +718,7 @@ function getBuiltCrimeBorder(house, condo, crime) {
 	var houseCheck = (houseCheckbox.is(':checked'));
 	var condoCheck = (condoCheckbox.is(':checked'));
 
-	// CEHCK IF HOUSE OR CONDO IS CHECKED 	
+	// CEHCK IF HOUSE OR CONDO IS CHECKED
 	if ((houseCheck === true) && (condoCheck === false)) {
 
 		if ((income >= house) && ((crime > 0))) {
@@ -747,7 +747,7 @@ function getCrimeColor(crime, house, condo) {
 	var condoCheck = (condoCheckbox.is(':checked'));
 	var inputEmpty = (incomeInput === '');
 
-	// CEHCK IF HOUSE OR CONDO IS CHECKED 	
+	// CEHCK IF HOUSE OR CONDO IS CHECKED
 	if ((houseCheck === true) && ((condoCheck === false) && (inputEmpty === false))) {
 
 		if ((income >= house) && ((crime > 200))) {
@@ -756,7 +756,7 @@ function getCrimeColor(crime, house, condo) {
 			return '#fc9272';
 		} else if ((income >= house) && ((crime > 0) && (crime < 100))) {
 			return '#fee0d2';
-		} 
+		}
 
 	} else if ((houseCheck === false) && ((condoCheck === true) && (inputEmpty === false))) {
 
@@ -766,7 +766,7 @@ function getCrimeColor(crime, house, condo) {
 			return '#fc9272';
 		} else if ((income >= condo) && ((crime > 0) && (crime < 100))) {
 			return '#fee0d2';
-		} 
+		}
 	}
 }
 
@@ -792,7 +792,7 @@ function getBuiltSchoolOpacity(school,house,condo) {
 	var houseCheck = (houseCheckbox.is(':checked'));
 	var condoCheck = (condoCheckbox.is(':checked'));
 
-	// CEHCK IF HOUSE OR CONDO IS CHECKED 	
+	// CEHCK IF HOUSE OR CONDO IS CHECKED
 	if ((houseCheck === true) && (condoCheck === false)) {
 
 		if ((income >= house) && ((school > 0))) {
@@ -817,7 +817,7 @@ function getBuiltSchoolBorder(school,house,condo) {
 	var houseCheck = (houseCheckbox.is(':checked'));
 	var condoCheck = (condoCheckbox.is(':checked'));
 
-	// CEHCK IF HOUSE OR CONDO IS CHECKED 	
+	// CEHCK IF HOUSE OR CONDO IS CHECKED
 	if ((houseCheck === true) && (condoCheck === false)) {
 
 		if ((income >= house) && ((school > 0))) {
@@ -858,7 +858,7 @@ function getSchoolColor(school, house, condo) {
 			return '#cbc9e2';
 		} else if ((income >= house) && ((school >= 0.1) && (school <= 0.9))) {
 			return '#f2f0f7';
-		} 
+		}
 	} else if ((houseCheck === false) && ((condoCheck === true) && (inputEmpty === false))) {
 
 		if ((income >= condo) && (school === 4)) {
@@ -914,7 +914,7 @@ function getPos(event) {
 		y = posY;
 	}
 
-	// HOVER BOX CSS	
+	// HOVER BOX CSS
 	$('#hover-box').css({
 		'left': x,
 		'top': y + 150
@@ -1035,7 +1035,7 @@ function checkInput(income) {
 	condoCheckbox.attr('disabled', true);
 	houseCheckbox.attr('disabled', true);
 
-	
+
 	// ERROR HANDLING
 
 	// NO ERRORS
@@ -1059,7 +1059,7 @@ function checkInput(income) {
 		flagError();
 	}
 
-	// IF PAYMENT IS SELECTED AND INPUT IS FILLED, 
+	// IF PAYMENT IS SELECTED AND INPUT IS FILLED,
 	// BUT PAYMENT IS NOT CHECKED, THROW MONEY ERROR
 	else if ((inputBoxError === false) && ((houseCheck === true) || condoCheck === true) && ((incomeCheck === false) && (savingsCheck === false))) {
 		flagMoneyError();
@@ -1126,7 +1126,7 @@ function buildKey(housing) {
 		$('.legend-block').css('width', '33%');
 
 	} else {
-		
+
 		var purple = ['#54278f','#756bb1','#9e9ac8','#cbc9e2','#f2f0f7'];
 		for (var i = 0; i < purple.length; i++) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + purple[i] + '\'</div>');
@@ -1205,7 +1205,7 @@ function writeHoverBox (feature,layer) {
 	var	crimeRateButton = $('.crime-rate');
 	var	schoolTable = $('#school-list');
 
-	// CHANGE COLOR OF HOUSE AND 
+	// CHANGE COLOR OF HOUSE AND
 	// CONDO VALUES BY PERCENT
 
 	// CHANGE CONDO 2014 COLOR
@@ -1214,7 +1214,7 @@ function writeHoverBox (feature,layer) {
 	} else {
 		$('.condo-price-fourteen').css('color', 'black');
 	}
-	// CHANGE CONDO 2015 COLOR			
+	// CHANGE CONDO 2015 COLOR
 	if (condoPriceFifteen === 'No data') {
 		$('.condo-price-fifteen').css('color', '#ccc');
 	} else {
@@ -1315,7 +1315,7 @@ function writeHoverBox (feature,layer) {
 		}
 
 		else {
-			
+
 			var schoolCount = 0;
 
 			for (var i = 0; i < schoolData.length; i++) {
@@ -1328,7 +1328,7 @@ function writeHoverBox (feature,layer) {
 				$('.school-number').html(schoolCount + ' school');
 			}
 		}
-		
+
 		if (schoolGrade >= 4) {
 			$('.average-grade').html('A');
 		} else if ((schoolGrade >= 3) && (schoolGrade < 4)){
@@ -1397,7 +1397,7 @@ function onEachFeature(feature, layer) {
 			endHover();
 			$('.schools-row').empty();
 		},
-		
+
 		// mousemove: function(e) {},
 
 		click: function(e) {
@@ -1406,13 +1406,13 @@ function onEachFeature(feature, layer) {
 			var w = window.innerWidth;
 
 			if (mobile > w) {
-				
+
 				$('#hover-box').css({
 					'margin': 'auto',
   					'position': 'absolute',
-  					'top': 0, 
-  					'left': 0, 
-  					'bottom': '23%', 
+  					'top': 0,
+  					'left': 0,
+  					'bottom': '23%',
   					'right': 0,
   					'height': '245px',
 					'width': '275px'
@@ -1431,9 +1431,9 @@ function onEachFeature(feature, layer) {
 				$('#hover-box').css({
 					'margin': 'auto',
   					'position': 'absolute',
-  					'top': 0, 
-  					'left': 0, 
-  					'bottom': '23%', 
+  					'top': 0,
+  					'left': 0,
+  					'bottom': '23%',
   					'right': 0,
   					'height': '245px',
 					'width': '275px'
@@ -1698,7 +1698,7 @@ function buildDefaultPercentCondo() {
 
 	$('.housing-explainer').html(' in South Florida');
 	$('.percent-year').css('display', 'inline');
-	
+
 
 	$('.label-left')
 		.html('1%')
@@ -1793,7 +1793,7 @@ function buildDefaultSchool() {
 			'color': '#54278f',
 			'font-weight': 'bold'
 		});
-	
+
 
 	$('.label-left')
 		.css({
@@ -1801,7 +1801,7 @@ function buildDefaultSchool() {
 			'text-align':'center'
 		})
 		.html('A');
-	
+
 	$('.b-grade')
 		.css({
 			'width': '20%',
@@ -1859,7 +1859,7 @@ function buildHouseMap() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.crime-select').removeClass('selected-interface');
 	$('.school-select').removeClass('selected-interface');
-	
+
 	$('#interface-container').slideDown('400');
 	$('#map-info').css('bottom', '26%');
 
@@ -1895,7 +1895,7 @@ function buildHouseMap() {
 		});
 	$('.housing-explainer').html(' single-family houses in South Florida.');
 	$('.percent-year').css('display', 'none');
-	
+
 	$('.label-left')
 		.html('Less expensive')
 		.css({
@@ -2017,7 +2017,7 @@ function buildHousePercentMap() {
 		});
 	$('.housing-explainer').html(' of single-family houses since 2014 in the ZIP codes you can afford.');
 	$('.percent-year').css('display', 'none');
-	
+
 	$('.label-left')
 		.html('1%')
 		.css({
@@ -2070,7 +2070,7 @@ function buildCondoPercentMap() {
 		});
 	$('.housing-explainer').html(' for condos and townhouses since 2014 in the ZIP codes you can afford.');
 	$('.percent-year').css('display', 'none');
-	
+
 	$('.label-left')
 		.html('1%')
 		.css({
@@ -2123,7 +2123,7 @@ function buildCrimeMap() {
 		});
 	$('.housing-explainer').html(' for ZIP codes you can afford.');
 	$('.percent-year').css('display', 'none');
-	
+
 	$('.label-left')
 		.html('Low')
 		.css({
@@ -2137,7 +2137,7 @@ function buildCrimeMap() {
 			'display': 'inline-block',
 			'width': '33%'
 		});
-	
+
 	$('.label-right')
 		.html('High')
 		.css({
@@ -2180,7 +2180,7 @@ function buildSchoolMap() {
 		});
 	$('.housing-explainer').html(' for ZIP codes you can afford.');
 	$('.percent-year').css('display', 'none');
-	
+
 	$('.label-left')
 		.css({
 			'width':'20%',
