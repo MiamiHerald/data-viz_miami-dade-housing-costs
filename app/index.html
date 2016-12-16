@@ -76,8 +76,6 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 					</span>
 				</span>
 
-				<!-- <hr class="dotted dotted-mobile"> -->
-
 				<span ng-show="houseTypeChecked" class="item ng-hide">
 					Show ZIP codes I can afford based on...
 					<span class="check-button" id="check-button-income">
@@ -95,10 +93,6 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 					</span>
 				</span>
 			</div>
-
-			<p class="readout">
-				<span class="hover-instructions">Hover over a ZIP code for more information.</span>
-			</p>
 
 			<div id="input-container" ng-show="incomeTypeChecked" class="ng-hide">
 				<div ng-if="priceType() === 'income'">
@@ -119,8 +113,6 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 			</div>
 		</div>
 
-		<!-- <hr class="dotted dotted-mobile"> -->
-
 		<div class="clearfix"></div>
 		<div class="error">
 			<div class="alert alert-danger" role="alert">
@@ -137,6 +129,10 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 			<p class="income-only">Experts say you should, at most, spend three-and-a-half times your income when buying a home.</p>
 		</div>
 	</div>
+
+	<p class="readout">
+		<span class="hover-instructions">Hover over a ZIP code for more information.</span>
+	</p>
 </div>
 
 <div id="interface-container">

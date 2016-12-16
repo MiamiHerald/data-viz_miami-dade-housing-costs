@@ -3,94 +3,94 @@
     height: 91.5vh;
     display: block;
     position: relative !important;
-    #interface-container {
-        ul {
-            position: relative;
-            top: 11px;
-            right: 40px;
-            z-index: 2;
-        }
-        .price-explainer {
-            font-family: $serif;
-            font-size: $sm;
-            line-height: 18px;
-        }
-        .percent-year {
-            display: none;
-        }
+}
+
+#interface-container {
+    ul {
+      padding-left: 0;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
     }
-    .interface-selector {
-        background: #EEE;
-        font-family: $sans-serif-condensed;
-        text-transform: uppercase;
-        display: inline-block;
-        padding: 5px 7px;
-        margin: 0 !important;
-        cursor: pointer;
-        border-top: 1px solid #CCC;
-        border-right: 1px solid #BBB;
-        border-bottom: 1px solid #BBB;
-        border-left: 1px solid #BBB;
-    }
-    .selected-interface {
-        background: #fff;
-        border-bottom: none;
-        padding-bottom: 6px;
-    }
-    .map-interface {
-        width: 375px;
-        z-index: 9999;
-        display: block;
-        padding: 15px;
-        background: #FFF;
-        border-top: 1px solid #BBB;
-        border-right: 1px solid #BBB;
-        border-bottom: 2px solid #AAA;
-        border-left: 1px solid #BBB;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .key-holder {
-        clear: both;
-        margin: 1em 0;
-    }
-    .labels {
-        .label {
-            font-family: $sans-serif-condensed;
-            font-size: $xxs;
-            display: inline-block;
-            padding: 0px;
-            float: left;
-            text-transform: uppercase;
-            color: #aaa;
-            margin: 0.5em 0;
-            &:nth-child(1) {
-                text-align: left;
-                width: 50%;
-            }
-            &:last-of-type {
-                text-align: right;
-                width: 50%;
-            }
-            &-middle {
-                text-align: center;
-                width: 33%;
-                display: none;
-            }
-        }
-        .b-grade,
-        .d-grade {
-            display: none;
-        }
-    }
-    .legend-block {
-        width: 25%;
-        float: left;
-        border: 5px solid;
-    }
-    .footer-list {
-        font-size: $xxs !important;
+
+    .price-explainer {
         font-family: $serif;
-        margin-top: 2em;
+        font-size: $sm;
+        line-height: 18px;
     }
+
+    .percent-year {
+        display: none;
+    }
+}
+
+.interface-selector {
+    font-family: $sans-serif-condensed;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 7px;
+    cursor: pointer;
+    font-size: 11px;
+    border-top: 1px solid #CCC;
+    border-right: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    border-left: 1px solid #BBB;
+}
+
+.selected-interface {
+    background: #fff;
+    border-bottom: none;
+    padding-bottom: 6px;
+}
+
+.map-interface {
+    padding: 15px;
+    background: #FFF;
+}
+
+.key-holder {
+    clear: both;
+    margin: 1em 0;
+}
+
+.labels {
+    .label {
+        font-family: $sans-serif-condensed;
+        font-size: $xxs;
+        display: inline-block;
+        padding: 0px;
+        float: left;
+        text-transform: uppercase;
+        color: #aaa;
+        margin: 0.5em 0;
+        &:nth-child(1) {
+            text-align: left;
+            width: 50%;
+        }
+        &:last-of-type {
+            text-align: right;
+            width: 50%;
+        }
+        &-middle {
+            text-align: center;
+            width: 33%;
+            display: none;
+        }
+    }
+    .b-grade,
+    .d-grade {
+        display: none;
+    }
+}
+
+.legend-block {
+    width: 25%;
+    float: left;
+    border: 5px solid;
+}
+
+.footer-list {
+    font-size: $xxs !important;
+    font-family: $serif;
+    margin-top: 2em;
 }

@@ -5,21 +5,9 @@
     .item {
         display: block;
         margin: 0.5em 0px;
+        text-align: center;
     }
 }
-
-// @media (max-width: $small-display) {
-//   .map {
-//       display: block;
-//       width: 100%;
-//       padding-right: 15px;
-//       padding-left: 15px;
-//       margin-right: auto;
-//       margin-left: auto;
-//       margin-top: 1em;
-//   }
-// }
-
 
 #input-container {
     height: 50px;
