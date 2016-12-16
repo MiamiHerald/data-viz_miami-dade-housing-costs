@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 
 var src = {
     app: 'app/',
-    scss: 'app/scss/*.scss',
+    scss: 'app/scss/**/*.scss',
     css:  'app/css',
     js: 'app/js/*.js',
     jsLibs: 'app/js/libs/*.js',

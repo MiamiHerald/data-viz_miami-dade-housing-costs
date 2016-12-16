@@ -354,18 +354,6 @@ hr {
   .error .alert {
     padding: 2px !important; }
 
-.map-info-container {
-  position: absolute;
-  bottom: 26%;
-  right: 15px;
-  height: auto;
-  max-width: 375px;
-  z-index: 9999;
-  background-color: #fff;
-  display: block;
-  border: 1px solid #ccc;
-  padding: 0.75em; }
-
 .tool-list-container {
   list-style: decimal;
   list-style-position: inside;
@@ -373,16 +361,6 @@ hr {
   .tool-list-container .item {
     display: block;
     margin: 0.5em 0px; }
-
-@media (max-width: 768px) {
-  .map {
-    display: block;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1em; } }
 
 #input-container {
   height: 50px;
@@ -436,236 +414,6 @@ hr {
       outline: 0; }
       #input-container .income-box:focus::-webkit-input-placeholder {
         color: #fff; }
-  @media (max-width: 768px) {
-    #input-container {
-      width: 400px; }
-      #input-container .input-holder {
-        margin-top: 5px !important; }
-      #input-container .button-holder button {
-        width: 80px !important; } }
-
-@media (max-width: 992px) {
-  #map-info #button-container {
-    height: auto; }
-  .input-holder {
-    width: 45%; }
-  .button-holder {
-    width: 45%; } }
-
-@media (max-width: 768px) {
-  #map-info {
-    position: relative;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    max-width: 100%;
-    z-index: 9999;
-    height: auto;
-    border: none; }
-    #map-info .tool-list {
-      text-align: center;
-      padding: 0px; }
-      #map-info .tool-list .check-button {
-        display: block;
-        width: 100%;
-        height: 100%; }
-        #map-info .tool-list .check-button label span {
-          font-size: 14px !important;
-          text-align: center; }
-    #map-info .graphic-label,
-    #map-info .headline,
-    #map-info .byline,
-    #map-info .date {
-      text-align: center; }
-    #map-info .readout {
-      font-size: 14px;
-      line-height: 20px; }
-    #map-info #button-container {
-      margin: 1em auto;
-      display: block;
-      width: 100%; }
-      #map-info #button-container h3 {
-        text-align: center; }
-    #map-info .error {
-      height: auto;
-      width: 100%;
-      display: none;
-      margin: 1px auto;
-      text-align: center; }
-      #map-info .error .error-message {
-        background: #aa0000;
-        padding: 0.25em; }
-    #map-info #check-button-house,
-    #map-info #check-button-condo {
-      border-radius: 4px;
-      border: 1px solid #D0D0D0;
-      overflow: hidden;
-      height: 20px;
-      display: inline-block;
-      margin: 0; }
-      #map-info #check-button-house:hover,
-      #map-info #check-button-condo:hover {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
-      #map-info #check-button-house label,
-      #map-info #check-button-condo label {
-        float: left;
-        width: 100%; }
-        #map-info #check-button-house label span,
-        #map-info #check-button-condo label span {
-          text-align: left;
-          display: block;
-          font-size: 14px;
-          font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-          line-height: 0px; }
-        #map-info #check-button-house label input,
-        #map-info #check-button-condo label input {
-          display: none; }
-          #map-info #check-button-house label input:checked + span,
-          #map-info #check-button-condo label input:checked + span {
-            background-color: #aaa;
-            color: #000; }
-    #map-info #check-button-savings {
-      width: 40px;
-      height: 18px; }
-      #map-info #check-button-savings span {
-        font-size: 14px !important; }
-    #map-info #check-button-income {
-      width: 50px; }
-      #map-info #check-button-income span {
-        font-size: 14px !important; }
-    #map-info #check-button-condo {
-      width: 122.5px; }
-    #map-info .explainer {
-      display: none;
-      font-size: 14px;
-      line-height: 18px;
-      text-align: center;
-      font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-      background: whitesmoke;
-      padding: 0.25em;
-      height: auto;
-      margin-top: 1em;
-      border-radius: 0.25em; }
-      #map-info .explainer .fa-level-down {
-        display: inline; }
-    #map-info #input-container .input-holder {
-      text-align: center;
-      display: inline-block; }
-    #map-info #input-container .button-holder {
-      text-align: center;
-      display: inline; }
-    #map-info #input-container .dollar-sign {
-      font-size: 24px;
-      vertical-align: 10px; }
-    #map-info #input-container .income-btn {
-      margin: 5px auto;
-      background-color: #EFEFEF;
-      border-radius: 4px;
-      border: 1px solid #D0D0D0;
-      overflow: hidden;
-      width: 100%;
-      height: 30px;
-      display: inline-block;
-      font-size: 16px;
-      font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-      font-weight: bold; }
-      #map-info #input-container .income-btn:hover {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
-    #map-info #input-container .income-box {
-      font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-      font-size: 18px !important;
-      border-bottom: 1px solid #ccc;
-      border-bottom-style: solid;
-      border-top: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      width: 150px;
-      padding: 0.25em 0.5;
-      text-align: left;
-      vertical-align: 10px; }
-      #map-info #input-container .income-box::-webkit-input-placeholder {
-        font-weight: 300;
-        text-align: left;
-        line-height: 1.75em;
-        font-size: 18px; }
-      #map-info #input-container .income-box:focus {
-        outline: 0; }
-        #map-info #input-container .income-box:focus::-webkit-input-placeholder {
-          color: #fff; }
-  #map-container {
-    width: 100% !important; }
-    #map-container #interface-container {
-      right: -35px;
-      width: 300px;
-      bottom: 30px; }
-      #map-container #interface-container .map-interface {
-        width: 260px; }
-      #map-container #interface-container .price-explainer {
-        font-size: 12px;
-        line-height: 16px; }
-      #map-container #interface-container .interface-selector {
-        font-size: 10px; }
-  footer {
-    display: block;
-    width: 100%; }
-  #hover-box {
-    display: none; }
-    #hover-box .housing-table th {
-      font-size: 8.95px !important; }
-    #hover-box .mobile-readout {
-      display: block; }
-      #hover-box .mobile-readout .readout {
-        font-size: 10px;
-        text-align: left; }
-        #hover-box .mobile-readout .readout .average-grade, #hover-box .mobile-readout .readout .school-number {
-          font-weight: bold;
-          color: #54278f; }
-  .mobile-readout {
-    display: block; }
-    .mobile-readout .close-button-wrapper {
-      text-align: center; }
-      .mobile-readout .close-button-wrapper .hover-box-close {
-        margin: 0px auto;
-        background-color: #EFEFEF;
-        border-radius: 4px;
-        border: 1px solid #D0D0D0;
-        overflow: hidden;
-        height: 30px;
-        font-weight: bold;
-        font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-        font-size: 14px; }
-        .mobile-readout .close-button-wrapper .hover-box-close:hover {
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
-  .leaflet-bottom.leaflet-right {
-    display: none; }
-  .hover-instructions {
-    display: none; } }
-
-@media (max-width: 701px) {
-  .school-list {
-    width: 100% !important;
-    margin-bottom: 0 !important; }
-  .schools-hed {
-    clear: both; } }
-
-@media (max-width: 400px) {
-  #button-container {
-    height: auto !important; }
-  #input-container {
-    height: 85px !important;
-    width: 100%; }
-    #input-container .input-holder {
-      width: 100%;
-      margin: 0px !important; }
-      #input-container .input-holder .income-box {
-        width: 145px !important; }
-    #input-container .button-holder {
-      width: 100% !important;
-      height: 40px !important; }
-  #interface-container {
-    bottom: 60px !important; } }
 
 input.income {
   font-weight: bold;
@@ -686,7 +434,7 @@ input.income {
 footer {
   display: none; }
 
-#hover-box {
+.hover-box-container {
   width: 300px;
   position: absolute;
   background: #fff;
@@ -696,19 +444,19 @@ footer {
   display: none;
   z-index: 9999;
   height: auto; }
-  #hover-box .mobile-readout {
+  .hover-box-container .mobile-readout {
     display: none; }
-  #hover-box .sub-info {
+  .hover-box-container .sub-info {
     height: auto;
     margin-bottom: 0.5em;
     line-height: 14px; }
-    #hover-box .sub-info .neighborhoods {
+    .hover-box-container .sub-info .neighborhoods {
       display: inline;
       font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
       font-size: 11px;
       color: #666;
       font-weight: bold; }
-  #hover-box .crime-rate {
+  .hover-box-container .crime-rate {
     float: right;
     padding: 2px 4px;
     margin-top: 2px;
@@ -717,42 +465,42 @@ footer {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
     display: none;
     font-weight: bold; }
-  #hover-box .float-left {
+  .hover-box-container .float-left {
     float: left; }
-  #hover-box .float-right {
+  .hover-box-container .float-right {
     float: right; }
-  #hover-box .housing-table {
+  .hover-box-container .housing-table {
     width: 100%;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif; }
-    #hover-box .housing-table th {
+    .hover-box-container .housing-table th {
       font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
       text-transform: uppercase;
       color: #666;
       font-size: 10px; }
-      #hover-box .housing-table th:nth-child(2) {
+      .hover-box-container .housing-table th:nth-child(2) {
         text-align: right; }
-    #hover-box .housing-table tr {
+    .hover-box-container .housing-table tr {
       border-bottom: 1px #ccc;
       border-bottom-style: dashed; }
-      #hover-box .housing-table tr:first-of-type, #hover-box .housing-table tr:last-of-type {
+      .hover-box-container .housing-table tr:first-of-type, .hover-box-container .housing-table tr:last-of-type {
         border: none; }
-    #hover-box .housing-table td {
+    .hover-box-container .housing-table td {
       width: 50%; }
-      #hover-box .housing-table td:nth-child(2) {
+      .hover-box-container .housing-table td:nth-child(2) {
         text-align: right; }
-  #hover-box #house-price {
+  .hover-box-container #house-price {
     border-right: 1px dashed #ccc;
     height: 80px;
     width: 50%;
     padding: 2.5px 5px 0px 5px;
     float: left; }
-  #hover-box #condo-price {
+  .hover-box-container #condo-price {
     border-right: none;
     height: 80px;
     width: 50%;
     padding: 2.5px 5px 0px 5px;
     float: right; }
-  #hover-box .house-row {
+  .hover-box-container .house-row {
     display: block;
     height: 20px;
     width: 100%;
@@ -760,18 +508,18 @@ footer {
     border-bottom-style: dashed !important;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
     font-size: 12px; }
-    #hover-box .house-row:last-of-type {
+    .hover-box-container .house-row:last-of-type {
       border: none; }
-  #hover-box #school-list {
+  .hover-box-container #school-list {
     height: auto;
     display: none;
     font-size: 10px;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
     clear: both;
     padding: 0px 5px 0px 5px; }
-    #hover-box #school-list .school-table {
+    .hover-box-container #school-list .school-table {
       width: 100%; }
-      #hover-box #school-list .school-table th {
+      .hover-box-container #school-list .school-table th {
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
         text-transform: uppercase;
         color: #666;
@@ -780,29 +528,29 @@ footer {
         font-size: 10px;
         text-align: center;
         padding-top: 2.5px; }
-      #hover-box #school-list .school-table .name {
+      .hover-box-container #school-list .school-table .name {
         text-align: left; }
-      #hover-box #school-list .school-table td {
+      .hover-box-container #school-list .school-table td {
         text-align: center; }
-      #hover-box #school-list .school-table .schools-row {
+      .hover-box-container #school-list .school-table .schools-row {
         border-bottom: 1px dashed #ccc;
         border-bottom-style: dashed; }
-  #hover-box .no-school {
+  .hover-box-container .no-school {
     display: none;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
     font-size: 18px;
     color: #bbb;
     margin-bottom: 10px;
     text-align: center; }
-  #hover-box .table-label {
+  .hover-box-container .table-label {
     font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
     color: #666; }
-  #hover-box .zip-code,
-  #hover-box .city,
-  #hover-box .state {
+  .hover-box-container .zip-code,
+  .hover-box-container .city,
+  .hover-box-container .state {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
     font-size: 16px;
     font-weight: bold; }
@@ -814,7 +562,8 @@ footer {
     border-radius: 4px;
     border: 1px solid #D0D0D0;
     overflow: hidden;
-    display: inline-block; }
+    display: block;
+    padding: 2rem; }
     #button-container .check-button:hover {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
     #button-container .check-button label {
@@ -822,7 +571,7 @@ footer {
       width: 100%;
       margin-bottom: 0; }
       #button-container .check-button label span {
-        text-align: left;
+        text-align: center;
         display: block;
         font-size: 14px;
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;

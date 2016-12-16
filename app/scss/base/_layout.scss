@@ -1,16 +1,3 @@
-.map-info-container {
-    position: absolute;
-    bottom: 26%;
-    right: 15px;
-    height: auto;
-    max-width: 375px;
-    z-index: 9999;
-    background-color: #fff;
-    display: block;
-    border: 1px solid #ccc;
-    padding: 0.75em;
-}
-
 .tool-list-container {
     list-style: decimal;
     list-style-position: inside;
@@ -21,17 +8,17 @@
     }
 }
 
-@media (max-width: $small-display) {
-  .map {
-      display: block;
-      width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-      margin-top: 1em;
-  }
-}
+// @media (max-width: $small-display) {
+//   .map {
+//       display: block;
+//       width: 100%;
+//       padding-right: 15px;
+//       padding-left: 15px;
+//       margin-right: auto;
+//       margin-left: auto;
+//       margin-top: 1em;
+//   }
+// }
 
 
 #input-container {
@@ -97,17 +84,17 @@
         }
     }
 
-    @media(max-width: $small-display) {
-      width: 400px;
-      .input-holder {
-          margin-top: 5px !important;
-      }
-      .button-holder {
-          button {
-              width: 80px !important;
-          }
-      }
-    }
+    // @media(max-width: $small-display) {
+    //   width: 400px;
+    //   .input-holder {
+    //       margin-top: 5px !important;
+    //   }
+    //   .button-holder {
+    //       button {
+    //           width: 80px !important;
+    //       }
+    //   }
+    // }
 }
 
 // @media (max-width: $medium-display) {
