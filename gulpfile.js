@@ -80,7 +80,7 @@ gulp.task('render', function () {
 });
 
 // JSHint
-gulp.task('jshint', function (){
+gulp.task('jshint', function() {
     gulp.src([src.js, src.jsLibs])
       .pipe(jshint('.jshintrc'))
       .pipe(jshint.reporter('jshint-stylish'));
