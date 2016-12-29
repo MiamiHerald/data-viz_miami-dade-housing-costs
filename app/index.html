@@ -95,21 +95,32 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 			</div>
 
 			<div class="input-container" id="input-container" ng-show="incomeTypeChecked" class="ng-hide">
-				<div ng-if="priceType() === 'income'">
-					My annual household income is:
+				<div class="row">
+				   <div class="col-lg-12">
+				    <div class="input-group input-group-lg">
+							<input name="income-box" class="income-box form-control input-lg" type="text" placeholder="$">
+				      <span class="input-group-btn">
+								<button class="income-button income-btn btn btn-default btn-lg" type="button" value="Execute">Submit</button>
+								<button class="reset income-btn btn btn-default btn-lg" type="button" value="Reset" ng-click="incomeTypeChecked = false; houseTypeChecked = false">Reset</button>
+				      </span>
+				    </div>
+				  </div>
 				</div>
-				<div ng-if="priceType() === 'savings'">
-					My maximum price is:
-				</div>
-				<div class="input-holder">
-					<input name="income-box" class="income-box" type="text" placeholder="$">
-				</div>
+					<!-- <div ng-if="priceType() === 'income'">
+						My annual household income is:
+					</div>
+					<div ng-if="priceType() === 'savings'">
+						My maximum price is:
+					</div>
+					<div class="input-holder">
+						<input name="income-box" class="income-box form-control" type="text" placeholder="$">
+						<button class="income-button income-btn" type="button" value="Execute">Submit</button>
+						<button class="reset income-btn" type="button" value="Reset" ng-click="incomeTypeChecked = false; houseTypeChecked = false">Reset</button>
+					</div> -->
 
-				<div class="button-holder">
-					<button class='income-button income-btn' type="button" value="Execute">Submit</button>
+				<!-- <div class="button-holder">
 
-					<button class='reset income-btn' type="button" value="Reset" ng-click="incomeTypeChecked = false; houseTypeChecked = false">Reset</button>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
@@ -136,14 +147,6 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 </div>
 
 <div id="interface-container" class="container">
-	<ul>
-		<li class="price-select interface-selector selected-interface">Value</li>
-		<li class="percent-select interface-selector">Value growth</li>
-
-		<li class="crime-select interface-selector">Crime</li>
-
-		<li class="school-select interface-selector">Schools</li>
-	</ul>
 
 	<div class="map-interface">
 
@@ -154,6 +157,15 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 				<span class='percent-year'> since 2014.</span>
 			</p>
 		</div>
+
+		<ul>
+			<li class="price-select interface-selector selected-interface">Value</li>
+			<li class="percent-select interface-selector">Value growth</li>
+
+			<li class="crime-select interface-selector">Crime</li>
+
+			<li class="school-select interface-selector">Schools</li>
+		</ul>
 
 		<div class="key-holder">
 

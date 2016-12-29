@@ -1,6 +1,5 @@
 .input-container {
     margin: 0.5em auto;
-    text-align: center;
     .input-holder input {
           &::-webkit-input-placeholder { text-align: center; }
           &:-moz-placeholder { text-align: center; }
@@ -10,6 +9,7 @@
     .button-holder {
         text-align: center;
         margin-top: 0.25em;
+        text-align: center;
     }
     .income-btn {
         margin: 5px auto;
