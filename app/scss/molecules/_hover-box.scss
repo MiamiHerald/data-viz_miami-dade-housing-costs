@@ -1,15 +1,17 @@
 .hover-box-container {
-    width: 300px;
-    position: absolute;
+    @media (max-width: $screen-xs) {
+      width: 300px;
+      position: absolute;
+      display: none;
+      box-shadow: 0px 0px 10px #999;
+    }
     background: #fff;
     color: #000;
     padding: 5px 8px;
-    box-shadow: 0px 0px 10px #999;
-    display: none;
     z-index: 9999;
     height: auto;
     .mobile-readout {
-        display: none;
+        // display: none;
     }
     .sub-info {
         height: auto;
