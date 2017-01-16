@@ -387,6 +387,17 @@ footer {
   padding: 5px 8px;
   z-index: 9999;
   height: auto; }
+  @media (max-width: 480px) {
+    .hover-box-container#hover-box {
+      width: 300px;
+      position: absolute;
+      display: none;
+      box-shadow: 0px 0px 10px #999; } }
+  .hover-box-container#hover-box-mobile {
+    width: 300px;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 0px 10px #999; }
   .hover-box-container .close-button-wrapper {
     display: none; }
     @media (max-width: 480px) {
@@ -464,19 +475,16 @@ footer {
     font-size: 12px; }
     .hover-box-container .house-row:last-of-type {
       border: none; }
-  .hover-box-container #school-list {
+  .hover-box-container .school-list {
     height: auto;
-    display: block;
+    display: none;
     font-size: 10px;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
     clear: both;
     padding: 0px 5px 0px 5px; }
-    @media (max-width: 480px) {
-      .hover-box-container #school-list {
-        display: none; } }
-    .hover-box-container #school-list .school-table {
+    .hover-box-container .school-list .school-table {
       width: 100%; }
-      .hover-box-container #school-list .school-table th {
+      .hover-box-container .school-list .school-table th {
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
         text-transform: uppercase;
         color: #666;
@@ -485,11 +493,11 @@ footer {
         font-size: 10px;
         text-align: center;
         padding-top: 2.5px; }
-      .hover-box-container #school-list .school-table .name {
+      .hover-box-container .school-list .school-table .name {
         text-align: left; }
-      .hover-box-container #school-list .school-table td {
+      .hover-box-container .school-list .school-table td {
         text-align: center; }
-      .hover-box-container #school-list .school-table .schools-row {
+      .hover-box-container .school-list .school-table .schools-row {
         border-bottom: 1px dashed #ccc;
         border-bottom-style: dashed; }
   .hover-box-container .no-school {

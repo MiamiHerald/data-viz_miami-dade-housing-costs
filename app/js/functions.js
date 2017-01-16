@@ -28,7 +28,7 @@ var w = window.innerWidth;
 // AND ZOOM ON PAGE LOAD
 function fixPosition() {
 	if (w >= mobile) {
-		return [25.82, -79.85];
+		return [25.82, -80.25];
 	} else {
 		return [25.50, -80.20];
 	}
@@ -1207,7 +1207,7 @@ function writeHoverBox (feature,layer) {
 	var crimeRate = layer.feature.properties.crime;
 	var schoolGrade = layer.feature.properties.schoolGrade;
 	var	crimeRateButton = $('.crime-rate');
-	var	schoolTable = $('#school-list');
+	var	schoolTable = $('.school-list');
 
 	// CHANGE COLOR OF HOUSE AND
 	// CONDO VALUES BY PERCENT
@@ -1310,15 +1310,13 @@ function writeHoverBox (feature,layer) {
 	var mobile = 843;
 	var w = window.innerWidth;
 
-	if (mobile > w) {
+	if (mobile < w) {
 
 		$('.school-table').hide();
 
 		if (schoolGrade === 'No data') {
 			$('.average-grade').html('no grade available');
-		}
-
-		else {
+		} else {
 
 			var schoolCount = 0;
 
@@ -1348,13 +1346,6 @@ function writeHoverBox (feature,layer) {
 		 	$('.school-number').html('0 schools');
 		}
 
-		$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
-			$('#hover-box-mobile').hide();
-		});
-	}
-
-	else {
-
 		if (schoolData === 'No data') {
 			$('.no-school').show();
 			$('.school-table').hide();
@@ -1366,6 +1357,10 @@ function writeHoverBox (feature,layer) {
 			}
 			$('.school-table').show();
 		}
+	} else {
+		$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
+			$('#hover-box-mobile').hide();
+		});
 	}
 	crimeRateButton.show();
 	schoolTable.show();
