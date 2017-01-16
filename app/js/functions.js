@@ -1374,6 +1374,7 @@ function onEachFeature(feature, layer) {
 	layer.on({
 
 		mouseover: function(e) {
+			$('.schools-row').empty();
 			var layer = e.target;
 			layer.setStyle({
 				'color': '#666'
@@ -1395,7 +1396,6 @@ function onEachFeature(feature, layer) {
 				color: '#fff'
 			});
 			endHover();
-			$('.schools-row').empty();
 		},
 
 		// mousemove: function(e) {},
