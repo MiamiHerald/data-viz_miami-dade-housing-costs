@@ -197,7 +197,7 @@
 		var houseCheck = (house_checkbox.is(':checked'));
 		var condoCheck = (condo_checkbox.is(':checked'));
 		var inputEmpty = (incomeInput === '');
-		var schoolTable = $('#school-list');
+		var schoolTable = $('.school-list');
 		var crimeRate = $('.crime-rate');
 
 		crimeRate.show();
@@ -230,7 +230,7 @@
 		var houseCheck = (house_checkbox.is(':checked'));
 		var condoCheck = (condo_checkbox.is(':checked'));
 		var inputEmpty = (incomeInput === '');
-		var schoolTable = $('#school-list');
+		var schoolTable = $('.school-list');
 		var crimeRate = $('.crime-rate');
 
 		schoolTable.show();
@@ -310,7 +310,7 @@
 		} else {
 			clearAllLayers();
 		}
-		$('#school-list').hide();
+		$('.school-list').hide();
 
 		var defaultOption = $('.housing-option option[value=\'default\']');
 

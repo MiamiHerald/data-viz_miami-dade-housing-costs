@@ -1311,9 +1311,6 @@ function writeHoverBox (feature,layer) {
 	var w = window.innerWidth;
 
 	if (mobile < w) {
-
-		$('.school-table').hide();
-
 		if (schoolGrade === 'No data') {
 			$('.average-grade').html('no grade available');
 		} else {
@@ -1353,17 +1350,21 @@ function writeHoverBox (feature,layer) {
 			// LOOP THROUGH SCHOOL LIST AND BUILD TABLE
 			for (var i = 0; i < schoolData.length; i++) {
 				$('.no-school').hide();
+				$('.school-table').show();
 				$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td>' + schoolData[i].grade2015 + '</td><td>' + schoolData[i].grade2014 + '</td><td>' + schoolData[i].grade2013 + '</td></tr>');
 			}
-			$('.school-table').show();
 		}
+
+		schoolTable.show();
+
 	} else {
+		schoolTable.hide();
+
 		$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
 			$('#hover-box-mobile').hide();
 		});
 	}
 	crimeRateButton.show();
-	schoolTable.show();
 }
 
 
