@@ -925,6 +925,8 @@ function getPos(event) {
 function initHover() {
 	if (mobile > w) {
 		$('#hover-box-mobile').show();
+	} else {
+		$('#hover-box-mobile').hide();
 	}
 	$(document).bind('mousemove', getPos);
 }

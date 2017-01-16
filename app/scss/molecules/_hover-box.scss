@@ -8,13 +8,24 @@
         box-shadow: 0px 0px 10px #999;
       }
     }
+    &#hover-box-mobile {
+      @media (max-width: $screen-xs) {
+        width: 300px;
+        position: absolute;
+        display: none;
+        box-shadow: 0px 0px 10px #999;
+      }
+    }
     background: #fff;
     color: #000;
     padding: 5px 8px;
     z-index: 9999;
     height: auto;
     .mobile-readout {
+      display: block;
+      @media (max-width: $screen-xs) {
         display: none;
+      }
     }
     .sub-info {
         height: auto;
@@ -98,7 +109,10 @@
     }
     #school-list {
         height: auto;
-        display: none;
+        display: block;
+        @media (max-width: $screen-xs) {
+          display: none;
+        }
         font-size: $xxs;
         font-family: $serif;
         clear: both;

@@ -393,8 +393,17 @@ footer {
       position: absolute;
       display: none;
       box-shadow: 0px 0px 10px #999; } }
+  @media (max-width: 480px) {
+    .hover-box-container#hover-box-mobile {
+      width: 300px;
+      position: absolute;
+      display: none;
+      box-shadow: 0px 0px 10px #999; } }
   .hover-box-container .mobile-readout {
-    display: none; }
+    display: block; }
+    @media (max-width: 480px) {
+      .hover-box-container .mobile-readout {
+        display: none; } }
   .hover-box-container .sub-info {
     height: auto;
     margin-bottom: 0.5em;
@@ -461,11 +470,14 @@ footer {
       border: none; }
   .hover-box-container #school-list {
     height: auto;
-    display: none;
+    display: block;
     font-size: 10px;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
     clear: both;
     padding: 0px 5px 0px 5px; }
+    @media (max-width: 480px) {
+      .hover-box-container #school-list {
+        display: none; } }
     .hover-box-container #school-list .school-table {
       width: 100%; }
       .hover-box-container #school-list .school-table th {
