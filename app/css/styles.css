@@ -388,11 +388,13 @@ footer {
   z-index: 9999;
   height: auto; }
   @media (max-width: 480px) {
-    .hover-box-container {
+    .hover-box-container#hover-box {
       width: 300px;
       position: absolute;
       display: none;
       box-shadow: 0px 0px 10px #999; } }
+  .hover-box-container .mobile-readout {
+    display: none; }
   .hover-box-container .sub-info {
     height: auto;
     margin-bottom: 0.5em;

@@ -923,13 +923,15 @@ function getPos(event) {
 
 // ACTIVATE HOVER
 function initHover() {
-	$('#hover-box').show();
+	if (mobile > w) {
+		$('#hover-box-mobile').show();
+	}
 	$(document).bind('mousemove', getPos);
 }
 
 // END HOVER
 function endHover() {
-	$('#hover-box').hide();
+	// $('#hover-box').hide();
 	$(document).unbind('mousemove', getPos);
 }
 
@@ -1344,8 +1346,8 @@ function writeHoverBox (feature,layer) {
 		 	$('.school-number').html('0 schools');
 		}
 
-		$('#hover-box').on('click', '.hover-box-close', function(event) {
-			$('#hover-box').hide();
+		$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
+			$('#hover-box-mobile').hide();
 		});
 	}
 
@@ -1407,7 +1409,7 @@ function onEachFeature(feature, layer) {
 
 			if (mobile > w) {
 
-				$('#hover-box').css({
+				$('#hover-box-mobile').css({
 					'margin': 'auto',
   					'position': 'absolute',
   					'top': 0,
