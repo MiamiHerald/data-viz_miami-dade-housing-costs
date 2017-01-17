@@ -1408,14 +1408,12 @@ function onEachFeature(feature, layer) {
 			if (mobile > w) {
 
 				$('#hover-box-mobile').css({
-					'margin': 'auto',
-  					'position': 'absolute',
-  					'top': 0,
-  					'left': 0,
-  					'bottom': '23%',
-  					'right': 0,
-  					'height': '245px',
-					'width': '275px'
+					'position': 'absolute',
+					'right': 0,
+					'left': 0,
+					'bottom': '0%',
+					'top': '50%',
+					'width': '100%'
 				});
 
 				writeHoverBox(feature,layer);

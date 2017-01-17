@@ -378,11 +378,11 @@ input.income {
     .dotted-mobile {
       display: block; } }
 
-.results-container {
-  padding: 0 5px; }
-
 footer {
   display: none; }
+
+.hover-box-mobile-container {
+  position: relative; }
 
 .hover-box-container {
   background: #fff;
@@ -399,8 +399,7 @@ footer {
   .hover-box-container#hover-box-mobile {
     width: 300px;
     position: absolute;
-    display: none;
-    box-shadow: 0px 0px 10px #999; }
+    display: none; }
   .hover-box-container .close-button-wrapper {
     display: none; }
     @media (max-width: 480px) {
