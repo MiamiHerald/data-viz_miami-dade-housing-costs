@@ -1375,6 +1375,7 @@ function onEachFeature(feature, layer) {
 
 		mouseover: function(e) {
 			$('.schools-row').empty();
+
 			var layer = e.target;
 			layer.setStyle({
 				'color': '#666'
@@ -1406,7 +1407,6 @@ function onEachFeature(feature, layer) {
 			var w = window.innerWidth;
 
 			if (mobile > w) {
-
 				$('#hover-box-mobile').css({
 					'position': 'absolute',
 					'right': 0,
