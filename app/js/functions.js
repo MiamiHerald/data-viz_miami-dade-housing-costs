@@ -1310,7 +1310,7 @@ function writeHoverBox (feature,layer) {
 	var mobile = 843;
 	var w = window.innerWidth;
 
-	if (mobile < w) {
+	// if (mobile < w) {
 		if (schoolGrade === 'No data') {
 			$('.average-grade').html('no grade available');
 		} else {
@@ -1357,13 +1357,13 @@ function writeHoverBox (feature,layer) {
 
 		schoolTable.show();
 
-	} else {
-		schoolTable.hide();
+	// } else {
+		// schoolTable.hide();
 
 		$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
 			$('#hover-box-mobile').hide();
 		});
-	}
+	// }
 	crimeRateButton.show();
 }
 

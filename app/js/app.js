@@ -1,8 +1,10 @@
+'use strict';
+
 var housingApp = angular.module('housingApp', []);
 
 housingApp.controller('HousingFormController', ['$scope',
   function HousingFormController($scope) {
-    
+
     $scope.houseType = function() {
       if ($('.house:checkbox').is(':checked')) {
         return 'house';
@@ -11,7 +13,7 @@ housingApp.controller('HousingFormController', ['$scope',
       } else {
         return undefined;
       }
-    }
+    };
 
     $scope.priceType = function() {
       if ($('.income:checkbox').is(':checked')) {
@@ -21,5 +23,5 @@ housingApp.controller('HousingFormController', ['$scope',
       } else {
         return undefined;
       }
-    }
+    };
 }]);
