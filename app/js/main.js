@@ -340,7 +340,7 @@
 		removeError();
 
 		buildDefaultHouse();
-
+    $('.reset-button-holder').hide();
 	});
 
 	// LAUNCH PAD
