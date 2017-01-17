@@ -101,7 +101,7 @@ body, html {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
   text-transform: uppercase; }
 
-.navbar-collapse.collapse {
+/*.navbar-collapse.collapse {
   display: block !important; }
 
 .navbar-nav > li, .navbar-nav {
@@ -111,7 +111,7 @@ body, html {
   margin-right: 0px !important; }
 
 .navbar-right {
-  float: right !important; }
+  float: right !important; }*/
 
 .center {
   text-align: center; }
