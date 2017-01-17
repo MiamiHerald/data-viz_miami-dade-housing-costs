@@ -381,10 +381,15 @@ input.income {
 .btn {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 16px !important; }
+
+.reset-button-holder {
+  display: none; }
 
 .income-box {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif; }
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-size: 16px !important; }
 
 footer {
   display: none; }

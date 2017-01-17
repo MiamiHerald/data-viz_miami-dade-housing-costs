@@ -290,8 +290,9 @@
 			style: schoolStyle
 		});
 
-		checkInput(income);
+    $('.reset-button-holder').show();
 
+		checkInput(income);
 	});
 
 	$('.reset-button-holder').on('click touchstart', '.reset', function() {
