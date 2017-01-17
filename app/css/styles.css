@@ -378,6 +378,14 @@ input.income {
     .dotted-mobile {
       display: block; } }
 
+.btn {
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.income-box {
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif; }
+
 footer {
   display: none; }
 
