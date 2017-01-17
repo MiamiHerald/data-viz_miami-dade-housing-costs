@@ -4157,7 +4157,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-left: 0;
   }
 }
-.navbar-static-top {
+/*.navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
 }
@@ -4426,7 +4426,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-/*  color: none;*/
+  color: none;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
@@ -4614,7 +4614,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 .navbar-inverse .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
-}
+}*/
 .breadcrumb {
   padding: 8px 15px;
   margin-bottom: 20px;
@@ -6346,7 +6346,7 @@ button.close {
 
 
 @media (min-width: 768px) {
-  
+
   .navbar:before,
   .navbar:after,
   .navbar-header:before,
