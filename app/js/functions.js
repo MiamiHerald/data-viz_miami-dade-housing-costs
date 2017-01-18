@@ -21,7 +21,7 @@ var $defaultSchoolLayer = null;
 var tiles = new L.StamenTileLayer('toner-lite');
 
 // MOBILE WIDTHS
-var mobile = 843;
+var mobile = 768;
 var w = window.innerWidth;
 
 // FUNCTIONS TO FIX MAP POSITION
@@ -1307,7 +1307,7 @@ function writeHoverBox (feature,layer) {
 	 }
 
 	// HANDLE CHANGE SCREEN SIZE
-	var mobile = 843;
+	var mobile = 768;
 	var w = window.innerWidth;
 
 	if (schoolGrade === 'No data') {
@@ -1363,18 +1363,23 @@ function writeHoverBox (feature,layer) {
 	crimeRateButton.show();
 }
 
-$(window).on('resize', function() {
-	if (Modernizr.mq('min-width: 843px')) {
-		console.log('true');
+$(window).resize(function() {
+	if (Modernizr.mq('(min-width: 768px)')) {
+		$('#hover-box-mobile').hide();
+		$('#hover-box').show();
+	} else {
+		$('#hover-box-mobile').show();
+		$('#hover-box').hide();
 	}
-});
+}).resize();
+
 // EVENT FOR EACH ZIP LAYER
 function onEachFeature(feature, layer) {
 
 	layer.on({
 
 		mouseover: function(e) {
-			var query = Modernizr.mq('(min-width: 843px)');
+			var query = Modernizr.mq('(min-width: 768px)');
 
 			if (query) {
 				$('.schools-row').empty();
@@ -1385,7 +1390,7 @@ function onEachFeature(feature, layer) {
 				});
 				layer.bringToFront();
 
-				var mobile = 843;
+				var mobile = 768;
 				var w = window.innerWidth;
 
 				if (mobile < w) {
@@ -1409,7 +1414,7 @@ function onEachFeature(feature, layer) {
 
 			if (query) {
 				$('.schools-row').empty();
-				var mobile = 843;
+				var mobile = 768;
 				var w = window.innerWidth;
 
 				if (mobile > w) {
@@ -1429,7 +1434,7 @@ function onEachFeature(feature, layer) {
 
 		tap: function(e) {
 			$('.schools-row').empty();
-			var mobile = 843;
+			var mobile = 768;
 			var w = window.innerWidth;
 
 			if (mobile > w) {
