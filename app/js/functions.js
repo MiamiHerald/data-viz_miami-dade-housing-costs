@@ -1310,85 +1310,88 @@ function writeHoverBox (feature,layer) {
 	var mobile = 843;
 	var w = window.innerWidth;
 
-	// if (mobile < w) {
-		if (schoolGrade === 'No data') {
-			$('.average-grade').html('no grade available');
-		} else {
+	if (schoolGrade === 'No data') {
+		$('.average-grade').html('no grade available');
+	} else {
 
-			var schoolCount = 0;
+		var schoolCount = 0;
 
-			for (var i = 0; i < schoolData.length; i++) {
-				schoolCount++;
-			}
-
-			if ((schoolCount === 0) || (schoolCount > 1) ) {
-				$('.school-number').html(schoolCount+ ' schools');
-			} else if (schoolCount === 1) {
-				$('.school-number').html(schoolCount + ' school');
-			}
+		for (var i = 0; i < schoolData.length; i++) {
+			schoolCount++;
 		}
 
-		if (schoolGrade >= 4) {
-			$('.average-grade').html('A');
-		} else if ((schoolGrade >= 3) && (schoolGrade < 4)){
-			$('.average-grade').html('B');
-		} else if ((schoolGrade >= 2) && (schoolGrade < 3)){
-			$('.average-grade').html('C');
-		} else if ((schoolGrade >= 1) && (schoolGrade < 2)){
-			$('.average-grade').html('D');
-		} else if ((schoolGrade >= 0) && (schoolGrade < 1)){
-			$('.average-grade').html('F');
-		} else {
-			$('.average-grade').html('no grade available');
-		 	$('.school-number').html('0 schools');
+		if ((schoolCount === 0) || (schoolCount > 1) ) {
+			$('.school-number').html(schoolCount+ ' schools');
+		} else if (schoolCount === 1) {
+			$('.school-number').html(schoolCount + ' school');
 		}
+	}
 
-		if (schoolData === 'No data') {
-			$('.no-school').show();
-			$('.school-table').hide();
-		} else {
-			// LOOP THROUGH SCHOOL LIST AND BUILD TABLE
-			for (var i = 0; i < schoolData.length; i++) {
-				$('.no-school').hide();
-				$('.school-table').show();
-				$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td>' + schoolData[i].grade2015 + '</td><td>' + schoolData[i].grade2014 + '</td><td>' + schoolData[i].grade2013 + '</td></tr>');
-			}
+	if (schoolGrade >= 4) {
+		$('.average-grade').html('A');
+	} else if ((schoolGrade >= 3) && (schoolGrade < 4)){
+		$('.average-grade').html('B');
+	} else if ((schoolGrade >= 2) && (schoolGrade < 3)){
+		$('.average-grade').html('C');
+	} else if ((schoolGrade >= 1) && (schoolGrade < 2)){
+		$('.average-grade').html('D');
+	} else if ((schoolGrade >= 0) && (schoolGrade < 1)){
+		$('.average-grade').html('F');
+	} else {
+		$('.average-grade').html('no grade available');
+	 	$('.school-number').html('0 schools');
+	}
+
+	if (schoolData === 'No data') {
+		$('.no-school').show();
+		$('.school-table').hide();
+	} else {
+		// LOOP THROUGH SCHOOL LIST AND BUILD TABLE
+		for (var i = 0; i < schoolData.length; i++) {
+			$('.no-school').hide();
+			$('.school-table').show();
+			$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td>' + schoolData[i].grade2015 + '</td><td>' + schoolData[i].grade2014 + '</td><td>' + schoolData[i].grade2013 + '</td></tr>');
 		}
+	}
 
-		schoolTable.show();
+	schoolTable.show();
 
-	// } else {
-		// schoolTable.hide();
+	$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
+		$('#hover-box-mobile').hide();
+	});
 
-		$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
-			$('#hover-box-mobile').hide();
-		});
-	// }
 	crimeRateButton.show();
 }
 
-
+$(window).on('resize', function() {
+	if (Modernizr.mq('min-width: 843px')) {
+		console.log('true');
+	}
+});
 // EVENT FOR EACH ZIP LAYER
 function onEachFeature(feature, layer) {
 
 	layer.on({
 
 		mouseover: function(e) {
-			$('.schools-row').empty();
+			var query = Modernizr.mq('(min-width: 843px)');
 
-			var layer = e.target;
-			layer.setStyle({
-				'color': '#666'
-			});
-			layer.bringToFront();
+			if (query) {
+				$('.schools-row').empty();
 
-			var mobile = 843;
-			var w = window.innerWidth;
+				var layer = e.target;
+				layer.setStyle({
+					'color': '#666'
+				});
+				layer.bringToFront();
 
-			if (mobile < w) {
-				writeHoverBox(feature,layer);
+				var mobile = 843;
+				var w = window.innerWidth;
+
+				if (mobile < w) {
+					writeHoverBox(feature,layer);
+				}
 			}
-
 		},
 
 		mouseout: function(e) {
@@ -1402,26 +1405,30 @@ function onEachFeature(feature, layer) {
 		// mousemove: function(e) {},
 
 		click: function(e) {
+			var query = Modernizr.mq('(max-width: 842px)');
 
-			var mobile = 843;
-			var w = window.innerWidth;
+			if (query) {
+				$('.schools-row').empty();
+				var mobile = 843;
+				var w = window.innerWidth;
 
-			if (mobile > w) {
-				$('#hover-box-mobile').css({
-					'position': 'absolute',
-					'right': 0,
-					'left': 0,
-					'bottom': '0%',
-					'top': '50%',
-					'width': '100%'
-				});
+				if (mobile > w) {
+					$('#hover-box-mobile').css({
+						'position': 'absolute',
+						'right': 0,
+						'left': 0,
+						'bottom': '0%',
+						'top': '50%',
+						'width': '100%'
+					});
 
-				writeHoverBox(feature,layer);
+					writeHoverBox(feature,layer);
+				}
 			}
 		},
 
 		tap: function(e) {
-
+			$('.schools-row').empty();
 			var mobile = 843;
 			var w = window.innerWidth;
 
