@@ -923,11 +923,11 @@ function getPos(event) {
 
 // ACTIVATE HOVER
 function initHover() {
-	if (mobile > w) {
-		$('#hover-box-mobile').show();
-	} else {
-		$('#hover-box-mobile').hide();
-	}
+	// if (mobile > w) {
+	// 	$('#hover-box-mobile').show();
+	// } else {
+	// 	$('#hover-box-mobile').hide();
+	// }
 	$(document).bind('mousemove', getPos);
 }
 
@@ -1354,6 +1354,15 @@ function writeHoverBox (feature,layer) {
 		}
 	}
 
+	$(window).resize(function() {
+		if (Modernizr.mq('(min-width: 768px)')) {
+			$('#hover-box-mobile').hide();
+			$('#hover-box').show();
+		} else {
+			$('#hover-box').hide();
+		}
+	}).resize();
+
 	schoolTable.show();
 
 	$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
@@ -1362,16 +1371,6 @@ function writeHoverBox (feature,layer) {
 
 	crimeRateButton.show();
 }
-
-$(window).resize(function() {
-	if (Modernizr.mq('(min-width: 768px)')) {
-		$('#hover-box-mobile').hide();
-		$('#hover-box').show();
-	} else {
-		$('#hover-box-mobile').show();
-		$('#hover-box').hide();
-	}
-}).resize();
 
 // EVENT FOR EACH ZIP LAYER
 function onEachFeature(feature, layer) {
@@ -1410,10 +1409,13 @@ function onEachFeature(feature, layer) {
 		// mousemove: function(e) {},
 
 		click: function(e) {
-			var query = Modernizr.mq('(max-width: 842px)');
+			var query = Modernizr.mq('(max-width: 768px)');
 
 			if (query) {
+				console.log('click');
+				$('#hover-box-mobile').show();
 				$('.schools-row').empty();
+				console.log('something else');
 				var mobile = 768;
 				var w = window.innerWidth;
 
