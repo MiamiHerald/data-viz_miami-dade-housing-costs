@@ -1861,7 +1861,7 @@ function buildHouseMap() {
 	$('#interface-container').slideDown('400');
 	$('#map-info').css('bottom', '26%');
 
-	d3.csv('http://media.miamiherald.com/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
+	d3.csv('http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
 
 		var count = 0;
 
