@@ -5,6 +5,7 @@
   font-size: $md;
   padding: 10px;
   transition: background-color 0.3s linear;
+  border-radius: 0px !important;
 
   &:hover {
     background-color: #aaa;

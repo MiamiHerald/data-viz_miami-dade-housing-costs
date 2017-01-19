@@ -7,6 +7,10 @@
 
 .map-info-container {
   margin-bottom: 30px;
+
+  @media (max-width: $screen-md) {
+    margin-bottom: 15px;
+  }
 }
 
 .hover-box-container {
@@ -32,7 +36,7 @@
     font-family: $sans-serif-condensed;
     text-transform: uppercase;
     display: inline-block;
-    padding: 5px 7px;
+    padding: 10px;
     cursor: pointer;
     font-size: $sm;
     border-top: 1px solid #CCC;
@@ -50,6 +54,11 @@
 
 .map-interface {
     background: #FFF;
+
+    ul {
+      text-align: center;
+      padding-left: 0;
+    }
 }
 
 .key-holder {
