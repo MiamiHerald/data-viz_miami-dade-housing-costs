@@ -10,6 +10,12 @@
             float: left;
             width: 100%;
             margin-bottom: 0;
+            cursor: pointer;
+            transition: background-color 0.3s linear;
+
+            &:hover {
+              background-color: #aaa;
+            }
             & span {
                 display: block;
                 font-size: $md;

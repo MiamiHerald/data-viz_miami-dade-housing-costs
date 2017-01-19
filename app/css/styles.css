@@ -547,7 +547,11 @@ footer {
     .button-container .check-button label {
       float: left;
       width: 100%;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      cursor: pointer;
+      transition: background-color 0.3s linear; }
+      .button-container .check-button label:hover {
+        background-color: #aaa; }
       .button-container .check-button label span {
         display: block;
         font-size: 18px;
