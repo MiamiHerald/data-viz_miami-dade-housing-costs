@@ -1,5 +1,5 @@
 .button-container {
-    margin-bottom: 0.25em;
+    margin-bottom: 30px;
     height: auto;
     .check-button {
         border-radius: 4px;
@@ -12,10 +12,10 @@
             margin-bottom: 0;
             & span {
                 display: block;
-                font-size: $sm;
+                font-size: $md;
                 font-family: $sans-serif-condensed;
                 line-height: 0px;
-                padding: 2rem;
+                padding: 10px;
             }
             & input {
                 display: none;
@@ -34,11 +34,11 @@
     line-height: 18px;
     font-family: $serif;
     background: whitesmoke;
-    padding: 5px 5px 0.15px 5px;
+    padding: 10px 10px 0.15px 5px;
     text-align: center;
     border-radius: 0.25em;
     .first-graf {
-        font-size: $base;
+        font-size: $md;
     }
     .income-only {
         font-size: $xxs;

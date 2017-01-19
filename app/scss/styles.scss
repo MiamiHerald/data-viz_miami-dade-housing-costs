@@ -8,13 +8,13 @@
 @import 'atoms/map';
 @import 'atoms/dotted-mobile-hr';
 @import 'atoms/buttons';
-@import 'atoms/input';
 
 @import 'molecules/footer';
 @import 'molecules/hover-box';
 
 @import 'organisms/button-container';
 @import 'organisms/map-container';
+@import 'organisms/input-container';
 
 .section:nth-child(2) {
     margin-top: 2em;

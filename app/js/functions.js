@@ -1412,10 +1412,8 @@ function onEachFeature(feature, layer) {
 			var query = Modernizr.mq('(max-width: 768px)');
 
 			if (query) {
-				console.log('click');
 				$('#hover-box-mobile').show();
 				$('.schools-row').empty();
-				console.log('something else');
 				var mobile = 768;
 				var w = window.innerWidth;
 

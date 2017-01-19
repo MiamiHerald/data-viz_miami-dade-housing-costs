@@ -43,7 +43,7 @@
         .neighborhoods {
             display: inline;
             font-family: $serif;
-            font-size: 11px;
+            font-size: $sm;
             color: $text-gray;
             font-weight: bold;
         }
@@ -57,6 +57,7 @@
         font-family: $serif;
         display: none;
         font-weight: bold;
+        font-size: $sm;
     }
     .float-left {
         float: left;
@@ -166,7 +167,7 @@
     .city,
     .state {
         font-family: $serif;
-        font-size: $base;
+        font-size: $md;
         font-weight: bold;
     }
 }

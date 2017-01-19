@@ -2,7 +2,13 @@
   font-family: $sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 16px !important;
+  font-size: $md;
+  padding: 10px;
+  transition: background-color 0.3s linear;
+
+  &:hover {
+    background-color: #aaa;
+  }
 }
 
 .reset-button-holder {
