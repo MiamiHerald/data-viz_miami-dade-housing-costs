@@ -60,34 +60,34 @@
 
 
 .font-xxl {
-  font-size: 36px; }
+  font-size: 36px !important; }
 
 
 .font-xl {
-  font-size: 28px; }
+  font-size: 28px !important; }
 
 
 .font-lg {
-  font-size: 22px; }
+  font-size: 22px !important; }
 
 
 .font-md {
-  font-size: 18px; }
+  font-size: 18px !important; }
 
 
 .font-base {
-  font-size: 16px; }
+  font-size: 16px !important; }
 
 
 .font-sm {
-  font-size: 14px; }
+  font-size: 14px !important; }
 
 
 .font-xs {
-  font-size: 12px; }
+  font-size: 12px !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif; }
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
 
 body, html {
   color: #282828;
@@ -98,27 +98,15 @@ body, html {
 
 .sig {
   font-weight: bold;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   text-transform: uppercase; }
-
-.navbar-collapse.collapse {
-  display: block !important; }
-
-.navbar-nav > li, .navbar-nav {
-  float: left !important; }
-
-.navbar-nav.navbar-right:last-child {
-  margin-right: 0px !important; }
-
-.navbar-right {
-  float: right !important; }
 
 .center {
   text-align: center; }
 
 .graphic-label {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-  font-size: 18px;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-size: 18px !important;
   color: #aa0000;
   display: block;
   font-weight: 900;
@@ -126,8 +114,8 @@ body, html {
   text-align: center; }
 
 .headline {
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-  font-size: 50px;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+  font-size: 50px !important;
   line-height: 1em;
   margin: 5px 0px;
   font-weight: 700;
@@ -136,31 +124,31 @@ body, html {
 
 .byline {
   display: table;
-  font-size: 14px;
+  font-size: 14px !important;
   display: block;
   text-align: center; }
   .byline .name {
     font-weight: bold;
     display: block;
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif; }
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
     .byline .name .upper {
       text-transform: uppercase; }
   .byline .email {
     display: inline-block;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif; }
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
     .byline .email:hover {
       text-decoration: underline; }
   .byline .date {
     display: block;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-    font-size: 12px;
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+    font-size: 12px !important;
     color: #666; }
 
 .readout {
   margin: 0.75em auto;
   display: block;
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-  font-size: 16px;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+  font-size: 16px !important;
   line-height: 1.4;
   text-align: center; }
   .readout a {
@@ -173,54 +161,54 @@ body, html {
     display: block;
     width: 100%; }
   .readout .photog {
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
     margin: 0.25em 0;
-    font-size: 12px;
+    font-size: 12px !important;
     color: #666;
     text-align: right;
     display: block;
     width: 100%; }
   .readout .caption {
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
     margin: 0.25em 0;
-    font-size: 14px;
+    font-size: 14px !important;
     color: #666;
     display: block; }
   .readout .double-photo img {
     border: 2px solid #ffffff; }
 
 .photog {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   margin: 0.25em 0 0 0;
-  font-size: 10px;
+  font-size: 10px !important;
   color: #666;
   text-align: right;
   display: block;
   width: 100%; }
 
 .caption {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   margin: 0.5em 0 0.5em 0;
-  font-size: 12px;
+  font-size: 12px !important;
   color: #666;
   display: block; }
 
 .subhed {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-  font-size: 22px;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-size: 22px !important;
   font-weight: bold;
   text-transform: uppercase;
   margin: 1em 0; }
 
 .tinyhed {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-  font-size: 18px;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-size: 18px !important;
   margin: 1em 0 0.5em 0; }
 
 .instructions {
   background: whitesmoke;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-  font-size: 14px;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-size: 14px !important;
   font-weight: 300;
   line-height: 1.3;
   padding: 1em;
@@ -233,8 +221,8 @@ hr {
   border-top: 1.5px dashed #ccc; }
 
 #sources {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-  font-size: 12px;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-size: 12px !important;
   clear: both;
   max-width: 485px;
   color: #9b9b9b;
@@ -258,16 +246,16 @@ hr {
     box-shadow: none; }
   .footer-list .footer-text {
     margin-right: 1em;
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 12px; }
+    font-size: 12px !important; }
 
 .button {
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   letter-spacing: .03rem;
   margin: 0 0 0.3em;
   text-align: center;
@@ -285,7 +273,7 @@ hr {
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   letter-spacing: .03rem;
   margin: 0 0 0.3em;
   text-align: center;
@@ -307,36 +295,36 @@ hr {
   .headline {
     font-size: 25px; }
   .subhed {
-    font-size: 16px; }
+    font-size: 16px !important; }
   .readout {
-    font-size: 14px; }
+    font-size: 14px !important; }
   .fa-facebook, .fa-twitter, .fa-google-plus {
-    font-size: 18px; } }
+    font-size: 18px !important; } }
 
 .headline {
   font-size: 25px;
   text-align: left; }
 
 .byline {
-  font-size: 12px;
+  font-size: 12px !important;
   text-align: left;
   line-height: 15px; }
   .byline .name a {
     color: #666; }
   .byline .date {
-    font-size: 12px; }
+    font-size: 12px !important; }
 
 .readout {
-  font-size: 18px;
+  font-size: 18px !important;
   text-align: left; }
 
 .graphic-label {
   text-align: left; }
 
 .question {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   font-weight: bold;
-  font-size: 16px; }
+  font-size: 16px !important; }
 
 .dollar-sign {
   font-size: 20px;
@@ -348,7 +336,7 @@ hr {
   display: none;
   margin: 1px auto;
   text-align: center;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   font-size: 12px !important; }
   .error .alert {
     padding: 2px !important; }
@@ -370,7 +358,7 @@ input.income {
   background: #F4F4F4;
   padding: 0 0.25em;
   font-size: 11px;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif; }
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
 
 .dotted-mobile {
   display: none; }
@@ -379,10 +367,10 @@ input.income {
       display: block; } }
 
 .btn {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 18px !important;
   padding: 10px;
   transition: background-color 0.3s linear;
   border-radius: 0px !important; }
@@ -396,7 +384,8 @@ footer {
   display: none; }
 
 .hover-box-mobile-container {
-  position: relative; }
+  position: relative;
+  margin-bottom: 30px; }
 
 .hover-box-container {
   background: #fff;
@@ -433,8 +422,8 @@ footer {
     line-height: 14px; }
     .hover-box-container .sub-info .neighborhoods {
       display: inline;
-      font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-      font-size: 14px;
+      font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+      font-size: 14px !important;
       color: #666;
       font-weight: bold; }
   .hover-box-container .crime-rate {
@@ -443,19 +432,19 @@ footer {
     margin-top: 2px;
     border-radius: 4px;
     color: #fff;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     display: none;
     font-weight: bold;
-    font-size: 14px; }
+    font-size: 14px !important; }
   .hover-box-container .float-left {
     float: left; }
   .hover-box-container .float-right {
     float: right; }
   .hover-box-container .housing-table {
     width: 100%;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif; }
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
     .hover-box-container .housing-table th {
-      font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+      font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
       text-transform: uppercase;
       color: #666;
       font-size: 10px; }
@@ -488,21 +477,21 @@ footer {
     width: 100%;
     border-bottom: 1px #ccc !important;
     border-bottom-style: dashed !important;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     font-size: 12px; }
     .hover-box-container .house-row:last-of-type {
       border: none; }
   .hover-box-container .school-list {
     height: auto;
     display: none;
-    font-size: 10px;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+    font-size: 10px !important;
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     clear: both;
     padding: 0px 5px 0px 5px; }
     .hover-box-container .school-list .school-table {
       width: 100%; }
       .hover-box-container .school-list .school-table th {
-        font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+        font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
         text-transform: uppercase;
         color: #666;
         width: 5px;
@@ -519,22 +508,22 @@ footer {
         border-bottom-style: dashed; }
   .hover-box-container .no-school {
     display: none;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-    font-size: 18px;
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+    font-size: 18px !important;
     color: #bbb;
     margin-bottom: 10px;
     text-align: center; }
   .hover-box-container .table-label {
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 10px !important;
     font-weight: bold;
     color: #666; }
   .hover-box-container .zip-code,
   .hover-box-container .city,
   .hover-box-container .state {
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-    font-size: 18px;
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+    font-size: 18px !important;
     font-weight: bold; }
 
 .button-container {
@@ -554,8 +543,8 @@ footer {
         background-color: #aaa; }
       .button-container .check-button label span {
         display: block;
-        font-size: 18px;
-        font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+        font-size: 18px !important;
+        font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
         line-height: 0px;
         padding: 10px; }
       .button-container .check-button label input {
@@ -566,17 +555,17 @@ footer {
 
 .explainer {
   display: none;
-  font-size: 14px;
+  font-size: 14px !important;
   line-height: 18px;
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
   background: whitesmoke;
   padding: 10px 10px 0.15px 5px;
   text-align: center;
   border-radius: 0.25em; }
   .explainer .first-graf {
-    font-size: 18px; }
+    font-size: 18px !important; }
   .explainer .income-only {
-    font-size: 10px;
+    font-size: 10px !important;
     font-style: italic;
     width: 85%;
     display: block;
@@ -593,8 +582,8 @@ footer {
     width: 100%;
     height: 30px;
     display: inline-block;
-    font-size: 16px;
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+    font-size: 16px !important;
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
     font-weight: bold; }
     .explainer .reset:hover {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
@@ -618,20 +607,20 @@ footer {
   text-align: center; }
 
 .hover-box-container .price-explainer {
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
-  font-size: 18px;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+  font-size: 18px !important;
   line-height: 18px; }
 
 .hover-box-container .percent-year {
   display: none; }
 
 .interface-selector {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   text-transform: uppercase;
   display: inline-block;
   padding: 10px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 14px !important;
   border-top: 1px solid #CCC;
   border-right: 1px solid #BBB;
   border-bottom: 1px solid #BBB;
@@ -654,8 +643,8 @@ footer {
   margin: 1em 0; }
 
 .labels .label {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif;
-  font-size: 10px;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-size: 10px !important;
   display: inline-block;
   padding: 0px;
   float: left;
@@ -683,14 +672,14 @@ footer {
   border: 5px solid; }
 
 .footer-list {
-  font-size: 10px !important;
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+  font-size: 10px !important !important;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
   margin-top: 2em; }
 
 .input-container .income-box {
-  font-size: 18px;
+  font-size: 18px !important;
   padding: 10px;
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
   border-radius: 0px; }
 
 .section:nth-child(2) {

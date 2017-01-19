@@ -6,23 +6,23 @@
 // ===========
 
 //FONT VARIABLES
-$sans-serif: 'McClatchy Sans', Georgia, Times, 'Times New Roman', sans-serif;
-$sans-serif-condensed: 'McClatchy Sans', Georgia, Times, 'Times New Roman', sans-serif;
-$serif: 'McClatchy Slab', Georgia, Times, 'Times New Roman', serif;
-$raleway: "Raleway", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+$sans-serif: 'McClatchy Sans', Georgia, Times, 'Times New Roman', sans-serif !important;
+$sans-serif-condensed: 'McClatchy Sans', Georgia, Times, 'Times New Roman', sans-serif !important;
+$serif: 'McClatchy Slab', Georgia, Times, 'Times New Roman', serif !important;
+$raleway: "Raleway", "Helvetica Nueue", Helvetica, Arial, sans-serif !important;
 
 //STANDARD FONT SIZES
-$base: 16px;
-$xxl: 36px;
-$xl: 28px;
-$lg: 22px;
-$md: 18px;
-$sm: 14px;
-$xs: 12px;
-$xxs: 10px;
+$base: 16px !important;
+$xxl: 36px !important;
+$xl: 28px !important;
+$lg: 22px !important;
+$md: 18px !important;
+$sm: 14px !important;
+$xs: 12px !important;
+$xxs: 10px !important;
 
 //CUSTOM SIZES
-$headline: 50px;
+$headline: 50px !important;
 
 //FONT SIZE CLASS MIXINS
 @mixin font-size($f, $pct:1) {
@@ -118,23 +118,6 @@ body,html {
 	font-weight: bold;
 	font-family: $sans-serif;
 	text-transform: uppercase;
-}
-
-
-.navbar-collapse.collapse {
-	display: block!important;
-}
-
-.navbar-nav>li, .navbar-nav {
-	float: left !important;
-}
-
-.navbar-nav.navbar-right:last-child {
-	margin-right: 0px !important;
-}
-
-.navbar-right {
-	float: right !important;
 }
 
 .center {
