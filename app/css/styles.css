@@ -380,9 +380,6 @@ input.income {
 .reset-button-holder {
   display: none; }
 
-footer {
-  display: none; }
-
 .hover-box-mobile-container {
   position: relative;
   margin-bottom: 30px; }
@@ -643,7 +640,8 @@ footer {
   background: #FFF; }
   .map-interface ul {
     text-align: center;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-left: 0; }
 
 .key-holder {
   clear: both;
