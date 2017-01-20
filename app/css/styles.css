@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body, html {
   color: #282828;
-  background-color: #ffffff; }
+  background-color: #FFFFFF; }
 
 .mobile-img {
   display: none; }
@@ -107,7 +107,7 @@ body, html {
 .graphic-label {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   font-size: 18px !important;
-  color: #aa0000;
+  color: #ED1941;
   display: block;
   font-weight: 900;
   text-transform: uppercase;
@@ -152,7 +152,7 @@ body, html {
   line-height: 1.4;
   text-align: center; }
   .readout a {
-    color: #aa0000; }
+    color: #ED1941; }
     .readout a:hover {
       cursor: pointer; }
   .readout .single-photo, .readout .double-photo {
@@ -175,7 +175,7 @@ body, html {
     color: #666;
     display: block; }
   .readout .double-photo img {
-    border: 2px solid #ffffff; }
+    border: 2px solid #FFFFFF; }
 
 .photog {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
@@ -261,12 +261,12 @@ hr {
   text-align: center;
   vertical-align: middle;
   transition: border-color .218s;
-  background: #006DBD;
-  color: #ffffff;
+  background: #008FD5;
+  color: #FFFFFF;
   border: 0px;
   padding: 7px 12px; }
   .button:active, .button:hover {
-    background-color: rgba(0, 109, 189, 0.7);
+    background-color: rgba(0, 143, 213, 0.7);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
 
 .ghost-button {
@@ -352,7 +352,7 @@ hr {
 
 input.income {
   font-weight: bold;
-  color: #2ca25f; }
+  color: #00AE4D; }
 
 .leaflet-bottom.leaflet-left {
   background: #F4F4F4;
@@ -368,12 +368,13 @@ input.income {
 
 .btn {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 18px !important;
   padding: 10px;
   transition: background-color 0.3s linear;
-  border-radius: 0px !important; }
+  border-radius: 0px !important;
+  border: solid 2px #008FD5;
+  color: #008FD5; }
   .btn:hover {
     background-color: #aaa; }
 
@@ -534,10 +535,16 @@ input.income {
 .button-container {
   margin-bottom: 30px;
   height: auto; }
+  .button-container .standfirst {
+    font-weight: bold; }
   .button-container .check-button {
-    border: 1px solid #D0D0D0;
+    color: #008FD5;
+    border: 2px solid #008FD5;
     overflow: hidden;
-    display: block; }
+    display: inline-block;
+    margin-right: 30px; }
+    .button-container .check-button:last-child {
+      margin-right: 0; }
     .button-container .check-button label {
       float: left;
       width: 100%;
@@ -560,22 +567,18 @@ input.income {
 
 .explainer {
   display: none;
-  font-size: 14px !important;
+  font-size: 18px !important;
   line-height: 18px;
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-  background: whitesmoke;
-  padding: 10px 10px 0.15px 5px;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   text-align: center;
   border-radius: 0.25em; }
   .explainer .first-graf {
     font-size: 18px !important; }
   .explainer .income-only {
-    font-size: 10px !important;
-    font-style: italic;
-    width: 85%;
+    font-size: 18px !important;
     display: block;
     margin: 0px auto;
-    line-height: 14px; }
+    margin-bottom: 15px; }
   .explainer .fa-level-down {
     display: none; }
   .explainer .reset {
@@ -626,15 +629,21 @@ input.income {
   padding: 10px;
   cursor: pointer;
   font-size: 14px !important;
-  border-top: 1px solid #CCC;
-  border-right: 1px solid #BBB;
-  border-bottom: 1px solid #BBB;
-  border-left: 1px solid #BBB;
-  font-weight: bold; }
+  border: 2px solid #A6A6A6;
+  font-weight: bold;
+  color: #A6A6A6; }
 
-.selected-interface {
-  background: #fff;
-  border-bottom: none; }
+.selected-interface--green {
+  background-color: #00AE4D; }
+
+.selected-interface--blue {
+  background-color: #25408F; }
+
+.selected-interface--red {
+  background-color: #ED1941; }
+
+.selected-interface--yellow {
+  background-color: #D1A10D; }
 
 .map-interface {
   background: #FFF; }
@@ -681,11 +690,37 @@ input.income {
   font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
   margin-top: 2em; }
 
-.input-container .income-box {
-  font-size: 18px !important;
-  padding: 10px;
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-  border-radius: 0px; }
+.input-container {
+  text-align: center; }
+  .input-container .income-standfirst {
+    font-size: 18px !important;
+    font-weight: bold;
+    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
+  .input-container .income-box {
+    font-size: 18px !important;
+    padding: 10px;
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+    border: none;
+    border-bottom: 2px solid #008FD5;
+    text-align: center; }
+    .input-container .income-box::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #008FD5;
+      font-weight: bold; }
+    .input-container .income-box:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #008FD5;
+      opacity: 1;
+      font-weight: bold; }
+    .input-container .income-box::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #008FD5;
+      opacity: 1;
+      font-weight: bold; }
+    .input-container .income-box:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #008FD5;
+      font-weight: bold; }
 
 .section:nth-child(2) {
   margin-top: 2em; }

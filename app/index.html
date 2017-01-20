@@ -50,52 +50,67 @@
 			<p class="readout">Skyrocketing real estate prices make finding an affordable home difficult for many South Floridians. This tool shows where you can afford a home and how school quality, safety and annual value growth compare. Here's how to use it:</p>
 
 			<div class="tool-list-container readout">
-				<span class='item'>
-					I'd like to by a...
-					<span class="check-button" id="check-button-house">
-						<label>
-							<input class='house' type="checkbox" ng-model="houseTypeChecked" value="1">
-							<span><i class="fa fa-home"></i> single-family home</span>
-						</label>
-					</span>
-					or
-					<span class="check-button" id="check-button-condo">
-						<label>
-							<input class='condo' type="checkbox" ng-model="houseTypeChecked" value="1">
-							<span><i class="fa fa-building"></i> condo/townhouse</span>
-						</label>
-					</span>
-				</span>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<span class='item'>
+							<div class="standfirst">
+								I'd like to by a...
+							</div>
+							<div class="input-group">
+								<span class="check-button" id="check-button-house">
+									<label>
+										<input class='house' type="checkbox" ng-model="houseTypeChecked" value="1">
+										<span><i class="fa fa-home"></i> single-family home</span>
+									</label>
+								</span>
+								<span class="check-button" id="check-button-condo">
+									<label>
+										<input class='condo' type="checkbox" ng-model="houseTypeChecked" value="1">
+										<span><i class="fa fa-building"></i> condo/townhouse</span>
+									</label>
+								</span>
+							</div>
+						</span>
+					</div>
+				</div>
 
-				<span ng-show="houseTypeChecked" class="item ng-hide">
-					Show ZIP codes I can afford based on...
-					<span class="check-button" id="check-button-income">
-						<label>
-							<input class='income' type="checkbox" ng-model="incomeTypeChecked" value="1">
-							<span><i class="fa fa-briefcase"></i> annual household income</span>
-						</label>
-					</span>
-					or
-					<span class="check-button" id="check-button-savings">
-				   	<label>
-					   	<input class='savings' type="checkbox" ng-model="incomeTypeChecked" value="1">
-					   	<span><i class="fa fa-money"></i> price</span>
-						</label>
-					</span>
-				</span>
-			</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<span ng-show="houseTypeChecked" class="item ng-hide">
+							<div class="standfirst">
+								Show ZIP codes I can afford based on...
+							</div>
+							<div class="input-group">
+								<span class="check-button" id="check-button-income">
+									<label>
+										<input class="income" type="checkbox" ng-model="incomeTypeChecked" value="1">
+										<span><i class="fa fa-briefcase"></i> annual household income</span>
+									</label>
+								</span>
+								<span class="check-button" id="check-button-savings">
+									<label>
+										<input class='savings' type="checkbox" ng-model="incomeTypeChecked" value="1">
+										<span><i class="fa fa-money"></i> price</span>
+									</label>
+								</span>
+							</div>
+						</span>
+					</div>
+				</div>
 
-			<div class="input-container ng-hide" id="input-container" ng-show="incomeTypeChecked">
-		    <div class="input-group input-group-lg">
-					<input name="income-box" class="income-box form-control input-lg" type="text" placeholder="$">
-		      <span class="input-group-btn">
-						<button class="income-button income-btn btn btn-default btn-lg" type="button" value="Execute">Submit</button>
-		      </span>
-		    </div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="input-container ng-hide" id="input-container" ng-show="incomeTypeChecked">
+							<div class="income-standfirst"></div>
+							<input name="income-box" class="income-box" type="text" placeholder="$">
+							<span class="input-group-btn">
+								<button class="income-button income-btn btn btn-default btn-lg" type="button" value="Execute"><i class="fa fa-search"></i> Show me the ZIPs!</button>
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-
-		<div class="clearfix"></div>
 
 		<div class="error">
 			<div class="alert alert-danger" role="alert">
@@ -103,8 +118,17 @@
 				<span class="sr-only">Error:</span> Enter a valid number
 			</div>
 		</div>
+	</div>
+</div>
 
-		<div class="clearfix"></div>
+<div class="container">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="row">
+			<div class="explainer">
+				<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
+				<p class='first-graf'>You can afford a <span class="housing"></span> in <span class="zip-count"></span> ZIP codes. <i class="fa fa-level-down"></i></p>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -117,9 +141,7 @@
 					<ul>
 						<li class="price-select interface-selector selected-interface">Value</li>
 						<li class="percent-select interface-selector">Value growth</li>
-
 						<li class="crime-select interface-selector">Crime</li>
-
 						<li class="school-select interface-selector">Schools</li>
 					</ul>
 
@@ -255,11 +277,6 @@
 							<span class="housing-explainer"></span>
 							<span class='percent-year'> since 2014.</span>
 						</p>
-					</div>
-					<div class="explainer">
-						<p class='first-graf'>You can afford a <span class="housing"></span> in <span class="zip-count"></span> ZIP codes. <i class="fa fa-level-down"></i>
-						</p>
-						<p class="income-only">Experts say you should, at most, spend three-and-a-half times your income when buying a home.</p>
 					</div>
 					<p class="readout">
 						<span class="hover-instructions">Hover over or click a ZIP code for more information.</span>

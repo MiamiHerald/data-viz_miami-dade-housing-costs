@@ -1,8 +1,37 @@
 .input-container {
+  text-align: center;
+
+  .income-standfirst {
+    font-size: $md;
+    font-weight: bold;
+    font-family: $sans-serif;
+  }
+
   .income-box {
     font-size: $md;
     padding: 10px;
     font-family: $serif;
-    border-radius: 0px;
+    border: none;
+    border-bottom: 2px solid $herald-blue;
+    text-align: center;
+
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: $herald-blue;
+      font-weight: bold;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $herald-blue;
+      opacity: 1;
+      font-weight: bold;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $herald-blue;
+      opacity: 1;
+      font-weight: bold;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $herald-blue;
+      font-weight: bold;
+    }
   }
 }

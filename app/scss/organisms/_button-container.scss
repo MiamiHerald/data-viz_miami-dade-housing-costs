@@ -1,10 +1,18 @@
 .button-container {
     margin-bottom: 30px;
     height: auto;
+    .standfirst {
+      font-weight: bold;
+    }
     .check-button {
-        border: 1px solid #D0D0D0;
+        color: $herald-blue;
+        border: 2px solid $herald-blue;
         overflow: hidden;
-        display: block;
+        display: inline-block;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
         & label {
             float: left;
             width: 100%;
@@ -35,23 +43,19 @@
 
 .explainer {
     display: none;
-    font-size: $sm;
+    font-size: $md;
     line-height: 18px;
-    font-family: $serif;
-    background: whitesmoke;
-    padding: 10px 10px 0.15px 5px;
+    font-family: $sans-serif;
     text-align: center;
     border-radius: 0.25em;
     .first-graf {
         font-size: $md;
     }
     .income-only {
-        font-size: $xxs;
-        font-style: italic;
-        width: 85%;
+        font-size: $md;
         display: block;
         margin: 0px auto;
-        line-height: 14px;
+        margin-bottom: 15px;
     }
     .fa-level-down {
         display: none;

@@ -1862,8 +1862,10 @@ function buildHouseMap() {
 	var incomeInput = $('.income-box').val();
 	var income = getIncome(incomeInput);
 
-	console.log(income);
+	console.log(income, incomeInput);
 
+	$('.income-ammount').html('$' + numeral(incomeInput).format('0,0'));
+	$('.income-spend').html('$' + numeral(income).format('0,0'));
 	$('.income-button').attr('disabled', 'disabled');
 	$('.price-select').addClass('selected-interface');
 	$('.percent-select').removeClass('selected-interface');
