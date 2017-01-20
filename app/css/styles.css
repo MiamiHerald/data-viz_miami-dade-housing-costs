@@ -595,7 +595,7 @@ footer {
   position: relative !important; }
 
 .map-info-container {
-  margin-bottom: 30px; }
+  margin-bottom: 60px; }
   @media (max-width: 992px) {
     .map-info-container {
       margin-bottom: 15px; } }
@@ -629,8 +629,7 @@ footer {
 
 .selected-interface {
   background: #fff;
-  border-bottom: none;
-  padding-bottom: 6px; }
+  border-bottom: none; }
 
 .map-interface {
   background: #FFF; }
