@@ -1891,7 +1891,7 @@ function buildHouseMap() {
 
 		console.log('Houses:' + count);
 
-		$('.housing').html('house');
+		$('.housing').html('single-family homes');
 		$('.zip-count').html(count);
 	});
 
@@ -1996,7 +1996,7 @@ function buildCondoMap() {
 
 		$('#interface-container').slideDown('400');
 		$('.income').html('$' + numeral(income).format('0,0'));
-		$('.housing').html('condo or townhome');
+		$('.housing').html('condo or townhouse');
 		$('.zip-count').html(count);
 
 		$('.money').html('$'+numeral(income).format('0,0'));

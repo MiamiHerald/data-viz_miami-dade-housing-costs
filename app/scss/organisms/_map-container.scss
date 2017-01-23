@@ -2,7 +2,10 @@
     width: 100%;
     height: 100vh;
     position: relative !important;
-    display: none;
+}
+
+#interface-container {
+  padding: 10px;
 }
 
 .map-info-container {
@@ -42,21 +45,27 @@
     border: 2px solid $grey;
     font-weight: bold;
     color: $grey;
+
+    &--green.selected-interface {
+      background-color: $green;
+    }
+
+    &--blue.selected-interface {
+      background-color: $blue;
+    }
+
+    &--red.selected-interface {
+      background-color: $red;
+    }
+
+    &--yellow.selected-interface {
+      background-color: $yellow;
+    }
 }
 
 .selected-interface {
-    &--green {
-      background-color: $green;
-    }
-    &--blue {
-      background-color: $blue;
-    }
-    &--red {
-      background-color: $red;
-    }
-    &--yellow {
-      background-color: $yellow;
-    }
+  border: none;
+  color: white;
 }
 
 .map-interface {

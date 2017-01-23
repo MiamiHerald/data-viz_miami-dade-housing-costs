@@ -11,19 +11,19 @@
 
 
 .hover-box-container {
-    &#hover-box {
-      @media (max-width: $screen-xs) {
-        width: 300px;
-        position: absolute;
-        display: none;
-        box-shadow: 0px 0px 10px #999;
-      }
-    }
-    &#hover-box-mobile {
-      width: 300px;
-      position: absolute;
-      display: none;
-    }
+    // &#hover-box {
+    //   @media (max-width: $screen-xs) {
+    //     width: 300px;
+    //     position: absolute;
+    //     display: none;
+    //     box-shadow: 0px 0px 10px #999;
+    //   }
+    // }
+    // &#hover-box-mobile {
+    //   width: 300px;
+    //   position: absolute;
+    //   display: none;
+    // }
     background: #fff;
     color: #000;
     padding: 10px;
