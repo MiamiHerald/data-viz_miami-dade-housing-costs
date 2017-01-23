@@ -10,189 +10,189 @@
 }
 
 .hover-box-container {
-    // &#hover-box {
-    //   @media (max-width: $screen-xs) {
-    //     width: 300px;
-    //     position: absolute;
-    //     display: none;
-    //     box-shadow: 0px 0px 10px #999;
-    //   }
-    // }
-    // &#hover-box-mobile {
-    //   width: 300px;
-    //   position: absolute;
-    //   display: none;
-    // }
-    background: #fff;
-    color: #000;
-    padding: 10px;
-    @media(max-width: $screen-md) {
-      padding-top: 30px;
-    }
-    z-index: 9999;
-    height: auto;
-    .close-button-wrapper {
-      display: none;
-      padding: 0;
-      cursor: pointer;
-      @media (max-width: $screen-xs) {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 0px;
-      }
-
-      img {
-        width: 15px;
-        height: 15px;
-      }
-    }
-    .mobile-readout {
+  // &#hover-box {
+  //   @media (max-width: $screen-xs) {
+  //     width: 300px;
+  //     position: absolute;
+  //     display: none;
+  //     box-shadow: 0px 0px 10px #999;
+  //   }
+  // }
+  // &#hover-box-mobile {
+  //   width: 300px;
+  //   position: absolute;
+  //   display: none;
+  // }
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  @media(max-width: $screen-md) {
+    padding-top: 30px;
+  }
+  z-index: 9999;
+  height: auto;
+  .close-button-wrapper {
+    display: none;
+    padding: 0;
+    cursor: pointer;
+    @media (max-width: $screen-xs) {
       display: block;
-      @media (max-width: $screen-xs) {
-        display: none;
-      }
+      position: absolute;
+      top: 10px;
+      right: 0px;
     }
-    .sub-info {
-      .neighborhoods {
-        display: inline;
-        font-family: $serif;
-        font-size: $md;
-        line-height: 1.25;
-      }
+
+    img {
+      width: 15px;
+      height: 15px;
     }
-    .crime-rate {
-      float: right;
-      padding: 2px 4px;
-      margin-top: 2px;
-      border-radius: 4px;
-      color: #fff;
-      font-family: $serif;
+  }
+  .mobile-readout {
+    display: block;
+    @media (max-width: $screen-xs) {
       display: none;
-      font-weight: bold;
-      font-size: $sm;
     }
-    .housing-heading {
-      font-size: $md;
+  }
+  .sub-info {
+    .neighborhoods {
+      display: inline;
       font-family: $serif;
-      font-weight: bold;
+      font-size: $md;
+      line-height: 1.25;
+    }
+  }
+  .crime-rate {
+    float: right;
+    padding: 2px 4px;
+    margin-top: 2px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: $serif;
+    display: none;
+    font-weight: bold;
+    font-size: $sm;
+  }
+  .housing-heading {
+    font-size: $md;
+    font-family: $serif;
+    font-weight: bold;
 
-      & span {
-        font-weight: normal;
-      }
+    & span {
+      font-weight: normal;
     }
-    .housing-table {
-      text-align: center;
-    }
-    .housing-item {
-      display: inline-block;
-      padding: 10px;
-      margin-bottom: 15px;
+  }
+  .housing-table {
+    text-align: center;
+  }
+  .housing-item {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 15px;
 
-      &--year {
-        background-color: #E8F4E8;
-        border-right: solid 3px white;
-      }
+    &--year {
+      background-color: #E8F4E8;
+      border-right: solid 3px white;
+    }
 
-      &--growth {
-        background-color: #E1E1EE;
-      }
+    &--growth {
+      background-color: #E1E1EE;
     }
-    .housing-year {
-      color: $green;
-    }
-    .housing-growth {
+  }
+  .housing-year {
+    color: $green;
+  }
+  .housing-growth {
+    color: $blue;
+  }
+  .housing-year,
+  .housing-growth {
+    font-size: $md;
+  }
+  .housing-number {
+    font-family: $serif;
+    font-size: $lg;
+    font-weight: bold;
+
+    &.house-percent,
+    &.condo-percent {
       color: $blue;
     }
-    .housing-year,
-    .housing-growth {
-      font-size: $md;
+
+    &--green {
+      color: $green;
     }
-    .housing-number {
-      font-family: $serif;
-      font-size: $lg;
-      font-weight: bold;
 
-      &.house-percent,
-      &.condo-percent {
-        color: $blue;
-      }
-
-      &--green {
-        color: $green;
-      }
-
-      &--blue {
-        color: $blue;
-      }
+    &--blue {
+      color: $blue;
     }
-    .school-list {
-        display: none;
-        font-size: $xxs;
-        font-family: $serif;
-        margin-bottom: 15px;
-        .school-table {
-          width: 100%;
-          th {
-            font-family: $sans-serif;
-            color: $yellow;
-            font-size: $md;
-            text-align: center;
-            padding-top: 2.5px;
-            font-weight: normal;
-
-            &.name {
-              font-weight: bold;
-              font-family: $serif;
-            }
-          }
-          .name {
-            text-align: left;
-            color: black;
-            font-size: $md;
-          }
-          .grade {
-            font-size: $md;
-            font-weight: bold;
-            color: $yellow;
-          }
-          td {
-            text-align: center;
-            padding: 5px;
-          }
-          .schools-row {
-            &:nth-child(even) {
-              background-color: #F9F0DF;
-            }
-          }
-        }
-    }
-    .no-school {
-        display: none;
-        font-family: $serif;
+  }
+  .school-list {
+    display: none;
+    font-size: $xxs;
+    font-family: $serif;
+    margin-bottom: 15px;
+    .school-table {
+      width: 100%;
+      th {
+        font-family: $sans-serif;
+        color: $yellow;
         font-size: $md;
-        color: #bbb;
-        margin-bottom: 10px;
         text-align: center;
-    }
-    .table-label {
-        font-family: $sans-serif-condensed;
-        text-transform: uppercase;
-        font-size: $xxs;
-        font-weight: bold;
-        color: $text-gray;
-    }
-    .zip-code,
-    .city,
-    .state,
-    .parentheses {
-        font-family: $serif;
-        font-size: $lg;
-        font-weight: bold;
-    }
+        padding-top: 2.5px;
+        font-weight: normal;
 
-    .zip-code-heading,
-    .neighborhood-heading {
-        margin-bottom: 15px;
+        &.name {
+          font-weight: bold;
+          font-family: $serif;
+        }
+      }
+      .name {
+        text-align: left;
+        color: black;
+        font-size: $md;
+      }
+      .grade {
+        font-size: $md;
+        font-weight: bold;
+        color: $yellow;
+      }
+      td {
+        text-align: center;
+        padding: 5px;
+      }
+      .schools-row {
+        &:nth-child(even) {
+          background-color: #F9F0DF;
+        }
+      }
     }
+  }
+  .no-school {
+    display: none;
+    font-family: $serif;
+    font-size: $md;
+    color: #bbb;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .table-label {
+    font-family: $sans-serif-condensed;
+    text-transform: uppercase;
+    font-size: $xxs;
+    font-weight: bold;
+    color: $text-gray;
+  }
+  .zip-code,
+  .city,
+  .state,
+  .parentheses {
+    font-family: $serif;
+    font-size: $lg;
+    font-weight: bold;
+  }
+
+  .zip-code-heading,
+  .neighborhood-heading {
+    margin-bottom: 15px;
+  }
 }

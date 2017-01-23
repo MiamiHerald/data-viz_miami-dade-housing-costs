@@ -1,7 +1,7 @@
 .dotted-mobile {
-    display: none;
+  display: none;
 
-    @media (max-width: $small-display) {
-      display: block;
-    }
+  @media (max-width: $small-display) {
+    display: block;
+  }
 }

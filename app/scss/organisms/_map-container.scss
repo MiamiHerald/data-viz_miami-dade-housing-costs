@@ -1,7 +1,7 @@
 #map-container {
-    width: 100%;
-    height: 100vh;
-    position: relative !important;
+  width: 100%;
+  height: 100vh;
+  position: relative !important;
 }
 
 #interface-container {
@@ -17,50 +17,50 @@
 }
 
 .hover-box-container {
-    ul {
-      padding-left: 0;
-      margin: 0 auto;
-      width: 100%;
-      text-align: center;
-    }
+  ul {
+    padding-left: 0;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
 
-    .price-explainer {
-        font-family: $serif;
-        font-size: $md;
-        line-height: 18px;
-    }
+  .price-explainer {
+    font-family: $serif;
+    font-size: $md;
+    line-height: 18px;
+  }
 
-    .percent-year {
-        display: none;
-    }
+  .percent-year {
+    display: none;
+  }
 }
 
 .interface-selector {
-    font-family: $sans-serif-condensed;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 10px;
-    cursor: pointer;
-    font-size: $sm;
-    border: 2px solid $grey;
-    font-weight: bold;
-    color: $grey;
+  font-family: $sans-serif-condensed;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  font-size: $sm;
+  border: 2px solid $grey;
+  font-weight: bold;
+  color: $grey;
 
-    &--green.selected-interface {
-      background-color: $green;
-    }
+  &--green.selected-interface {
+    background-color: $green;
+  }
 
-    &--blue.selected-interface {
-      background-color: $blue;
-    }
+  &--blue.selected-interface {
+    background-color: $blue;
+  }
 
-    &--red.selected-interface {
-      background-color: $red;
-    }
+  &--red.selected-interface {
+    background-color: $red;
+  }
 
-    &--yellow.selected-interface {
-      background-color: $yellow;
-    }
+  &--yellow.selected-interface {
+    background-color: $yellow;
+  }
 }
 
 .selected-interface {
@@ -69,58 +69,58 @@
 }
 
 .map-interface {
-    background: #FFF;
+  background: #FFF;
 
-    ul {
-      text-align: center;
-      padding-left: 0;
-      margin-left: 0;
-    }
+  ul {
+    text-align: center;
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
 
 .key-holder {
-    clear: both;
-    margin: 1em 0;
+  clear: both;
+  margin: 1em 0;
 }
 
 .labels {
-    .label {
-        font-family: $sans-serif-condensed;
-        font-size: $xxs;
-        display: inline-block;
-        padding: 0px;
-        float: left;
-        text-transform: uppercase;
-        color: #aaa;
-        margin: 0.5em 0;
-        &:nth-child(1) {
-            text-align: left;
-            width: 50%;
-        }
-        &:last-of-type {
-            text-align: right;
-            width: 50%;
-        }
-        &-middle {
-            text-align: center;
-            width: 33%;
-            display: none;
-        }
+  .label {
+    font-family: $sans-serif-condensed;
+    font-size: $xxs;
+    display: inline-block;
+    padding: 0px;
+    float: left;
+    text-transform: uppercase;
+    color: #aaa;
+    margin: 0.5em 0;
+    &:nth-child(1) {
+        text-align: left;
+        width: 50%;
     }
-    .b-grade,
-    .d-grade {
+    &:last-of-type {
+        text-align: right;
+        width: 50%;
+    }
+    &-middle {
+        text-align: center;
+        width: 33%;
         display: none;
     }
+  }
+  .b-grade,
+  .d-grade {
+    display: none;
+  }
 }
 
 .legend-block {
-    width: 25%;
-    float: left;
-    border: 10px solid;
+  width: 25%;
+  float: left;
+  border: 10px solid;
 }
 
 .footer-list {
-    font-size: $xxs !important;
-    font-family: $serif;
-    margin-top: 2em;
+  font-size: $xxs !important;
+  font-family: $serif;
+  margin-top: 2em;
 }

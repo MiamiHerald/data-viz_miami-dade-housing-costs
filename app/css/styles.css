@@ -569,8 +569,6 @@ input.income {
     margin: 0px auto;
     margin-bottom: 15px;
     line-height: 1.5; }
-  .explainer .fa-level-down {
-    display: none; }
 
 #map-container {
   width: 100%;
@@ -703,6 +701,3 @@ input.income {
 
 .results-outer {
   margin-bottom: 30px; }
-
-.section:nth-child(2) {
-  margin-top: 2em; }

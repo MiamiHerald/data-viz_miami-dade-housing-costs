@@ -40,7 +40,7 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-8 col-md-offset-2">
 							<span ng-show="houseTypeChecked" class="item ng-hide">
 								<div class="standfirst">
 									Show ZIP codes I can afford based on...
@@ -58,10 +58,10 @@
 											<span><i class="fa fa-money"></i> Max price</span>
 										</label>
 									</span>
-									<span class="check-button" id="check-button-all">
+									<span class="check-button" id="check-button-all" ng-click="mapIt = true">
 										<label>
 											<input class='savings' type="checkbox" ng-model="incomeTypeChecked" value="1">
-											<span><i class="fa fa-check-circle"></i> Max price</span>
+											<span><i class="fa fa-check-circle"></i> Show them all</span>
 										</label>
 									</span>
 								</div>
@@ -109,86 +109,86 @@
 				<div class="col-xs-12 col-md-6 hover-box-mobile-container">
 					<div id="map-container"></div>
 					<div class="hover-box-container" id="hover-box-mobile">
-						<div class="results-container">
-							<div class="price-explainer">
-								<p>
-									<span class="housing-type"></span>
-									<span class="housing-explainer"></span>
-									<span class='percent-year'> since 2014.</span>
-								</p>
-							</div>
-							<div class="explainer">
-								<p class='first-graf'>You can afford a <span class="housing"></span> in <span class="zip-count"></span> ZIP codes. <i class="fa fa-level-down"></i>
-								</p>
-								<p class="income-only">Experts say you should, at most, spend three-and-a-half times your income when buying a home.</p>
-							</div>
-							<p class="readout">
-								<span class="hover-instructions">Hover over or click on a ZIP code for more information.</span>
-							</p>
+						<div class="row zip-code-heading">
+							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
+							<span class="crime-rate">
+								<span class="crime-level"></span>
+							</span>
 						</div>
-						<span class="city"></span><span class="state"> – </span><span class="zip-code"></span>
-						<span class="crime-rate">
-							<span class="crime-level"></span>
-						</span>
 
-						<div class="sub-info">
-							<span class='neighborhoods'>Neighborhoods include:
-								<span class="hoods"></span></span>
+						<div class="row neighborhood-heading">
+							<div class="sub-info">
+								<span class='neighborhoods'>Neighborhoods include:
+									<span class="hoods"></span></span>
+							</div>
 						</div>
-						<div class="clearfix"></div>
 
 						<div id="house-price">
+							<div class="row housing-heading">
+								Median value <span>(December)</span>
+							</div>
+							<div class="row housing-table">
+								<div class="housing-item housing-item--year col-xs-4">
+									<div class="housing-year">
+										2014
+									</div>
+									<div class="housing-number house-price-fourteen">
 
-							<table class='housing-table'>
-								<tr>
-									<th>Year</th>
-									<th>Median Home</th>
-								</tr>
-								<tr>
-									<td>2014</td>
-									<td class="house-price-fourteen"></td>
-								</tr>
-								<tr>
-									<td>2015</td>
-									<td class="house-price-fifteen"></td>
-								</tr>
-								<tr>
-									<td>% change</td>
-									<td class="house-percent"></td>
-								</tr>
+									</div>
+								</div>
+								<div class="housing-item housing-item--year col-xs-4">
+									<div class="housing-year">
+										2015
+									</div>
+									<div class="housing-number house-price-fifteen">
 
-							</table>
+									</div>
+								</div>
+								<div class="housing-item housing-item--growth col-xs-4">
+									<div class="housing-growth">
+										Growth
+									</div>
+									<div class="housing-number house-percent">
 
+									</div>
+								</div>
+							</div>
 						</div>
+
 						<div id="condo-price">
-							<table class='housing-table'>
-								<tr>
-									<th>Year</th>
-									<th>Median Condo</th>
-								</tr>
-								<tr>
-									<td>2014</td>
-									<td class="condo-price-fourteen"></td>
-								</tr>
-								<tr>
-									<td>2015</td>
-									<td class="condo-price-fifteen"></td>
-								</tr>
+							<div class="row housing-heading">
+								Median value <span>(December)</span>
+							</div>
+							<div class="row housing-table">
+								<div class="housing-item housing-item--year col-xs-4">
+									<div class="housing-year">
+										2014
+									</div>
+									<div class="housing-number condo-price-fourteen">
 
-								<tr>
-									<td>% change</td>
-									<td class="condo-percent"></td>
-								</tr>
+									</div>
+								</div>
+								<div class="housing-item housing-item--year col-xs-4">
+									<div class="housing-year">
+										2015
+									</div>
+									<div class="housing-number condo-price-fifteen">
 
-							</table>
+									</div>
+								</div>
+								<div class="housing-item housing-item--growth col-xs-4">
+									<div class="housing-growth">
+										Growth
+									</div>
+									<div class="housing-number condo-percent"></div>
+								</div>
+							</div>
 						</div>
 
-						<div class="clearfix"></div>
 						<div class="school-list">
-
 							<table class='school-table'>
 								<tr class='school-head'>
-									<th class='name'>School</th>
+									<th class='name'>School grade</th>
 									<th>2014-15</th>
 									<th>2013-14</th>
 									<th>2012-13</th>
@@ -196,17 +196,6 @@
 							</table>
 							<h4 class="no-school">No school data</h4>
 						</div>
-
-						<div class="close-button-wrapper">
-							<img class="hover-box-close" src="img/close-button.png" alt=""></img>
-						</div>
-
-						<div class="mobile-readout">
-							<p class="readout">
-								There are <span class="school-number"></span> in this ZIP code with an average grade, determined by the Florida Department of Education, of <span class="average-grade"></span>.
-							</p>
-						</div>
-
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-6 hover-box-desktop-container">
