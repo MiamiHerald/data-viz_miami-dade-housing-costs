@@ -1229,13 +1229,13 @@ function writeHoverBox (feature,layer) {
 	if (housePriceFourteen === 'No data') {
 		$('.house-price-fourteen').css('color', '#ccc');
 	} else {
-		$('.house-price-fourteen').css('color', 'black');
+		$('.house-price-fourteen').css('color', '#00AE4D');
 	}
 	// CHANGE HOUSE 2015 COLOR
 	if (housePriceFifteen === 'No data') {
 		$('.house-price-fifteen').css('color', '#ccc');
 	} else {
-		$('.house-price-fifteen').css('color', 'black');
+		$('.house-price-fifteen').css('color', '#00AE4D');
 	}
 	// CHANGE CONDO PERCENT COLOR
 	if (condoPercent > 0) {
@@ -1247,15 +1247,20 @@ function writeHoverBox (feature,layer) {
 	} else {
 		$('.condo-percent').css('color', '#ccc');
 	}
-	// CHANGE CONDO PERCENT COLOR
+	// CHANGE HOUSE PERCENT COLOR
 	if (housePercent > 0) {
-		$('.house-percent').css('color', 'green');
+		$('.house-percent').css('color', '#25408F');
+		$('.housing-growth').css('color', '#25408F');
+		$('.housing-item--growth').css('background-color', '#E1E1EE');
 	} else if (housePercent < 0) {
-		$('.house-percent').css('color', 'red');
+		$('.house-percent').css('color', '#ED1941');
+		$('.housing-growth').css('color', '#ED1941');
 	} else if (housePercent === 0) {
 		$('.house-percent').css('color', 'black');
+		$('.house-growth').css('color', 'black');
 	} else {
 		$('.house-percent').css('color', '#ccc');
+		$('.house-growth').css('color', '#ccc');
 	}
 
 	// WRITE DATA FROM GEOJSON FILE

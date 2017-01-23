@@ -441,30 +441,25 @@ input.income {
   .hover-box-container .float-right {
     float: right; }
   .hover-box-container .housing-table {
-    width: 100%;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
-    .hover-box-container .housing-table th {
-      font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
-      text-transform: uppercase;
-      color: #666;
-      font-size: 10px; }
-      .hover-box-container .housing-table th:nth-child(2) {
-        text-align: right; }
-    .hover-box-container .housing-table tr {
-      border-bottom: 1px #ccc;
-      border-bottom-style: dashed; }
-      .hover-box-container .housing-table tr:first-of-type, .hover-box-container .housing-table tr:last-of-type {
-        border: none; }
-    .hover-box-container .housing-table td {
-      width: 50%; }
-      .hover-box-container .housing-table td:nth-child(2) {
-        text-align: right; }
-  .hover-box-container #house-price {
-    border-right: 1px dashed #ccc;
-    height: 80px;
-    width: 50%;
-    padding: 2.5px 5px 0px 5px;
-    float: left; }
+    text-align: center; }
+  .hover-box-container .housing-item {
+    display: inline-block;
+    padding: 10px; }
+    .hover-box-container .housing-item--year {
+      background-color: #E8F4E8; }
+  .hover-box-container .housing-year {
+    color: #00AE4D; }
+  .hover-box-container .housing-year,
+  .hover-box-container .housing-growth {
+    font-size: 18px !important; }
+  .hover-box-container .housing-number {
+    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+    font-size: 22px !important;
+    font-weight: bold; }
+    .hover-box-container .housing-number--green {
+      color: #00AE4D; }
+    .hover-box-container .housing-number--blue {
+      color: #25408F; }
   .hover-box-container #condo-price {
     border-right: none;
     height: 80px;
