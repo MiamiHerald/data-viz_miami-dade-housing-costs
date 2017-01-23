@@ -4,7 +4,6 @@
 
 <div class="container" ng-app="housingApp">
 	<div class="map-info-container" id="map-info" ng-controller="HousingFormController">
-		<span class="graphic-label">{$ COPY.label $}</span>
 		<div class="headline">What will your money buy?</div>
 		<div class="byline">
 			<span class="name">By <span class="upper"><a href="mailto:calcantara@miamiherald.com">{$ COPY.reporter_name $}</a></span>, <span class="upper"><a href="mailto:nnehamas@miamiherald.com">{$ COPY.reporter_name_two $}</a></span> and <span class="upper"><a href="mailto:cwilliams@miamiherald.com">{$ COPY.reporter_name_three $}</a></span></span>
@@ -100,37 +99,6 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-md-6 hover-box-mobile-container">
-			<div id="interface-container">
-
-				<div class="map-interface">
-					<ul>
-						<li class="price-select interface-selector selected-interface">Value</li>
-						<li class="percent-select interface-selector">Value growth</li>
-						<li class="crime-select interface-selector">Crime</li>
-						<li class="school-select interface-selector">Schools</li>
-					</ul>
-
-					<div class="key-holder">
-
-						<div class="key"></div>
-
-						<div class="clearfix"></div>
-						<div class="labels">
-
-							<h6 class="label label-left"></h6>
-
-							<h6 class="label b-grade"></h6>
-
-							<h6 class="label label-middle"></h6>
-
-							<h6 class="label d-grade"></h6>
-
-							<h6 class="label label-right"></h6>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
 			<div id="map-container"></div>
 			<div class="hover-box-container" id="hover-box-mobile">
 				<div class="results-container">
@@ -233,8 +201,33 @@
 
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-6">
+		<div class="col-xs-12 col-md-6 hover-box-desktop-container">
 			<div class="hover-box-container" id="hover-box">
+				<div id="interface-container">
+					<div class="map-interface">
+						<ul>
+							<li class="price-select interface-selector selected-interface">Value</li>
+							<li class="percent-select interface-selector">Value growth</li>
+							<li class="crime-select interface-selector">Crime</li>
+							<li class="school-select interface-selector">Schools</li>
+						</ul>
+
+						<div class="key-holder">
+							<div class="key"></div>
+							<div class="clearfix"></div>
+							<div class="labels">
+								<h6 class="label label-left"></h6>
+								<h6 class="label b-grade"></h6>
+								<h6 class="label label-middle"></h6>
+								<h6 class="label d-grade"></h6>
+								<h6 class="label label-right"></h6>
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
 				<div class="results-container">
 					<div class="price-explainer">
 						<p>
@@ -287,10 +280,12 @@
 							<th>Year</th>
 							<th>Median Condo</th>
 						</tr>
+
 						<tr>
 							<td>2014</td>
 							<td class="condo-price-fourteen"></td>
 						</tr>
+
 						<tr>
 							<td>2015</td>
 							<td class="condo-price-fifteen"></td>
@@ -300,13 +295,10 @@
 							<td>% change</td>
 							<td class="condo-percent"></td>
 						</tr>
-
 					</table>
 				</div>
 
-				<div class="clearfix"></div>
 				<div class="school-list">
-
 					<table class='school-table'>
 						<tr class='school-head'>
 							<th class='name'>School</th>

@@ -1146,7 +1146,7 @@ function showExplainer() {
 		.find('span')
 		.each(function() {
 			$(this).css({
-				'color': '#006d2c',
+				'color': '#008FD5',
 				'font-weight': 'bold'
 			});
 		});

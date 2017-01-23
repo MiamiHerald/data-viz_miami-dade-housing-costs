@@ -1,7 +1,14 @@
-.hover-box-mobile-container {
+.hover-box-mobile-container,
+.hover-box-desktop-container {
   position: relative;
   margin-bottom: 30px;
 }
+
+#hover-box-mobile,
+#hover-box {
+  display: none;
+}
+
 
 .hover-box-container {
     &#hover-box {

@@ -347,7 +347,7 @@ hr {
   padding-left: 0px; }
   .tool-list-container .item {
     display: block;
-    margin: 0.5em 0px;
+    margin: 0 0 20px 0px;
     text-align: center; }
 
 input.income {
@@ -381,9 +381,14 @@ input.income {
 .reset-button-holder {
   display: none; }
 
-.hover-box-mobile-container {
+.hover-box-mobile-container,
+.hover-box-desktop-container {
   position: relative;
   margin-bottom: 30px; }
+
+#hover-box-mobile,
+#hover-box {
+  display: none; }
 
 .hover-box-container {
   background: #fff;
@@ -536,7 +541,8 @@ input.income {
   margin-bottom: 30px;
   height: auto; }
   .button-container .standfirst {
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 10px; }
   .button-container .check-button {
     color: #008FD5;
     border: 2px solid #008FD5;
@@ -578,7 +584,8 @@ input.income {
     font-size: 18px !important;
     display: block;
     margin: 0px auto;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    line-height: 1.5; }
   .explainer .fa-level-down {
     display: none; }
   .explainer .reset {
@@ -599,8 +606,8 @@ input.income {
 #map-container {
   width: 100%;
   height: 100vh;
-  display: block;
-  position: relative !important; }
+  position: relative !important;
+  display: none; }
 
 .map-info-container {
   margin-bottom: 20px; }
@@ -683,7 +690,7 @@ input.income {
 .legend-block {
   width: 25%;
   float: left;
-  border: 5px solid; }
+  border: 10px solid; }
 
 .footer-list {
   font-size: 10px !important !important;
@@ -702,7 +709,8 @@ input.income {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     border: none;
     border-bottom: 2px solid #008FD5;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 20px; }
     .input-container .income-box::-webkit-input-placeholder {
       /* WebKit, Blink, Edge */
       color: #008FD5;

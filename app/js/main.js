@@ -254,8 +254,7 @@
 	// WHEN EVERYTHING IS GOOD TO GO...
 	// RUN MAP-BUILDING FUNCTIONS
 	$('#input-container').on('click touchstart', '.income-button', function() {
-
-		$('.map-interface').slideDown('400');
+		$('#map-container').slideDown('400');
 
 		var incomeInput = $('.income-box').val();
 

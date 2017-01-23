@@ -3,6 +3,7 @@
     height: auto;
     .standfirst {
       font-weight: bold;
+      margin-bottom: 10px;
     }
     .check-button {
         color: $herald-blue;
@@ -56,6 +57,7 @@
         display: block;
         margin: 0px auto;
         margin-bottom: 15px;
+        line-height: 1.5;
     }
     .fa-level-down {
         display: none;
