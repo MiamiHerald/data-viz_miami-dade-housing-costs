@@ -133,7 +133,7 @@
 						<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
 						<p class="first-graf">There are <span class="zip-count"></span> <span>ZIP codes</span> in Miami-Dade and Broward counties with <span class="housing"></span> you can afford.</p>
 						<button class="btn btn-default btn-lg" type="button" ng-click="mapIt = true"><i class="fa fa-map-signs"></i> Map It!</button>
-						<button class="btn btn-default btn-lg" type="button"><i class="fa fa-pencil"></i> Edit search</button>
+						<button class="reset btn btn-default btn-lg" type="button" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil"></i> Edit search</button>
 					</div>
 				</div>
 			</div>
@@ -289,7 +289,9 @@
 						</div>
 
 						<div id="house-price">
-
+							<div class="row housing-heading">
+								Median value <span>(December)</span>
+							</div>
 							<div class="row housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
 									<div class="housing-year">
@@ -316,72 +318,48 @@
 									</div>
 								</div>
 							</div>
-
-							<!-- <table class='housing-table'>
-								<tr>
-									<th>Year</th>
-									<th>Median Home</th>
-								</tr>
-								<tr>
-									<td>2014</td>
-									<td class="house-price-fourteen"></td>
-								</tr>
-								<tr>
-									<td>2015</td>
-									<td class="house-price-fifteen"></td>
-								</tr>
-								<tr>
-									<td>% change</td>
-									<td class="house-percent"></td>
-								</tr>
-
-							</table>
-
 						</div>
+
 						<div id="condo-price">
-							<table class='housing-table'>
-								<tr>
-									<th>Year</th>
-									<th>Median Condo</th>
-								</tr>
+							<div class="row housing-heading">
+								Median value <span>(December)</span>
+							</div>
+							<div class="row housing-table">
+								<div class="housing-item housing-item--year col-xs-4">
+									<div class="housing-year">
+										2014
+									</div>
+									<div class="housing-number condo-price-fourteen">
 
-								<tr>
-									<td>2014</td>
-									<td class="condo-price-fourteen"></td>
-								</tr>
+									</div>
+								</div>
+								<div class="housing-item housing-item--year col-xs-4">
+									<div class="housing-year">
+										2015
+									</div>
+									<div class="housing-number condo-price-fifteen">
 
-								<tr>
-									<td>2015</td>
-									<td class="condo-price-fifteen"></td>
-								</tr>
-
-								<tr>
-									<td>% change</td>
-									<td class="condo-percent"></td>
-								</tr>
-							</table>
-						</div> -->
+									</div>
+								</div>
+								<div class="housing-item housing-item--growth col-xs-4">
+									<div class="housing-growth">
+										Growth
+									</div>
+									<div class="housing-number condo-percent"></div>
+								</div>
+							</div>
+						</div>
 
 						<div class="school-list">
 							<table class='school-table'>
 								<tr class='school-head'>
-									<th class='name'>School</th>
+									<th class='name'>School grade</th>
 									<th>2014-15</th>
 									<th>2013-14</th>
 									<th>2012-13</th>
 								</tr>
 							</table>
 							<h4 class="no-school">No school data</h4>
-						</div>
-
-						<div class="mobile-readout">
-							<p class="readout">
-								There are <span class="school-number"></span> in this ZIP code with an average grade, determined by the Florida Department of Education, of <span class="average-grade"></span>.
-							</p>
-
-						</div>
-						<div class="reset-button-holder">
-							<button class="reset income-btn btn btn-default btn-lg" type="button" value="Reset" ng-click="mapIt = false">Reset</button>
 						</div>
 					</div>
 				</div>

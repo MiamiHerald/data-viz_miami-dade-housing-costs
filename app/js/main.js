@@ -295,7 +295,7 @@
 		checkInput(income);
 	});
 
-	$('.reset-button-holder').on('click touchstart', '.reset', function() {
+	$('.reset').on('click touchstart', function() {
 
 		var houseCheckbox = $('.house:checkbox');
 		var condoCheckbox = $('.condo:checkbox');

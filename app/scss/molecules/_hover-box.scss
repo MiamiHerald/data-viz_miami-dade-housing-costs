@@ -9,7 +9,6 @@
   display: none;
 }
 
-
 .hover-box-container {
     // &#hover-box {
     //   @media (max-width: $screen-xs) {
@@ -55,32 +54,32 @@
       }
     }
     .sub-info {
-        height: auto;
-        margin-bottom: 0.5em;
-        line-height: 14px;
-        .neighborhoods {
-            display: inline;
-            font-family: $serif;
-            font-size: $md;
-            line-height: 1.25;
-        }
+      .neighborhoods {
+        display: inline;
+        font-family: $serif;
+        font-size: $md;
+        line-height: 1.25;
+      }
     }
     .crime-rate {
-        float: right;
-        padding: 2px 4px;
-        margin-top: 2px;
-        border-radius: 4px;
-        color: #fff;
-        font-family: $serif;
-        display: none;
-        font-weight: bold;
-        font-size: $sm;
+      float: right;
+      padding: 2px 4px;
+      margin-top: 2px;
+      border-radius: 4px;
+      color: #fff;
+      font-family: $serif;
+      display: none;
+      font-weight: bold;
+      font-size: $sm;
     }
-    .float-left {
-        float: left;
-    }
-    .float-right {
-        float: right;
+    .housing-heading {
+      font-size: $md;
+      font-family: $serif;
+      font-weight: bold;
+
+      & span {
+        font-weight: normal;
+      }
     }
     .housing-table {
       text-align: center;
@@ -88,13 +87,22 @@
     .housing-item {
       display: inline-block;
       padding: 10px;
+      margin-bottom: 15px;
 
       &--year {
         background-color: #E8F4E8;
+        border-right: solid 3px white;
+      }
+
+      &--growth {
+        background-color: #E1E1EE;
       }
     }
     .housing-year {
       color: $green;
+    }
+    .housing-growth {
+      color: $blue;
     }
     .housing-year,
     .housing-growth {
@@ -105,6 +113,11 @@
       font-size: $lg;
       font-weight: bold;
 
+      &.house-percent,
+      &.condo-percent {
+        color: $blue;
+      }
+
       &--green {
         color: $green;
       }
@@ -113,61 +126,45 @@
         color: $blue;
       }
     }
-    // #house-price {
-    //     border-right: 1px dashed #ccc;
-    //     height: 80px;
-    //     width: 50%;
-    //     padding: 2.5px 5px 0px 5px;
-    //     float: left;
-    // }
-    #condo-price {
-        border-right: none;
-        height: 80px;
-        width: 50%;
-        padding: 2.5px 5px 0px 5px;
-        float: right;
-    }
-    .house-row {
-        display: block;
-        height: 20px;
-        width: 100%;
-        border-bottom: 1px #ccc !important;
-        border-bottom-style: dashed !important;
-        font-family: $serif;
-        font-size: 12px;
-        &:last-of-type {
-            border: none;
-        }
-    }
     .school-list {
-        height: auto;
         display: none;
         font-size: $xxs;
         font-family: $serif;
-        clear: both;
-        padding: 0px 5px 0px 5px;
+        margin-bottom: 15px;
         .school-table {
-            width: 100%;
-            th {
-                font-family: $sans-serif-condensed;
-                text-transform: uppercase;
-                color: $text-gray;
-                width: 5px;
-                font-weight: 900;
-                font-size: 10px;
-                text-align: center;
-                padding-top: 2.5px;
+          width: 100%;
+          th {
+            font-family: $sans-serif;
+            color: $yellow;
+            font-size: $md;
+            text-align: center;
+            padding-top: 2.5px;
+            font-weight: normal;
+
+            &.name {
+              font-weight: bold;
+              font-family: $serif;
             }
-            .name {
-                text-align: left;
+          }
+          .name {
+            text-align: left;
+            color: black;
+            font-size: $md;
+          }
+          .grade {
+            font-size: $md;
+            font-weight: bold;
+            color: $yellow;
+          }
+          td {
+            text-align: center;
+            padding: 5px;
+          }
+          .schools-row {
+            &:nth-child(even) {
+              background-color: #F9F0DF;
             }
-            td {
-                text-align: center;
-            }
-            .schools-row {
-                border-bottom: 1px dashed #ccc;
-                border-bottom-style: dashed;
-            }
+          }
         }
     }
     .no-school {
