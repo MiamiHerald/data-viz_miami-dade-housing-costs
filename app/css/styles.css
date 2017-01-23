@@ -424,9 +424,8 @@ input.income {
     .hover-box-container .sub-info .neighborhoods {
       display: inline;
       font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-      font-size: 14px !important;
-      color: #666;
-      font-weight: bold; }
+      font-size: 18px !important;
+      line-height: 1.25; }
   .hover-box-container .crime-rate {
     float: right;
     padding: 2px 4px;
@@ -522,10 +521,14 @@ input.income {
     color: #666; }
   .hover-box-container .zip-code,
   .hover-box-container .city,
-  .hover-box-container .state {
+  .hover-box-container .state,
+  .hover-box-container .parentheses {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-    font-size: 18px !important;
+    font-size: 22px !important;
     font-weight: bold; }
+  .hover-box-container .zip-code-heading,
+  .hover-box-container .neighborhood-heading {
+    margin-bottom: 15px; }
 
 .button-container {
   margin-bottom: 30px;

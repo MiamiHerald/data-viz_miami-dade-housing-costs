@@ -61,9 +61,8 @@
         .neighborhoods {
             display: inline;
             font-family: $serif;
-            font-size: $sm;
-            color: $text-gray;
-            font-weight: bold;
+            font-size: $md;
+            line-height: 1.25;
         }
     }
     .crime-rate {
@@ -183,9 +182,15 @@
     }
     .zip-code,
     .city,
-    .state {
+    .state,
+    .parentheses {
         font-family: $serif;
-        font-size: $md;
+        font-size: $lg;
         font-weight: bold;
+    }
+
+    .zip-code-heading,
+    .neighborhood-heading {
+        margin-bottom: 15px;
     }
 }

@@ -91,8 +91,8 @@
 			</div>
 		</div>
 
-		<div class="container input-container">
-			<div class="col-md-8 col-md-offset-2">
+		<div class="container">
+			<div class="col-md-8 col-md-offset-2 results-outer">
 				<div class="row">
 					<div class="explainer">
 						<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
@@ -213,10 +213,10 @@
 					<div id="interface-container">
 						<div class="map-interface">
 							<ul>
-								<li class="price-select interface-selector selected-interface">Value</li>
-								<li class="percent-select interface-selector">Value growth</li>
-								<li class="crime-select interface-selector">Crime</li>
-								<li class="school-select interface-selector">Schools</li>
+								<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
+								<li class="percent-select interface-selector interface-selector--blue">Value growth</li>
+								<li class="crime-select interface-selector interface-selector--red">Crime</li>
+								<li class="school-select interface-selector interface-selector--yellow">Schools</li>
 							</ul>
 
 							<div class="key-holder">
@@ -239,25 +239,19 @@
 						</div>
 					</div>
 					<div class="hover-box-container" id="hover-box">
-						<div class="results-container">
-							<div class="price-explainer">
-								<p>
-									<span class="housing-type"></span>
-									<span class="housing-explainer"></span>
-									<span class='percent-year'> since 2014.</span>
-								</p>
+						<div class="row zip-code-heading">
+							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
+							<span class="crime-rate">
+								<span class="crime-level"></span>
+							</span>
+						</div>
+
+						<div class="row neighborhood-heading">
+							<div class="sub-info">
+								<span class='neighborhoods'>Neighborhoods include:
+									<span class="hoods"></span></span>
 							</div>
 						</div>
-						<span class="city"></span><span class="state"> – </span><span class="zip-code"></span>
-						<span class="crime-rate">
-							<span class="crime-level"></span>
-						</span>
-
-						<div class="sub-info">
-							<span class='neighborhoods'>Neighborhoods include:
-								<span class="hoods"></span></span>
-						</div>
-						<div class="clearfix"></div>
 
 						<div id="house-price">
 

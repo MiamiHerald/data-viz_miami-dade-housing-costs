@@ -11,11 +11,11 @@
 <meta name="copyright" content="&copy; 2015 Miami Herald">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Graphic: Finding affordable housing in Miami-Dade and Broward counties"/>
-<meta property="og:type" content="article"/>
+<meta property="og:type" content="article"/> 
 <meta property="og:description" content="Skyrocketing real estate prices make finding an affordable home difficult for many South Floridians. The Miami Herald built a tool that helps you see where you can afford a house or condo in South Florida."/>
 <meta property="og:image" content="pubsys.miamiherald.com/static/media/projects/2015/affordable-homes/img/fb.jpg"/>
 <meta property="og:url" content="pubsys.miamiherald.com/static/media/projects/2015/affordable-homes"/>
-<meta property="og:site_name " content="Miami Herald"/>
+<meta property="og:site_name " content="Miami Herald"/> 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@MiamiHerald">
 <meta name="twitter:creator" content="@MiamiHerald">
@@ -35,7 +35,7 @@
   </head>
   <body>
       <!-- CONTENT -->
-
+      
 
 <div class="container" ng-app="housingApp">
 	<div ng-controller="HousingFormController">
@@ -249,9 +249,9 @@
 						<div class="map-interface">
 							<ul>
 								<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
-								<li class="percent-select interface-selector--blue interface-selector">Value growth</li>
-								<li class="crime-select interface-selector--red interface-selector">Crime</li>
-								<li class="school-select interface-selector--yellow interface-selector">Schools</li>
+								<li class="percent-select interface-selector interface-selector--blue">Value growth</li>
+								<li class="crime-select interface-selector interface-selector--red">Crime</li>
+								<li class="school-select interface-selector interface-selector--yellow">Schools</li>
 							</ul>
 
 							<div class="key-holder">
@@ -274,25 +274,19 @@
 						</div>
 					</div>
 					<div class="hover-box-container" id="hover-box">
-						<div class="results-container">
-							<div class="price-explainer">
-								<p>
-									<span class="housing-type"></span>
-									<span class="housing-explainer"></span>
-									<span class='percent-year'> since 2014.</span>
-								</p>
+						<div class="row zip-code-heading">
+							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
+							<span class="crime-rate">
+								<span class="crime-level"></span>
+							</span>
+						</div>
+
+						<div class="row neighborhood-heading">
+							<div class="sub-info">
+								<span class='neighborhoods'>Neighborhoods include:
+									<span class="hoods"></span></span>
 							</div>
 						</div>
-						<span class="city"></span><span class="state"> – </span><span class="zip-code"></span>
-						<span class="crime-rate">
-							<span class="crime-level"></span>
-						</span>
-
-						<div class="sub-info">
-							<span class='neighborhoods'>Neighborhoods include:
-								<span class="hoods"></span></span>
-						</div>
-						<div class="clearfix"></div>
 
 						<div id="house-price">
 
@@ -373,7 +367,7 @@
        <!--  <div id="sources">
 	<p>Sources: Zillow, Florida Department of Education and ESRI</p>
 </div> -->
-
+        
       </div>
       <!-- JS LIBRARIES -->
       <script src="js/libs/d3/d3.min.js"></script>
