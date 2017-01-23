@@ -1102,37 +1102,37 @@ function buildKey(housing) {
 	$('.legend-block').remove();
 
 	if (housing === 'price') {
-		var green = ['#762a83', '#9970ab', '#c2a5cf', '#e7d4e8', '#d9f0d3', '#a6dba0', '#5aae61', '#1b7837'];
+		var green = ['rgba(114, 191, 68, 0.20)', 'rgba(114, 191, 68, 0.33)', 'rgba(114, 191, 68, 0.46)', 'rgba(114, 191, 68, 0.59)', 'rgba(114, 191, 68, 0.72)', 'rgba(114, 191, 68, 1)'];
 
 		for (var i = 0; i < green.length; i++) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + green[i] + '\'</div>');
 		}
-		$('.legend-block').css('width', '12.5%');
+		$('.legend-block').css('width', '16.66667%');
 
 		console.log('Build price key');
 
 	} else if (housing === 'percent') {
-		var blue = ['#bdd7e7', '#6baed6', '#3182bd', '#08519c'];
+		var blue = ['rgba(37, 64, 143, 0.20)', 'rgba(37, 64, 143, 0.33)', 'rgba(37, 64, 143, 0.46)', 'rgba(37, 64, 143, 0.59)', 'rgba(37, 64, 143, 0.72)', 'rgba(37, 64, 143, 1)'];
 
 		for (var i = 0; i < blue.length; i++) {
 
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + blue[i] + '\'</div>');
 		}
+
+		$('.legend-block').css('width', '16.66667%');
 		console.log('Build percent key');
 
 	} else if (housing === 'crime') {
-		var red = ['#fee0d2', '#fc9272', '#de2d26'];
+		var red = ['rgba(237, 25, 65, 0.20)', 'rgba(237, 25, 65, 0.33)', 'rgba(237, 25, 65, 0.46)', 'rgba(237, 25, 65, 0.59)', 'rgba(237, 25, 65, 0.72)', 'rgba(237, 25, 65, 1)'];
 
 		for (var i = 0; i < red.length; i++) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + red[i] + '\'</div>');
 		}
-
-		$('.legend-block').css('width', '33%');
-
+		$('.legend-block').css('width', '16.66667%');
 	} else {
+		var yellow = ['#54278f','#756bb1','#9e9ac8','#cbc9e2','#f2f0f7'];
 
-		var purple = ['#54278f','#756bb1','#9e9ac8','#cbc9e2','#f2f0f7'];
-		for (var i = 0; i < purple.length; i++) {
+		for (var i = 0; i < yellow.length; i++) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + purple[i] + '\'</div>');
 			$('.legend-block').css('width', '20%');
 		}
