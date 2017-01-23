@@ -89,7 +89,6 @@
 	});
 
 	$('#check-button-income').on('change', '.income:checkbox', function(e) {
-
     $('.income-standfirst').text('My annual household income is');
 		$('.savings:checkbox').attr('checked', false);
 		$('.income-only').show();
@@ -254,8 +253,6 @@
 	// WHEN EVERYTHING IS GOOD TO GO...
 	// RUN MAP-BUILDING FUNCTIONS
 	$('#input-container').on('click touchstart', '.income-button', function() {
-		// $('#map-outer').slideDown('400');
-
 		var incomeInput = $('.income-box').val();
 
 		income = getIncome(incomeInput);
@@ -289,8 +286,6 @@
 			onEachFeature: onEachFeature,
 			style: schoolStyle
 		});
-
-    $('.reset-button-holder').show();
 
 		checkInput(income);
 	});
