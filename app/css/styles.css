@@ -381,10 +381,6 @@ input.income {
 .reset-button-holder {
   display: none; }
 
-.row {
-  margin-left: 0 !important;
-  margin-right: 0 !important; }
-
 .hover-box-mobile-container,
 .hover-box-desktop-container {
   position: relative;
