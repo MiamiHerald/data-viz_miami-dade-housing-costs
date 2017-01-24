@@ -58,12 +58,6 @@
 											<span><i class="fa fa-money"></i> Max price</span>
 										</label>
 									</span>
-									<!-- <span class="check-button" id="check-button-all" ng-click="mapIt = true">
-										<label>
-											<input type="checkbox">
-											<span><i class="fa fa-check-circle"></i> Show them all</span>
-										</label>
-									</span> -->
 								</div>
 							</span>
 						</div>
@@ -123,7 +117,7 @@
 							</div>
 						</div>
 
-						<div id="house-price">
+						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
 							<div class="row housing-heading">
 								Median value <span>(December)</span>
 							</div>
@@ -155,7 +149,7 @@
 							</div>
 						</div>
 
-						<div id="condo-price">
+						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 							<div class="row housing-heading">
 								Median value <span>(December)</span>
 							</div>
@@ -196,8 +190,8 @@
 							</table>
 							<h4 class="no-school">No school data</h4>
 						</div>
-					</div>
-				</div>
+					</div><!-- END HOVERBOX CONTAINER -->
+				</div><!-- END MOBILE HOVERBOX -->
 				<div class="col-xs-12 col-md-6 hover-box-desktop-container">
 					<div id="interface-container">
 						<div class="map-interface">
@@ -244,7 +238,7 @@
 
 						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
 							<div class="row housing-heading">
-								Median house value <span>(December)</span>
+								Median value <span>(December)</span>
 							</div>
 							<div class="row housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
@@ -276,7 +270,7 @@
 
 						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 							<div class="row housing-heading">
-								Median condo value <span>(December)</span>
+								Median value <span>(December)</span>
 							</div>
 							<div class="row housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
@@ -315,8 +309,8 @@
 							</table>
 							<h4 class="no-school">No school data</h4>
 						</div>
-					</div>
-				</div>
+					</div><!-- END HOVERBOX CONTAINER -->
+				</div><!-- END DESKTOP HOVERBOX -->
 			</div>
 		</div>
 	</div>
