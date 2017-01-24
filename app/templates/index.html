@@ -16,7 +16,7 @@
 
 				<div class="tool-list-container readout">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-8 col-md-offset-2">
 							<span class='item'>
 								<div class="standfirst">
 									I'd like to by a...
@@ -30,7 +30,7 @@
 									</span>
 									<span class="check-button" id="check-button-condo">
 										<label>
-											<input class="condo" type="checkbox" ng-model="houseTypeChecked" value="1">
+											<input class="condo" type="checkbox" ng-model="condoTypeChecked" value="1">
 											<span><i class="fa fa-building"></i> Condo or townhouse</span>
 										</label>
 									</span>
@@ -41,7 +41,7 @@
 
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<span ng-show="houseTypeChecked" class="item ng-hide">
+							<span ng-show="houseTypeChecked || condoTypeChecked" class="item ng-hide">
 								<div class="standfirst">
 									Show ZIP codes I can afford based on...
 								</div>
@@ -70,7 +70,7 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-8 col-md-offset-2">
 							<div class="input-container ng-hide" id="input-container" ng-show="incomeTypeChecked">
 								<div class="income-standfirst"></div>
 								<input name="income-box" class="income-box" type="text" placeholder="$">
@@ -242,9 +242,9 @@
 							</div>
 						</div>
 
-						<div id="house-price">
+						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
 							<div class="row housing-heading">
-								Median value <span>(December)</span>
+								Median house value <span>(December)</span>
 							</div>
 							<div class="row housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
@@ -274,9 +274,9 @@
 							</div>
 						</div>
 
-						<div id="condo-price">
+						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 							<div class="row housing-heading">
-								Median value <span>(December)</span>
+								Median condo value <span>(December)</span>
 							</div>
 							<div class="row housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
