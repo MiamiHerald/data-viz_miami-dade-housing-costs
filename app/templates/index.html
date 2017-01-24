@@ -101,13 +101,40 @@
 		<div class="container">
 			<div class="row" id="map-outer" ng-show="mapIt">
 				<div class="col-xs-12 col-md-6 hover-box-mobile-container">
+					<div id="interface-container-mobile">
+						<div class="map-interface">
+							<ul>
+								<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
+								<li class="percent-select interface-selector interface-selector--blue">Growth</li>
+								<li class="crime-select interface-selector interface-selector--red">Crime</li>
+								<li class="school-select interface-selector interface-selector--yellow">Schools</li>
+							</ul>
+
+							<div class="key-holder">
+								<div class="key"></div>
+								<div class="clearfix"></div>
+								<div class="labels">
+									<h6 class="label label-left"></h6>
+									<h6 class="label b-grade"></h6>
+									<h6 class="label label-middle"></h6>
+									<h6 class="label d-grade"></h6>
+									<h6 class="label label-right"></h6>
+								</div>
+							</div>
+
+							<div class="clearfix"></div>
+
+							<p class="readout">
+								<span class="hover-instructions">Click on a ZIP code for more information.</span>
+							</p>
+						</div>
+					</div>
 					<div id="map-container"></div>
 					<div class="hover-box-container" id="hover-box-mobile">
 						<div class="row zip-code-heading">
 							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
-							<span class="crime-rate">
-								<span class="crime-level"></span>
-							</span>
+							<span class="crime-rate"></span>
+							<span class="crime-level"></span>
 						</div>
 
 						<div class="row neighborhood-heading">
@@ -217,16 +244,15 @@
 							<div class="clearfix"></div>
 
 							<p class="readout">
-								<span class="hover-instructions">Hover over or click a ZIP code for more information.</span>
+								<span class="hover-instructions">Hover over a ZIP code for more information.</span>
 							</p>
 						</div>
 					</div>
 					<div class="hover-box-container" id="hover-box">
 						<div class="row zip-code-heading">
 							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
-							<span class="crime-rate">
-								<span class="crime-level"></span>
-							</span>
+							<span class="crime-rate"></span>
+							<span class="crime-level"></span>
 						</div>
 
 						<div class="row neighborhood-heading">

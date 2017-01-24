@@ -66,11 +66,19 @@
     padding: 2px 4px;
     margin-top: 2px;
     border-radius: 4px;
-    color: #fff;
+    color: #000;
     font-family: $serif;
     display: none;
-    font-weight: bold;
     font-size: $sm;
+    line-height: $sm;
+  }
+  .crime-level {
+    display: inline-block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
   }
   .housing-heading {
     font-size: $md;
@@ -131,6 +139,9 @@
     font-size: $xxs;
     font-family: $serif;
     margin-bottom: 15px;
+    max-height: 200px;
+    overflow: scroll;
+    width: 100%;
     .school-table {
       width: 100%;
       th {

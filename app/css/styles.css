@@ -427,11 +427,18 @@ input.income {
     padding: 2px 4px;
     margin-top: 2px;
     border-radius: 4px;
-    color: #fff;
+    color: #000;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     display: none;
-    font-weight: bold;
-    font-size: 14px !important; }
+    font-size: 14px !important;
+    line-height: 14px !important; }
+  .hover-box-container .crime-level {
+    display: inline-block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle; }
   .hover-box-container .housing-heading {
     font-size: 18px !important;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
@@ -470,7 +477,10 @@ input.income {
     display: none;
     font-size: 10px !important;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow: scroll;
+    width: 100%; }
     .hover-box-container .school-list .school-table {
       width: 100%; }
       .hover-box-container .school-list .school-table th {
@@ -532,6 +542,11 @@ input.income {
     overflow: hidden;
     display: inline-block;
     margin-right: 30px; }
+    @media (max-width: 480px) {
+      .button-container .check-button {
+        margin-right: 0;
+        margin-bottom: 15px;
+        display: block; } }
     .button-container .check-button:last-child {
       margin-right: 0; }
     .button-container .check-button label {

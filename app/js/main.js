@@ -100,7 +100,7 @@
 		$('.income-only').hide();
 	});
 
-	$('#interface-container').on('click touchstart', '.price-select', function(event) {
+	$('#interface-container, #interface-container-mobile').on('click touchstart', '.price-select', function(event) {
 		$('.crime-select').removeClass('selected-interface');
 		$('.school-select').removeClass('selected-interface');
 		$('.percent-select').removeClass('selected-interface');
@@ -138,7 +138,7 @@
 		}
 	});
 
-	$('#interface-container').on('click touchstart', '.percent-select', function(event) {
+	$('#interface-container, #interface-container-mobile').on('click touchstart', '.percent-select', function(event) {
 
 		$('.crime-select').removeClass('selected-interface');
 		$('.school-select').removeClass('selected-interface');
@@ -183,7 +183,7 @@
 
 	});
 
-	$('#interface-container').on('click touchstart', '.crime-select', function(event) {
+	$('#interface-container, #interface-container-mobile').on('click touchstart', '.crime-select', function(event) {
 
 		$('.school-select').removeClass('selected-interface');
 		$('.price-select').removeClass('selected-interface');
@@ -215,7 +215,7 @@
 		}
 	});
 
-	$('#interface-container').on('click touchstart', '.school-select', function(event) {
+	$('#interface-container, #interface-container-mobile').on('click touchstart', '.school-select', function(event) {
 
 		$('.price-select').removeClass('selected-interface');
 		$('.percent-select').removeClass('selected-interface');
