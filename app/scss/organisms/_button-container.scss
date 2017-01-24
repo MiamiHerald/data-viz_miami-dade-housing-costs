@@ -56,12 +56,13 @@
   border-radius: 0.25em;
   .first-graf {
     font-size: $md;
+    line-height: 1.25;
   }
   .income-only {
     font-size: $md;
     display: block;
     margin: 0px auto;
     margin-bottom: 15px;
-    line-height: 1.5;
+    line-height: 1.25;
   }
 }
