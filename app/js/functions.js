@@ -446,22 +446,22 @@ function getHouseColor(d) {
 	if ((d >= 601801) && (d <= 3229000)) {
 
 		if (income >= d) {
-			return '#1b7837';
+			return 'rgba(114, 191, 68, 1)';
 		}
 	}
 
 	else if ((d >= 425551) && (d <= 601800)) {
 
 		if (income >= d) {
-			return '#5aae61';
+			return 'rgba(114, 191, 68, 0.875)';
 		}
 
 	}
 
-	else if ((d >= 319526) && (d <= 425550)) {
+	else if ((d >= 319526) && (d <= 3229000)) {
 
 		if (income >= d) {
-			return '#a6dba0';
+			return 'rgba(114, 191, 68, 0.75)';
 		}
 	}
 
@@ -469,14 +469,14 @@ function getHouseColor(d) {
 	else if ((d >= 284101) && (d <= 319525)) {
 
 		if (income >= d) {
-			return '#d9f0d3';
+			return 'rgba(114, 191, 68, 0.625)';
 		}
 	}
 
 	else if ((d >= 237051) && (d <= 284100)) {
 
 		if (income >= d) {
-			return '#e7d4e8';
+			return 'rgba(114, 191, 68, 0.50)';
 		}
 
 	}
@@ -484,7 +484,7 @@ function getHouseColor(d) {
 	else if ((d >= 200751) && (d <= 237050)) {
 
 		if (income >= d) {
-			return '#c2a5cf';
+			return 'rgba(114, 191, 68, 0.375)';
 		}
 	}
 
@@ -492,14 +492,14 @@ function getHouseColor(d) {
 	else if ((d >= 157876) && (d <= 200750)) {
 
 		if (income >= d) {
-			return '#9970ab';
+			return 'rgba(114, 191, 68, 0.25)';
 		}
 	}
 
 	else if ((d >= 1) && (d <= 157875)) {
 
 		if (income >= d) {
-			return '#762a83';
+			return 'rgba(114, 191, 68, 0.125)';
 		}
 	} else {
 		return '#fff';
@@ -527,37 +527,36 @@ function getCondoColor(d) {
 	if ((d >= 298701) && (d <= 394500)) {
 
 		if (income >= d) {
-			return '#1b7837';
+			return 'rgba(114, 191, 68, 1)';
 		}
 	}
 
 	else if ((d >= 214401) && (d <= 298700)) {
 
 		if (income >= d) {
-			return '#5aae61';
+			return 'rgba(114, 191, 68, 0.875)';
 		}
 
 	}
 
-	else if ((d >= 152051) && (d <= 214400)) {
+	else if ((d >= 152051) && (d <= 394500)) {
 
 		if (income >= d) {
-			return '#a6dba0';
+			return 'rgba(114, 191, 68, 0.75)';
 		}
 	}
-
 
 	else if ((d >= 138601) && (d <= 152050)) {
 
 		if (income >= d) {
-			return '#d9f0d3';
+			return 'rgba(114, 191, 68, 0.625)';
 		}
 	}
 
 	else if ((d >= 100601) && (d <= 138600)) {
 
 		if (income >= d) {
-			return '#e7d4e8';
+			return 'rgba(114, 191, 68, 0.50)';
 		}
 
 	}
@@ -565,7 +564,7 @@ function getCondoColor(d) {
 	else if ((d >= 100601) && (d <= 100600)) {
 
 		if (income >= d) {
-			return '#c2a5cf';
+			return 'rgba(114, 191, 68, 0.375)';
 		}
 	}
 
@@ -573,14 +572,14 @@ function getCondoColor(d) {
 	else if ((d >= 85826) && (d <= 100600)) {
 
 		if (income >= d) {
-			return '#9970ab';
+			return 'rgba(114, 191, 68, 0.25)';
 		}
 	}
 
 	else if ((d >= 1) && (d <= 85825)) {
 
 		if (income >= d) {
-			return '#762a83';
+			return 'rgba(114, 191, 68, 0.125)';
 		}
 	}
 
@@ -627,13 +626,13 @@ function getPercentBorder(price, d) {
 function getHousePercentColor(price, d) {
 
 	if ((income >= price) && (d >= 0.27)) {
-		return '#08519c';
+		return 'rgba(37, 64, 143, 1)';
 	} else if ((income >= price) && ((d >= 0.12) && (d <= 0.26))) {
-		return '#3182bd';
+		return 'rgba(37, 64, 143, 0.75)';
 	} else if ((income >= price) && ((d >= 0.084) && (d <= 0.11))) {
-		return '#6baed6';
+		return 'rgba(37, 64, 143, 0.50)';
 	} else if ((income >= price) && ((d > 0.0) && (d <= 0.083))) {
-		return '#bdd7e7';
+		return 'rgba(37, 64, 143, 0.25)';
 	} else {
 		'#fff';
 	}
@@ -657,13 +656,13 @@ function housePercentStyle(features, layer) {
 function getCondoPercentColor(price, d) {
 
 	if ((income >= price) && (d >= 0.25)) {
-		return '#08519c';
+		return 'rgba(37, 64, 143, 1)';
 	} else if ((income >= price) && ((d >= 0.08) && (d <= 0.24))) {
-		return '#3182bd';
+		return 'rgba(37, 64, 143, 0.75)';
 	} else if ((income >= price) && ((d >= 0.06) && (d <= 0.08))) {
-		return '#6baed6';
+		return 'rgba(37, 64, 143, 0.50)';
 	} else if ((income >= price) && ((d >= -0.03) && (d <= 0.06))) {
-		return '#9ecae1';
+		return 'rgba(37, 64, 143, 0.25)';
 	} else {
 		return '#fff';
 	}
@@ -751,21 +750,21 @@ function getCrimeColor(crime, house, condo) {
 	if ((houseCheck === true) && ((condoCheck === false) && (inputEmpty === false))) {
 
 		if ((income >= house) && ((crime > 200))) {
-			return '#de2d26';
+			return 'rgba(237, 25, 65, 1)';
 		} else if ((income >= house) && ((crime > 100) && (crime < 200))) {
-			return '#fc9272';
+			return 'rgba(237, 25, 65, 0.6667)';
 		} else if ((income >= house) && ((crime > 0) && (crime < 100))) {
-			return '#fee0d2';
+			return 'rgba(237, 25, 65, 0.3333)';
 		}
 
 	} else if ((houseCheck === false) && ((condoCheck === true) && (inputEmpty === false))) {
 
 		if ((income >= condo) && ((crime > 200))) {
-			return '#de2d26';
+			return 'rgba(237, 25, 65, 1)';
 		} else if ((income >= condo) && ((crime > 100) && (crime < 200))) {
-			return '#fc9272';
+			return 'rgba(237, 25, 65, 0.6667)';
 		} else if ((income >= condo) && ((crime > 0) && (crime < 100))) {
-			return '#fee0d2';
+			return 'rgba(237, 25, 65, 0.3333)';
 		}
 	}
 }
@@ -849,28 +848,28 @@ function getSchoolColor(school, house, condo) {
 	if ((houseCheck === true) && ((condoCheck === false) && (inputEmpty === false))) {
 
 		if ((income >= house) && (school === 4)) {
-			return '#54278f';
+			return 'rgba(209, 161, 13, 1)';
 		} else if ((income >= house) && ((school >= 3.0) && (school <= 3.9))) {
-			return '#756bb1';
+			return 'rgba(209, 161, 13, 0.8)';
 		} else if ((income >= house) && ((school >= 2.0) && (school <= 2.9))) {
-			return '#9e9ac8';
+			return 'rgba(209, 161, 13, 0.6)';
 		} else if ((income >= house) && ((school > 1) && (school <= 1.9))) {
-			return '#cbc9e2';
+			return 'rgba(209, 161, 13, 0.4)';
 		} else if ((income >= house) && ((school >= 0.1) && (school <= 0.9))) {
-			return '#f2f0f7';
+			return 'rgba(209, 161, 13, 0.2)';
 		}
 	} else if ((houseCheck === false) && ((condoCheck === true) && (inputEmpty === false))) {
 
 		if ((income >= condo) && (school === 4)) {
-			return '#54278f';
+			return 'rgba(209, 161, 13, 1)';
 		} else if ((income >= condo) && ((school >= 3.0) && (school <= 3.9))) {
-			return '#756bb1';
+			return 'rgba(209, 161, 13, 0.8)';
 		} else if ((income >= condo) && ((school >= 2.0) && (school <= 2.9))) {
-			return '#9e9ac8';
+			return 'rgba(209, 161, 13, 0.6)';
 		} else if ((income >= condo) && ((school > 1) && (school <= 1.9))) {
-			return '#cbc9e2';
+			return 'rgba(209, 161, 13, 0.4)';
 		} else if ((income >= condo) && ((school >= 0.1) && (school <= 0.9))) {
-			return '#f2f0f7';
+			return 'rgba(209, 161, 13, 0.2)';
 		}
 	}
 }
@@ -1102,38 +1101,38 @@ function buildKey(housing) {
 	$('.legend-block').remove();
 
 	if (housing === 'price') {
-		var green = ['rgba(114, 191, 68, 0.20)', 'rgba(114, 191, 68, 0.33)', 'rgba(114, 191, 68, 0.46)', 'rgba(114, 191, 68, 0.59)', 'rgba(114, 191, 68, 0.72)', 'rgba(114, 191, 68, 1)'];
+		var green = ['rgba(114, 191, 68, 0.125)', 'rgba(114, 191, 68, 0.25)', 'rgba(114, 191, 68, 0.375)', 'rgba(114, 191, 68, 0.50)', 'rgba(114, 191, 68, 0.625)', 'rgba(114, 191, 68, 0.75)', 'rgba(114, 191, 68, 0.875)', 'rgba(114, 191, 68, 1)'];
 
 		for (var i = 0; i < green.length; i++) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + green[i] + '\'</div>');
 		}
-		$('.legend-block').css('width', '16.66667%');
+		$('.legend-block').css('width', '12.5%');
 
 		console.log('Build price key');
 
 	} else if (housing === 'percent') {
-		var blue = ['rgba(37, 64, 143, 0.20)', 'rgba(37, 64, 143, 0.33)', 'rgba(37, 64, 143, 0.46)', 'rgba(37, 64, 143, 0.59)', 'rgba(37, 64, 143, 0.72)', 'rgba(37, 64, 143, 1)'];
+		var blue = ['rgba(37, 64, 143, 0.25)', 'rgba(37, 64, 143, 0.50)', 'rgba(37, 64, 143, 0.75)', 'rgba(37, 64, 143, 0.1)'];
 
 		for (var i = 0; i < blue.length; i++) {
 
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + blue[i] + '\'</div>');
 		}
 
-		$('.legend-block').css('width', '16.66667%');
+		$('.legend-block').css('width', '25%');
 		console.log('Build percent key');
 
 	} else if (housing === 'crime') {
-		var red = ['rgba(237, 25, 65, 0.20)', 'rgba(237, 25, 65, 0.33)', 'rgba(237, 25, 65, 0.46)', 'rgba(237, 25, 65, 0.59)', 'rgba(237, 25, 65, 0.72)', 'rgba(237, 25, 65, 1)'];
+		var red = ['rgba(237, 25, 65, 0.3333)', 'rgba(237, 25, 65, 0.6667)', 'rgba(237, 25, 65, 1)'];
 
 		for (var i = 0; i < red.length; i++) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + red[i] + '\'</div>');
 		}
-		$('.legend-block').css('width', '16.66667%');
+		$('.legend-block').css('width', '33.3333%');
 	} else {
-		var yellow = ['#54278f','#756bb1','#9e9ac8','#cbc9e2','#f2f0f7'];
+		var yellow = ['rgba(209, 161, 13, 0.2)', 'rgba(209, 161, 13, 0.4)','rgba(209, 161, 13, 0.6)','rgba(209, 161, 13, 0.8)','rgba(209, 161, 13, 1)'];
 
 		for (var i = 0; i < yellow.length; i++) {
-			$('.key').append('<div class=\'legend-block\' style=\'color:' + purple[i] + '\'</div>');
+			$('.key').append('<div class=\'legend-block\' style=\'color:' + yellow[i] + '\'</div>');
 			$('.legend-block').css('width', '20%');
 		}
 	}
@@ -2017,7 +2016,7 @@ function buildCondoMap() {
 
 function buildHousePercentMap() {
 
-	var legendColors = ['#eff3ff', '#bdd7e7', '#6baed6', '#3182bd', '#08519c'];
+	var legendColors = ['#eff3ff', 'rgba(37, 64, 143, 0.25)', 'rgba(37, 64, 143, 0.50)', 'rgba(37, 64, 143, 0.75)', 'rgba(37, 64, 143, 1)'];
 
 	$('.income-button').attr('disabled', 'disabled');
 	$('.percent-select').addClass('selected-interface');
@@ -2070,7 +2069,7 @@ function buildHousePercentMap() {
 
 function buildCondoPercentMap() {
 
-	var legendColors = ['#eff3ff', '#bdd7e7', '#6baed6', '#3182bd', '#08519c'];
+	var legendColors = ['#eff3ff', 'rgba(37, 64, 143, 0.25)', 'rgba(37, 64, 143, 0.50)', 'rgba(37, 64, 143, 0.75)', 'rgba(37, 64, 143, 1)'];
 
 	$('.income-button').attr('disabled', 'disabled');
 	$('.percent-select').addClass('selected-interface');
@@ -2124,7 +2123,7 @@ function buildCondoPercentMap() {
 
 function buildCrimeMap() {
 
-	var legendColors = ['#fee0d2', '#fc9272', '#de2d26'];
+	var legendColors = ['rgba(237, 25, 65, 0.3333)', 'rgba(237, 25, 65, 0.6667)', 'rgba(237, 25, 65, 1)'];
 
 	$('.income-button').attr('disabled', 'disabled');
 	$('.crime-select').addClass('selected-interface');
@@ -2180,7 +2179,7 @@ function buildCrimeMap() {
 
 function buildSchoolMap() {
 
-	var legendColors = ['#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f'];
+	var legendColors = ['rgba(209, 161, 13, 0.2)', 'rgba(209, 161, 13, 0.4)', 'rgba(209, 161, 13, 0.6)', 'rgba(209, 161, 13, 0.8)', 'rgba(209, 161, 13, 1)'];
 
 	$('.income-button').attr('disabled', 'disabled');
 	$('.crime-select').removeClass('selected-interface');
