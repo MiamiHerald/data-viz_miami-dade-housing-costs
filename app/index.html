@@ -50,63 +50,57 @@
 				<p class="readout">Skyrocketing real estate prices make finding an affordable home difficult for many South Floridians. This tool shows where you can afford a home and how school quality, safety and annual value growth compare. Here's how to use it:</p>
 
 				<div class="tool-list-container readout">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<span class='item'>
-								<div class="standfirst">
-									I'd like to by a...
-								</div>
-								<div class="input-group">
-									<span class="check-button" id="check-button-house">
-										<label>
-											<input class="house" type="checkbox" ng-model="houseTypeChecked" value="1">
-											<span><i class="fa fa-home"></i> Single-family home</span>
-										</label>
-									</span>
-									<span class="check-button" id="check-button-condo">
-										<label>
-											<input class="condo" type="checkbox" ng-model="condoTypeChecked" value="1">
-											<span><i class="fa fa-building"></i> Condo or townhouse</span>
-										</label>
-									</span>
-								</div>
-							</span>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<span ng-show="houseTypeChecked || condoTypeChecked" class="item ng-hide">
-								<div class="standfirst">
-									Show ZIP codes I can afford based on...
-								</div>
-								<div class="input-group">
-									<span class="check-button" id="check-button-income">
-										<label>
-											<input class="income" type="checkbox" ng-model="incomeTypeChecked" value="1">
-											<span><i class="fa fa-briefcase"></i> My income</span>
-										</label>
-									</span>
-									<span class="check-button" id="check-button-savings">
-										<label>
-											<input class="savings" type="checkbox" ng-model="incomeTypeChecked" value="1">
-											<span><i class="fa fa-money"></i> Max price</span>
-										</label>
-									</span>
-								</div>
-							</span>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="input-container ng-hide" id="input-container" ng-show="incomeTypeChecked">
-								<div class="income-standfirst"></div>
-								<input name="income-box" class="income-box" type="text" placeholder="$">
-								<span class="input-group-btn">
-									<button class="income-button income-btn btn btn-default btn-lg" type="button" value="Execute"><i class="fa fa-search"></i> Show me the ZIPs!</button>
+					<div class="col-md-8 col-md-offset-2">
+						<span class='item'>
+							<div class="standfirst">
+								I'd like to by a...
+							</div>
+							<div class="input-group">
+								<span class="check-button" id="check-button-house">
+									<label>
+										<input class="house" type="checkbox" ng-model="houseTypeChecked" value="1">
+										<span><i class="fa fa-home"></i> Single-family home</span>
+									</label>
+								</span>
+								<span class="check-button" id="check-button-condo">
+									<label>
+										<input class="condo" type="checkbox" ng-model="condoTypeChecked" value="1">
+										<span><i class="fa fa-building"></i> Condo or townhouse</span>
+									</label>
 								</span>
 							</div>
+						</span>
+					</div>
+
+					<div class="col-md-8 col-md-offset-2">
+						<span ng-show="houseTypeChecked || condoTypeChecked" class="item ng-hide">
+							<div class="standfirst">
+								Show ZIP codes I can afford based on...
+							</div>
+							<div class="input-group">
+								<span class="check-button" id="check-button-income">
+									<label>
+										<input class="income" type="checkbox" ng-model="incomeTypeChecked" value="1">
+										<span><i class="fa fa-briefcase"></i> My income</span>
+									</label>
+								</span>
+								<span class="check-button" id="check-button-savings">
+									<label>
+										<input class="savings" type="checkbox" ng-model="incomeTypeChecked" value="1">
+										<span><i class="fa fa-money"></i> Max price</span>
+									</label>
+								</span>
+							</div>
+						</span>
+					</div>
+
+					<div class="col-md-8 col-md-offset-2">
+						<div class="input-container ng-hide" id="input-container" ng-show="incomeTypeChecked">
+							<div class="income-standfirst"></div>
+							<input name="income-box" class="income-box" type="text" placeholder="$">
+							<span class="input-group-btn">
+								<button class="income-button income-btn btn btn-default btn-lg" type="button" value="Execute"><i class="fa fa-search"></i> Show me the ZIPs!</button>
+							</span>
 						</div>
 					</div>
 				</div>
@@ -122,19 +116,17 @@
 
 		<div class="container">
 			<div class="col-md-8 col-md-offset-2 results-outer">
-				<div class="row">
-					<div class="explainer">
-						<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
-						<p class="first-graf">There are <span class="zip-count"></span> <span>ZIP codes</span> in Miami-Dade and Broward counties with <span class="housing"></span> you can afford.</p>
-						<button class="btn btn-default btn-lg" type="button" ng-click="mapIt = true"><i class="fa fa-map-signs"></i> Map It!</button>
-						<button class="reset btn btn-default btn-lg" type="button" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil"></i> Edit search</button>
-					</div>
+				<div class="explainer">
+					<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
+					<p class="first-graf">There are <span class="zip-count"></span> <span>ZIP codes</span> in Miami-Dade and Broward counties with <span class="housing"></span> you can afford.</p>
+					<button class="btn btn-default btn-lg" type="button" ng-click="mapIt = true"><i class="fa fa-map-signs"></i> Map It!</button>
+					<button class="reset btn btn-default btn-lg" type="button" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil"></i> Edit search</button>
 				</div>
 			</div>
 		</div>
 
 		<div class="container">
-			<div class="row" id="map-outer" ng-show="mapIt">
+			<div id="map-outer" ng-show="mapIt">
 				<div class="col-xs-12 col-md-6 hover-box-mobile-container">
 					<div id="interface-container-mobile">
 						<div class="map-interface">
@@ -166,13 +158,13 @@
 					</div>
 					<div id="map-container"></div>
 					<div class="hover-box-container" id="hover-box-mobile">
-						<div class="row zip-code-heading">
+						<div class="zip-code-heading">
 							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
 							<span class="crime-rate"></span>
 							<span class="crime-level"></span>
 						</div>
 
-						<div class="row neighborhood-heading">
+						<div class="neighborhood-heading">
 							<div class="sub-info">
 								<span class='neighborhoods'>Neighborhoods include:
 									<span class="hoods"></span></span>
@@ -180,10 +172,10 @@
 						</div>
 
 						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
-							<div class="row housing-heading">
+							<div class="housing-heading">
 								Median value <span>(December)</span>
 							</div>
-							<div class="row housing-table">
+							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
 									<div class="housing-year">
 										2014
@@ -212,10 +204,10 @@
 						</div>
 
 						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
-							<div class="row housing-heading">
+							<div class="housing-heading">
 								Median value <span>(December)</span>
 							</div>
-							<div class="row housing-table">
+							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
 									<div class="housing-year">
 										2014
@@ -284,13 +276,13 @@
 						</div>
 					</div>
 					<div class="hover-box-container" id="hover-box">
-						<div class="row zip-code-heading">
+						<div class="zip-code-heading">
 							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
 							<span class="crime-rate"></span>
 							<span class="crime-level"></span>
 						</div>
 
-						<div class="row neighborhood-heading">
+						<div class="neighborhood-heading">
 							<div class="sub-info">
 								<span class='neighborhoods'>Neighborhoods include:
 									<span class="hoods"></span></span>
@@ -298,10 +290,10 @@
 						</div>
 
 						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
-							<div class="row housing-heading">
+							<div class="housing-heading">
 								Median value <span>(December)</span>
 							</div>
-							<div class="row housing-table">
+							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
 									<div class="housing-year">
 										2014
@@ -330,10 +322,10 @@
 						</div>
 
 						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
-							<div class="row housing-heading">
+							<div class="housing-heading">
 								Median value <span>(December)</span>
 							</div>
-							<div class="row housing-table">
+							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
 									<div class="housing-year">
 										2014
