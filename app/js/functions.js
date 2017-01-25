@@ -155,7 +155,6 @@ function getDefaultHouseColor(d) {
 
 // SET DEFAULT HOUSE STYLES
 function defaultHouseStyle(features, layer) {
-	console.log(features);
 	return {
 		fillColor: getDefaultHouseColor(features.properties.currHousePrice),
 		weight: 2,
