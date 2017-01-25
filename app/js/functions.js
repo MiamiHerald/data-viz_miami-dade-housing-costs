@@ -155,13 +155,14 @@ function getDefaultHouseColor(d) {
 
 // SET DEFAULT HOUSE STYLES
 function defaultHouseStyle(features, layer) {
+	console.log(features);
 	return {
-		fillColor: getDefaultHouseColor(features.properties.housePriceFifteen),
+		fillColor: getDefaultHouseColor(features.properties.currHousePrice),
 		weight: 2,
 		opacity: 1,
-		color: getDefaultBorder(features.properties.housePriceFifteen),
+		color: getDefaultBorder(features.properties.currHousePrice),
 		dashArray: '3',
-		fillOpacity: getDefaultOpacity(features.properties.housePriceFifteen)
+		fillOpacity: getDefaultOpacity(features.properties.currHousePrice)
 	};
 }
 
@@ -207,12 +208,12 @@ function getDefaultCondoColor(d) {
 
 function defaultCondoStyle(features, layer) {
 	return {
-		fillColor: getDefaultCondoColor(features.properties.condoPriceFifteen),
+		fillColor: getDefaultCondoColor(features.properties.currCondoPrice),
 		weight: 2,
 		opacity: 1,
-		color: getDefaultBorder(features.properties.condoPriceFifteen),
+		color: getDefaultBorder(features.properties.currCondoPrice),
 		dashArray: '3',
-		fillOpacity: getDefaultOpacity(features.properties.condoPriceFifteen)
+		fillOpacity: getDefaultOpacity(features.properties.currCondoPrice)
 	};
 }
 
@@ -262,12 +263,12 @@ function getDefaultHousePercentColor(d) {
 
 function defaultHousePercentStyle(features, layer) {
 	return {
-		fillColor: getDefaultHousePercentColor(features.properties.housePercent),
+		fillColor: getDefaultHousePercentColor(features.properties.housePricePercent),
 		weight: 2,
 		opacity: 1,
-		color: getDefaultPercentBorder(features.properties.housePercent),
+		color: getDefaultPercentBorder(features.properties.housePricePercent),
 		dashArray: '3',
-		fillOpacity: getDefaultPercentOpacity(features.properties.housePercent)
+		fillOpacity: getDefaultPercentOpacity(features.properties.housePricePercent)
 	};
 }
 
@@ -297,12 +298,12 @@ function getDefaultCondoPercentColor(d) {
 
 function defaultCondoPercentStyle(features, layer) {
 	return {
-		fillColor: getDefaultCondoPercentColor(features.properties.condoPercent),
+		fillColor: getDefaultCondoPercentColor(features.properties.condoPricePercent),
 		weight: 2,
 		opacity: 1,
-		color: getDefaultPercentBorder(features.properties.condoPercent),
+		color: getDefaultPercentBorder(features.properties.condoPricePercent),
 		dashArray: '3',
-		fillOpacity: getDefaultPercentOpacity(features.properties.condoPercent)
+		fillOpacity: getDefaultPercentOpacity(features.properties.condoPricePercent)
 	};
 }
 
@@ -511,12 +512,12 @@ function getHouseColor(d) {
 
 function houseStyle(features, layer) {
 	return {
-		fillColor: getHouseColor(features.properties.housePriceFifteen),
+		fillColor: getHouseColor(features.properties.currHousePrice),
 		weight: 2,
 		opacity: 1,
-		color: getPriceBorder(features.properties.housePriceFifteen),
+		color: getPriceBorder(features.properties.currHousePrice),
 		dashArray: '3',
-		fillOpacity: getPriceOpacity(features.properties.housePriceFifteen)
+		fillOpacity: getPriceOpacity(features.properties.currHousePrice)
 	};
 }
 
@@ -593,12 +594,12 @@ function getCondoColor(d) {
 
 function condoStyle(features, layer) {
 	return {
-		fillColor: getCondoColor(features.properties.condoPriceFifteen),
+		fillColor: getCondoColor(features.properties.currCondoPrice),
 		weight: 2,
 		opacity: 1,
-		color: getPriceBorder(features.properties.condoPriceFifteen),
+		color: getPriceBorder(features.properties.currCondoPrice),
 		dashArray: '3',
-		fillOpacity: getPriceOpacity(features.properties.condoPriceFifteen)
+		fillOpacity: getPriceOpacity(features.properties.currCondoPrice)
 	};
 }
 
@@ -642,12 +643,12 @@ function getHousePercentColor(price, d) {
 
 function housePercentStyle(features, layer) {
 	return {
-		fillColor: getHousePercentColor(features.properties.housePriceFifteen, features.properties.housePercent),
+		fillColor: getHousePercentColor(features.properties.currHousePrice, features.properties.housePricePercent),
 		weight: 2,
 		opacity: 1,
-		color: getPercentBorder(features.properties.housePriceFifteen, features.properties.housePercent),
+		color: getPercentBorder(features.properties.currHousePrice, features.properties.housePricePercent),
 		dashArray: '3',
-		fillOpacity: getPercentOpacity(features.properties.housePriceFifteen, features.properties.housePercent)
+		fillOpacity: getPercentOpacity(features.properties.currHousePrice, features.properties.housePricePercent)
 	};
 }
 
@@ -672,12 +673,12 @@ function getCondoPercentColor(price, d) {
 
 function condoPercentStyle(features, layer) {
 	return {
-		fillColor: getCondoPercentColor(features.properties.condoPriceFifteen, features.properties.condoPercent),
+		fillColor: getCondoPercentColor(features.properties.currCondoPrice, features.properties.condoPricePercent),
 		weight: 2,
 		opacity: 1,
-		color: getPercentBorder(features.properties.condoPriceFifteen, features.properties.condoPercent),
+		color: getPercentBorder(features.properties.currCondoPrice, features.properties.condoPricePercent),
 		dashArray: '3',
-		fillOpacity: getPercentOpacity(features.properties.condoPriceFifteen, features.properties.condoPercent)
+		fillOpacity: getPercentOpacity(features.properties.currCondoPrice, features.properties.condoPricePercent)
 	};
 }
 
@@ -773,12 +774,12 @@ function getCrimeColor(crime, house, condo) {
 
 function crimeStyle(features, layer) {
 	return {
-		fillColor: getCrimeColor(features.properties.crime, features.properties.housePriceFifteen, features.properties.condoPriceFifteen),
+		fillColor: getCrimeColor(features.properties.crime, features.properties.currHousePrice, features.properties.currCondoPrice),
 		weight: 2,
 		opacity: 1,
-		color: getBuiltCrimeBorder(features.properties.housePriceFifteen,features.properties.condoPriceFifteen,features.properties.crime),
+		color: getBuiltCrimeBorder(features.properties.currHousePrice, features.properties.currCondoPrice, features.properties.crime),
 		dashArray: '3',
-		fillOpacity: getBuiltCrimeOpacity(features.properties.housePriceFifteen,features.properties.condoPriceFifteen,features.properties.crime)
+		fillOpacity: getBuiltCrimeOpacity(features.properties.currHousePrice, features.properties.currCondoPrice, features.properties.crime)
 	};
 }
 
@@ -878,12 +879,12 @@ function getSchoolColor(school, house, condo) {
 
 function schoolStyle(features, layer) {
 	return {
-		fillColor: getSchoolColor(features.properties.schoolGrade, features.properties.housePriceFifteen, features.properties.condoPriceFifteen),
+		fillColor: getSchoolColor(features.properties.schoolGrade, features.properties.currHousePrice, features.properties.currCondoPrice),
 		weight: 2,
 		opacity: 1,
-		color: getBuiltSchoolBorder(features.properties.schoolGrade, features.properties.housePriceFifteen, features.properties.condoPriceFifteen),
+		color: getBuiltSchoolBorder(features.properties.schoolGrade, features.properties.currHousePrice, features.properties.currCondoPrice),
 		dashArray: '3',
-		fillOpacity: getBuiltSchoolOpacity(features.properties.schoolGrade, features.properties.housePriceFifteen, features.properties.condoPriceFifteen)
+		fillOpacity: getBuiltSchoolOpacity(features.properties.schoolGrade, features.properties.currHousePrice, features.properties.currCondoPrice)
 	};
 }
 
@@ -1197,12 +1198,15 @@ function writeHoverBox (feature,layer) {
 	initHover();
 	var zip = parseInt(layer.feature.properties.zipcode);
 	var city = layer.feature.properties.cities;
-	var housePriceFourteen = layer.feature.properties.housePriceFourteen;
-	var housePriceFifteen = layer.feature.properties.housePriceFifteen;
-	var housePercent = layer.feature.properties.housePercent;
-	var condoPriceFourteen = layer.feature.properties.condoPriceFourteen;
-	var condoPriceFifteen = layer.feature.properties.condoPriceFifteen;
-	var condoPercent = layer.feature.properties.condoPercent;
+	var housePriceFourteen = layer.feature.properties.prevHousePrice;
+	var housePriceFifteen = layer.feature.properties.currHousePrice;
+	var housePercent = layer.feature.properties.housePricePercent;
+	var condoPriceFourteen = layer.feature.properties.prevCondoPrice;
+	var condoPriceFifteen = layer.feature.properties.currCondoPrice;
+	var condoPercent = layer.feature.properties.condoPricePercent;
+	var currMonth = layer.feature.properties.currMonth;
+	var currYear = layer.feature.properties.currYear;
+	var prevYear = layer.feature.properties.currYear - 1;
 	var schoolData = layer.feature.properties.school;
 	var neighborhoodNames = layer.feature.properties.neighborhoods;
 	var crimeRate = layer.feature.properties.crime;
@@ -1274,6 +1278,9 @@ function writeHoverBox (feature,layer) {
 	$('.condo-price-fifteen').html(numberChange(condoPriceFifteen));
 	$('.condo-percent').html(percentChange(condoPercent));
 	$('.hoods').html(neighborhoodNames);
+	$('.housing-year--prev').html(prevYear);
+	$('.housing-year--curr').html(currYear);
+	$('.current-month').html('(' + currMonth + ')');
 
 	if ((crimeRate > 0) && (crimeRate < 100)) {
 		$('.crime-level')

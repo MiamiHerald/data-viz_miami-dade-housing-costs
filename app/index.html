@@ -173,24 +173,18 @@
 
 						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
 							<div class="housing-heading">
-								Median value <span>(December)</span>
+								Median value <span class="current-month"></span>
 							</div>
 							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2014
-									</div>
-									<div class="housing-number house-price-fourteen">
+									<div class="housing-year housing-year--prev"></div>
 
-									</div>
+									<div class="housing-number house-price-fifteen"></div>
 								</div>
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2015
-									</div>
-									<div class="housing-number house-price-fifteen">
+									<div class="housing-year housing-year--curr"></div>
 
-									</div>
+									<div class="housing-number house-price-sixteen"></div>
 								</div>
 								<div class="housing-item housing-item--growth col-xs-4">
 									<div class="housing-growth">
@@ -209,20 +203,14 @@
 							</div>
 							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2014
-									</div>
-									<div class="housing-number condo-price-fourteen">
+									<div class="housing-year housing-year--prev"></div>
 
-									</div>
+									<div class="housing-number condo-price-fourteen"></div>
 								</div>
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2015
-									</div>
-									<div class="housing-number condo-price-fifteen">
+									<div class="housing-year housing-year--curr"></div>
 
-									</div>
+									<div class="housing-number condo-price-fifteen"></div>
 								</div>
 								<div class="housing-item housing-item--growth col-xs-4">
 									<div class="housing-growth">
@@ -295,20 +283,14 @@
 							</div>
 							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2014
-									</div>
-									<div class="housing-number house-price-fourteen">
+									<div class="housing-year housing-year--prev"></div>
 
-									</div>
+									<div class="housing-number house-price-fourteen"></div>
 								</div>
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2015
-									</div>
-									<div class="housing-number house-price-fifteen">
+									<div class="housing-year housing-year--curr"></div>
 
-									</div>
+									<div class="housing-number house-price-fifteen"></div>
 								</div>
 								<div class="housing-item housing-item--growth col-xs-4">
 									<div class="housing-growth">
@@ -323,24 +305,18 @@
 
 						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 							<div class="housing-heading">
-								Median value <span>(December)</span>
+								Median value <span class="current-month"></span>
 							</div>
 							<div class="housing-table">
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2014
-									</div>
-									<div class="housing-number condo-price-fourteen">
+									<div class="housing-year housing-year--prev"></div>
 
-									</div>
+									<div class="housing-number condo-price-fourteen"></div>
 								</div>
 								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year">
-										2015
-									</div>
-									<div class="housing-number condo-price-fifteen">
+									<div class="housing-year housing-year--curr"></div>
 
-									</div>
+									<div class="housing-number condo-price-fifteen"></div>
 								</div>
 								<div class="housing-item housing-item--growth col-xs-4">
 									<div class="housing-growth">
@@ -386,7 +362,7 @@
 <script src="js/libs/modernizr/modernizr.js"></script>
 <script src="js/libs/bootstrap/bootstrap.min.js"></script>
 <script src="js/libs/sinclair.js"></script>
-<script src="js/libs/data/zipdata.js"></script>
+<script src="http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipdata_new.js"></script>
 <script src="js/libs/leaflet/leaflet.js"></script>
 <script src="js/libs/leaflet/tile.stamen.js"></script>
 <script src="js/functions.js"></script>
