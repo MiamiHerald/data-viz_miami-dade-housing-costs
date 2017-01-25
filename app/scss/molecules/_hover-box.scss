@@ -120,6 +120,10 @@
     font-size: $lg;
     font-weight: bold;
 
+    @media (max-width: $screen-xs) {
+      font-size: $md;
+    }
+
     &.house-percent,
     &.condo-percent {
       color: $blue;

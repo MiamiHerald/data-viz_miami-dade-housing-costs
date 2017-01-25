@@ -466,6 +466,9 @@ input.income {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     font-size: 22px !important;
     font-weight: bold; }
+    @media (max-width: 480px) {
+      .hover-box-container .housing-number {
+        font-size: 18px !important; } }
     .hover-box-container .housing-number.house-percent, .hover-box-container .housing-number.condo-percent {
       color: #25408F; }
     .hover-box-container .housing-number--green {
