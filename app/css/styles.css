@@ -540,12 +540,14 @@ input.income {
     border: 2px solid #008FD5;
     overflow: hidden;
     display: inline-block;
-    margin-right: 30px; }
+    margin-right: 30px;
+    min-width: 250px; }
     @media (max-width: 480px) {
       .button-container .check-button {
         margin-right: 0;
         margin-bottom: 15px;
-        display: block; } }
+        display: block;
+        min-width: none; } }
     .button-container .check-button:last-child {
       margin-right: 0; }
     .button-container .check-button label {

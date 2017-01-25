@@ -11,10 +11,12 @@
     overflow: hidden;
     display: inline-block;
     margin-right: 30px;
+    min-width: 250px;
     @media (max-width: $screen-xs) {
       margin-right: 0;
       margin-bottom: 15px;
       display: block;
+      min-width: none;
     }
     &:last-child {
       margin-right: 0;
