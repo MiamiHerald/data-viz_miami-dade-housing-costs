@@ -79,7 +79,7 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container" ng-hide="mapIt">
 			<div class="col-md-8 col-md-offset-2 results-outer">
 				<div class="explainer">
 					<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
@@ -123,7 +123,8 @@
 					</div>
 					<div id="map-container"></div>
 					<div class="map-button__outer">
-						<div class="map-button"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Edit Search</span></div>
+						<div class="map-button reset" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Edit Search</span></div>
+						<!-- <button class="reset btn btn-default btn-lg" type="button" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil"></i> Edit search</button> -->
 						<div class="map-button"><i class="fa fa-undo" aria-hidden="true"></i> <span>Show all zips</span></div>
 					</div>
 					<div class="hover-box-container" id="hover-box-mobile">
