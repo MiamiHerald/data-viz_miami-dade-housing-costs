@@ -1,0 +1,22 @@
+.map-button {
+  background-color: white;
+  display: block;
+  margin-bottom: 10px;
+  font-size: $md;
+  font-family: sans-serif;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+
+  &:hover {
+    background-color: $grey;
+  }
+
+  &__outer {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    z-index: 999;
+    transform: translateY(-50%);
+  }
+}

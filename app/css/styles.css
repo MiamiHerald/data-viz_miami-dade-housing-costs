@@ -381,6 +381,24 @@ input.income {
 .reset-button-holder {
   display: none; }
 
+.map-button {
+  background-color: white;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px !important;
+  font-family: sans-serif;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s linear; }
+  .map-button:hover {
+    background-color: #A6A6A6; }
+  .map-button__outer {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    z-index: 999;
+    transform: translateY(-50%); }
+
 .hover-box-mobile-container,
 .hover-box-desktop-container {
   position: relative;
