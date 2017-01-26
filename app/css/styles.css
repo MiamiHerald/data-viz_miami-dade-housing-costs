@@ -394,8 +394,8 @@ input.income {
     background-color: #A6A6A6; }
   .map-button__outer {
     position: absolute;
-    top: 50%;
-    right: 5px;
+    top: 25%;
+    right: 25px;
     z-index: 999;
     transform: translateY(-50%); }
 
