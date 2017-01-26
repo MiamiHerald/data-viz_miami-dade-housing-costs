@@ -21,7 +21,7 @@ var $defaultSchoolLayer = null;
 var tiles = new L.StamenTileLayer('toner-lite');
 
 // MOBILE WIDTHS
-var mobile = 768;
+var mobile = 992;
 var w = window.innerWidth;
 
 $(window).resize(function() {
@@ -1313,7 +1313,7 @@ function writeHoverBox (feature,layer) {
 	}
 
 	// HANDLE CHANGE SCREEN SIZE
-	var mobile = 768;
+	var mobile = 992;
 	var w = window.innerWidth;
 
 	if (schoolGrade === 'No data') {
@@ -1361,7 +1361,7 @@ function writeHoverBox (feature,layer) {
 	}
 
 	$(window).resize(function() {
-		if (Modernizr.mq('(min-width: 768px)')) {
+		if (Modernizr.mq('(min-width: 992px)')) {
 			$('#hover-box-mobile').hide();
 			$('#hover-box').show();
 		} else {
@@ -1384,7 +1384,7 @@ function onEachFeature(feature, layer) {
 	layer.on({
 
 		mouseover: function(e) {
-			var query = Modernizr.mq('(min-width: 768px)');
+			var query = Modernizr.mq('(min-width: 992px)');
 
 			if (query) {
 				$('.schools-row').empty();
@@ -1395,7 +1395,7 @@ function onEachFeature(feature, layer) {
 				});
 				layer.bringToFront();
 
-				var mobile = 768;
+				var mobile = 992;
 				var w = window.innerWidth;
 
 				if (mobile < w) {
@@ -1415,12 +1415,12 @@ function onEachFeature(feature, layer) {
 		// mousemove: function(e) {},
 
 		click: function(e) {
-			var query = Modernizr.mq('(max-width: 768px)');
+			var query = Modernizr.mq('(max-width: 992px)');
 
 			if (query) {
 				$('#hover-box-mobile').show();
 				$('.schools-row').empty();
-				var mobile = 768;
+				var mobile = 992;
 				var w = window.innerWidth;
 
 				if (mobile > w) {
@@ -1440,7 +1440,7 @@ function onEachFeature(feature, layer) {
 
 		tap: function(e) {
 			$('.schools-row').empty();
-			var mobile = 768;
+			var mobile = 992;
 			var w = window.innerWidth;
 
 			if (mobile > w) {

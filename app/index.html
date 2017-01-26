@@ -37,7 +37,7 @@
       <!-- CONTENT -->
       
 
-<div class="container" ng-app="housingApp">
+<div ng-app="housingApp">
 	<div ng-controller="HousingFormController">
 		<div class="map-info-container" id="map-info">
 			<div class="headline">What will your money buy?</div>
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 
-		<div class="container" ng-hide="mapIt">
+		<div ng-hide="mapIt">
 			<div class="col-md-8 col-md-offset-2 results-outer">
 				<div class="explainer">
 					<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
@@ -125,226 +125,224 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<div id="map-outer" ng-show="mapIt">
-				<div class="col-xs-12 col-md-6 hover-box-mobile-container">
-					<div id="interface-container-mobile">
-						<div class="map-interface">
-							<ul>
-								<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
-								<li class="percent-select interface-selector interface-selector--blue">Growth</li>
-								<li class="crime-select interface-selector interface-selector--red">Crime</li>
-								<li class="school-select interface-selector interface-selector--yellow">Schools</li>
-							</ul>
+		<div id="map-outer" ng-show="mapIt">
+			<div class="col-xs-12 col-md-6 hover-box-mobile-container">
+				<div id="interface-container-mobile">
+					<div class="map-interface">
+						<ul>
+							<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
+							<li class="percent-select interface-selector interface-selector--blue">Growth</li>
+							<li class="crime-select interface-selector interface-selector--red">Crime</li>
+							<li class="school-select interface-selector interface-selector--yellow">Schools</li>
+						</ul>
 
-							<div class="key-holder">
-								<div class="key"></div>
-								<div class="clearfix"></div>
-								<div class="labels">
-									<h6 class="label label-left"></h6>
-									<h6 class="label b-grade"></h6>
-									<h6 class="label label-middle"></h6>
-									<h6 class="label d-grade"></h6>
-									<h6 class="label label-right"></h6>
-								</div>
-							</div>
-
+						<div class="key-holder">
+							<div class="key"></div>
 							<div class="clearfix"></div>
+							<div class="labels">
+								<h6 class="label label-left"></h6>
+								<h6 class="label b-grade"></h6>
+								<h6 class="label label-middle"></h6>
+								<h6 class="label d-grade"></h6>
+								<h6 class="label label-right"></h6>
+							</div>
+						</div>
 
-							<p class="readout">
-								<span class="hover-instructions">Click on a ZIP code for more information.</span>
-							</p>
+						<div class="clearfix"></div>
+
+						<p class="readout">
+							<span class="hover-instructions">Click on a ZIP code for more information.</span>
+						</p>
+					</div>
+				</div>
+				<div id="map-container"></div>
+				<div class="map-button__outer">
+					<div class="map-button reset" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Edit Search</span></div>
+					<div class="map-button"><i class="fa fa-undo" aria-hidden="true"></i> <span>Show all zips</span></div>
+				</div>
+				<div class="hover-box-container" id="hover-box-mobile">
+					<div class="zip-code-heading">
+						<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
+						<span class="crime-rate"></span>
+						<span class="crime-level"></span>
+					</div>
+
+					<div class="neighborhood-heading">
+						<div class="sub-info">
+							<span class='neighborhoods'>Neighborhoods include:
+								<span class="hoods"></span></span>
 						</div>
 					</div>
-					<div id="map-container"></div>
-					<div class="map-button__outer">
-						<div class="map-button reset" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Edit Search</span></div>
-						<div class="map-button"><i class="fa fa-undo" aria-hidden="true"></i> <span>Show all zips</span></div>
+
+					<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
+						<div class="housing-heading">
+							Median value <span class="current-month"></span>
+						</div>
+						<div class="housing-table">
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--prev"></div>
+
+								<div class="housing-number house-price-fourteen"></div>
+							</div>
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--curr"></div>
+
+								<div class="housing-number house-price-fifteen"></div>
+							</div>
+							<div class="housing-item housing-item--growth col-xs-4">
+								<div class="housing-growth">
+									Growth
+								</div>
+								<div class="housing-number house-percent">
+
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="hover-box-container" id="hover-box-mobile">
-						<div class="zip-code-heading">
-							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
-							<span class="crime-rate"></span>
-							<span class="crime-level"></span>
+
+					<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
+						<div class="housing-heading">
+							Median value <span>(December)</span>
 						</div>
+						<div class="housing-table">
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--prev"></div>
 
-						<div class="neighborhood-heading">
-							<div class="sub-info">
-								<span class='neighborhoods'>Neighborhoods include:
-									<span class="hoods"></span></span>
+								<div class="housing-number condo-price-fourteen"></div>
 							</div>
-						</div>
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--curr"></div>
 
-						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
-							<div class="housing-heading">
-								Median value <span class="current-month"></span>
+								<div class="housing-number condo-price-fifteen"></div>
 							</div>
-							<div class="housing-table">
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--prev"></div>
-
-									<div class="housing-number house-price-fourteen"></div>
+							<div class="housing-item housing-item--growth col-xs-4">
+								<div class="housing-growth">
+									Growth
 								</div>
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--curr"></div>
-
-									<div class="housing-number house-price-fifteen"></div>
-								</div>
-								<div class="housing-item housing-item--growth col-xs-4">
-									<div class="housing-growth">
-										Growth
-									</div>
-									<div class="housing-number house-percent">
-
-									</div>
-								</div>
+								<div class="housing-number condo-percent"></div>
 							</div>
 						</div>
+					</div>
 
-						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
-							<div class="housing-heading">
-								Median value <span>(December)</span>
-							</div>
-							<div class="housing-table">
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--prev"></div>
+					<div class="school-list">
+						<table class='school-table'>
+							<tr class='school-head'>
+								<th class='name'>School grade</th>
+								<th>2014-15</th>
+								<th>2013-14</th>
+								<th>2012-13</th>
+							</tr>
+						</table>
+						<h4 class="no-school">No school data</h4>
+					</div>
+				</div><!-- END HOVERBOX CONTAINER -->
+			</div><!-- END MOBILE HOVERBOX -->
+			<div class="col-xs-12 col-md-6 hover-box-desktop-container">
+				<div id="interface-container">
+					<div class="map-interface">
+						<ul>
+							<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
+							<li class="percent-select interface-selector interface-selector--blue">Growth</li>
+							<li class="crime-select interface-selector interface-selector--red">Crime</li>
+							<li class="school-select interface-selector interface-selector--yellow">Schools</li>
+						</ul>
 
-									<div class="housing-number condo-price-fourteen"></div>
-								</div>
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--curr"></div>
-
-									<div class="housing-number condo-price-fifteen"></div>
-								</div>
-								<div class="housing-item housing-item--growth col-xs-4">
-									<div class="housing-growth">
-										Growth
-									</div>
-									<div class="housing-number condo-percent"></div>
-								</div>
-							</div>
-						</div>
-
-						<div class="school-list">
-							<table class='school-table'>
-								<tr class='school-head'>
-									<th class='name'>School grade</th>
-									<th>2014-15</th>
-									<th>2013-14</th>
-									<th>2012-13</th>
-								</tr>
-							</table>
-							<h4 class="no-school">No school data</h4>
-						</div>
-					</div><!-- END HOVERBOX CONTAINER -->
-				</div><!-- END MOBILE HOVERBOX -->
-				<div class="col-xs-12 col-md-6 hover-box-desktop-container">
-					<div id="interface-container">
-						<div class="map-interface">
-							<ul>
-								<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
-								<li class="percent-select interface-selector interface-selector--blue">Growth</li>
-								<li class="crime-select interface-selector interface-selector--red">Crime</li>
-								<li class="school-select interface-selector interface-selector--yellow">Schools</li>
-							</ul>
-
-							<div class="key-holder">
-								<div class="key"></div>
-								<div class="clearfix"></div>
-								<div class="labels">
-									<h6 class="label label-left"></h6>
-									<h6 class="label b-grade"></h6>
-									<h6 class="label label-middle"></h6>
-									<h6 class="label d-grade"></h6>
-									<h6 class="label label-right"></h6>
-								</div>
-							</div>
-
+						<div class="key-holder">
+							<div class="key"></div>
 							<div class="clearfix"></div>
+							<div class="labels">
+								<h6 class="label label-left"></h6>
+								<h6 class="label b-grade"></h6>
+								<h6 class="label label-middle"></h6>
+								<h6 class="label d-grade"></h6>
+								<h6 class="label label-right"></h6>
+							</div>
+						</div>
 
-							<p class="readout">
-								<span class="hover-instructions">Hover over a ZIP code for more information.</span>
-							</p>
+						<div class="clearfix"></div>
+
+						<p class="readout">
+							<span class="hover-instructions">Hover over a ZIP code for more information.</span>
+						</p>
+					</div>
+				</div>
+				<div class="hover-box-container" id="hover-box">
+					<div class="zip-code-heading">
+						<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
+						<span class="crime-rate"></span>
+						<span class="crime-level"></span>
+					</div>
+
+					<div class="neighborhood-heading">
+						<div class="sub-info">
+							<span class='neighborhoods'>Neighborhoods include:
+								<span class="hoods"></span></span>
 						</div>
 					</div>
-					<div class="hover-box-container" id="hover-box">
-						<div class="zip-code-heading">
-							<span class="zip-code"></span> <span class="parentheses">(<span class="city"></span>)</span>
-							<span class="crime-rate"></span>
-							<span class="crime-level"></span>
+
+					<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
+						<div class="housing-heading">
+							Median value <span>(December)</span>
 						</div>
+						<div class="housing-table">
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--prev"></div>
 
-						<div class="neighborhood-heading">
-							<div class="sub-info">
-								<span class='neighborhoods'>Neighborhoods include:
-									<span class="hoods"></span></span>
+								<div class="housing-number house-price-fourteen"></div>
 							</div>
-						</div>
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--curr"></div>
 
-						<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
-							<div class="housing-heading">
-								Median value <span>(December)</span>
+								<div class="housing-number house-price-fifteen"></div>
 							</div>
-							<div class="housing-table">
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--prev"></div>
-
-									<div class="housing-number house-price-fourteen"></div>
+							<div class="housing-item housing-item--growth col-xs-4">
+								<div class="housing-growth">
+									Growth
 								</div>
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--curr"></div>
+								<div class="housing-number house-percent">
 
-									<div class="housing-number house-price-fifteen"></div>
-								</div>
-								<div class="housing-item housing-item--growth col-xs-4">
-									<div class="housing-growth">
-										Growth
-									</div>
-									<div class="housing-number house-percent">
-
-									</div>
 								</div>
 							</div>
 						</div>
+					</div>
 
-						<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
-							<div class="housing-heading">
-								Median value <span class="current-month"></span>
+					<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
+						<div class="housing-heading">
+							Median value <span class="current-month"></span>
+						</div>
+						<div class="housing-table">
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--prev"></div>
+
+								<div class="housing-number condo-price-fourteen"></div>
 							</div>
-							<div class="housing-table">
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--prev"></div>
+							<div class="housing-item housing-item--year col-xs-4">
+								<div class="housing-year housing-year--curr"></div>
 
-									<div class="housing-number condo-price-fourteen"></div>
+								<div class="housing-number condo-price-fifteen"></div>
+							</div>
+							<div class="housing-item housing-item--growth col-xs-4">
+								<div class="housing-growth">
+									Growth
 								</div>
-								<div class="housing-item housing-item--year col-xs-4">
-									<div class="housing-year housing-year--curr"></div>
-
-									<div class="housing-number condo-price-fifteen"></div>
-								</div>
-								<div class="housing-item housing-item--growth col-xs-4">
-									<div class="housing-growth">
-										Growth
-									</div>
-									<div class="housing-number condo-percent"></div>
-								</div>
+								<div class="housing-number condo-percent"></div>
 							</div>
 						</div>
+					</div>
 
-						<div class="school-list">
-							<table class='school-table'>
-								<tr class='school-head'>
-									<th class='name'>School grade</th>
-									<th>2014-15</th>
-									<th>2013-14</th>
-									<th>2012-13</th>
-								</tr>
-							</table>
-							<h4 class="no-school">No school data</h4>
-						</div>
-					</div><!-- END HOVERBOX CONTAINER -->
-				</div><!-- END DESKTOP HOVERBOX -->
-			</div>
+					<div class="school-list">
+						<table class='school-table'>
+							<tr class='school-head'>
+								<th class='name'>School grade</th>
+								<th>2014-15</th>
+								<th>2013-14</th>
+								<th>2012-13</th>
+							</tr>
+						</table>
+						<h4 class="no-school">No school data</h4>
+					</div>
+				</div><!-- END HOVERBOX CONTAINER -->
+			</div><!-- END DESKTOP HOVERBOX -->
 		</div>
 	</div>
 </div><!-- END MAP -->
