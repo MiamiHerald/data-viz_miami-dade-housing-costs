@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-	$('.leaflet-bottom.leaflet-left').append('<div class=\'source\'>Sources: Zillow, Florida Department of Education and ESRI</div>');
-
 	$('.income-box').keyup(function(event) {
 		var inputNumber = $(this).val().replace(/,/gi, '');
 		var newNumber = inputNumber.split(/(?=(?:\d{3})+$)/).join(',');
