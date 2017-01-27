@@ -51,17 +51,26 @@
 
 .explainer {
   display: none;
-  font-size: $md;
+  font-size: $lg;
+  @media (max-width: $screen-xs) {
+    font-size: $md;
+  }
   line-height: 18px;
   font-family: $sans-serif;
   text-align: center;
   border-radius: 0.25em;
   .first-graf {
-    font-size: $md;
+    font-size: $lg;
+    @media (max-width: $screen-xs) {
+      font-size: $md;
+    }
     line-height: 1.25;
   }
   .income-only {
-    font-size: $md;
+    font-size: $lg;
+    @media (max-width: $screen-xs) {
+      font-size: $md;
+    }
     display: block;
     margin: 0px auto;
     margin-bottom: 15px;

@@ -68,7 +68,7 @@
 
 
 .font-lg {
-  font-size: 22px !important; }
+  font-size: 24px !important; }
 
 
 .font-md {
@@ -195,7 +195,7 @@ body, html {
 
 .subhed {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
-  font-size: 22px !important;
+  font-size: 24px !important;
   font-weight: bold;
   text-transform: uppercase;
   margin: 1em 0; }
@@ -315,8 +315,11 @@ hr {
     font-size: 12px !important; }
 
 .readout {
-  font-size: 20px !important;
+  font-size: 24px !important;
   text-align: left; }
+  @media (max-width: 480px) {
+    .readout {
+      font-size: 20px !important; } }
 
 .graphic-label {
   text-align: left; }
@@ -489,7 +492,7 @@ input.income {
     font-size: 20px !important; }
   .hover-box-container .housing-number {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-    font-size: 22px !important;
+    font-size: 24px !important;
     font-weight: bold; }
     @media (max-width: 480px) {
       .hover-box-container .housing-number {
@@ -551,7 +554,7 @@ input.income {
   .hover-box-container .state,
   .hover-box-container .parentheses {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-    font-size: 22px !important;
+    font-size: 24px !important;
     font-weight: bold; }
   .hover-box-container .zip-code-heading,
   .hover-box-container .neighborhood-heading {
@@ -600,20 +603,29 @@ input.income {
 
 .explainer {
   display: none;
-  font-size: 20px !important;
+  font-size: 24px !important;
   line-height: 18px;
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   text-align: center;
   border-radius: 0.25em; }
+  @media (max-width: 480px) {
+    .explainer {
+      font-size: 20px !important; } }
   .explainer .first-graf {
-    font-size: 20px !important;
+    font-size: 24px !important;
     line-height: 1.25; }
+    @media (max-width: 480px) {
+      .explainer .first-graf {
+        font-size: 20px !important; } }
   .explainer .income-only {
-    font-size: 20px !important;
+    font-size: 24px !important;
     display: block;
     margin: 0px auto;
     margin-bottom: 15px;
     line-height: 1.25; }
+    @media (max-width: 480px) {
+      .explainer .income-only {
+        font-size: 20px !important; } }
 
 #map-container {
   width: 100%;
@@ -651,16 +663,19 @@ input.income {
   font-weight: bold;
   color: #A6A6A6; }
   .interface-selector--green.selected-interface {
-    background-color: #00AE4D; }
+    background-color: #00AE4D;
+    border-color: #00AE4D; }
   .interface-selector--blue.selected-interface {
-    background-color: #25408F; }
+    background-color: #25408F;
+    border-color: #25408F; }
   .interface-selector--red.selected-interface {
-    background-color: #ED1941; }
+    background-color: #ED1941;
+    border-color: #ED1941; }
   .interface-selector--yellow.selected-interface {
-    background-color: #D1A10D; }
+    background-color: #D1A10D;
+    border-color: #D1A10D; }
 
 .selected-interface {
-  border: none;
   color: white; }
 
 .map-interface {
@@ -711,9 +726,12 @@ input.income {
 .input-container {
   text-align: center; }
   .input-container .income-standfirst {
-    font-size: 20px !important;
+    font-size: 24px !important;
     font-weight: bold;
     font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
+    @media (max-width: 480px) {
+      .input-container .income-standfirst {
+        font-size: 20px !important; } }
   .input-container .income-box {
     font-size: 20px !important;
     padding: 10px;
@@ -742,7 +760,9 @@ input.income {
       font-weight: bold; }
 
 .results-outer {
-  margin-bottom: 30px; }
+  margin-bottom: 100px;
+  padding-bottom: 200px;
+  border-bottom: solid 5px #A6A6A6; }
 
 .input-group {
   margin: 0 auto; }

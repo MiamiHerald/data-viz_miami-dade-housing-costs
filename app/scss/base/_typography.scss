@@ -16,7 +16,11 @@
 }
 
 .readout {
-  font-size: $md;
+  @media (max-width: $screen-xs) {
+    font-size: $md;
+  }
+
+  font-size: $lg;
   text-align: left;
 }
 

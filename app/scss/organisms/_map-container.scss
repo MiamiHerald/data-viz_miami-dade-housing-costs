@@ -44,23 +44,26 @@
 
   &--green.selected-interface {
     background-color: $green;
+    border-color: $green;
   }
 
   &--blue.selected-interface {
     background-color: $blue;
+    border-color: $blue;
   }
 
   &--red.selected-interface {
     background-color: $red;
+    border-color: $red;
   }
 
   &--yellow.selected-interface {
     background-color: $yellow;
+    border-color: $yellow;
   }
 }
 
 .selected-interface {
-  border: none;
   color: white;
 }
 
