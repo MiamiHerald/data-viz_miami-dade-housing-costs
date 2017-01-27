@@ -72,7 +72,7 @@
 
 
 .font-md {
-  font-size: 18px !important; }
+  font-size: 20px !important; }
 
 
 .font-base {
@@ -106,7 +106,7 @@ body, html {
 
 .graphic-label {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
   color: #ED1941;
   display: block;
   font-weight: 900;
@@ -202,7 +202,7 @@ body, html {
 
 .tinyhed {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
   margin: 1em 0 0.5em 0; }
 
 .instructions {
@@ -299,7 +299,7 @@ hr {
   .readout {
     font-size: 14px !important; }
   .fa-facebook, .fa-twitter, .fa-google-plus {
-    font-size: 18px !important; } }
+    font-size: 20px !important; } }
 
 .headline {
   font-size: 25px;
@@ -315,7 +315,7 @@ hr {
     font-size: 12px !important; }
 
 .readout {
-  font-size: 18px !important;
+  font-size: 20px !important;
   text-align: left; }
 
 .graphic-label {
@@ -369,7 +369,7 @@ input.income {
 .btn {
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   font-weight: bold;
-  font-size: 18px !important;
+  font-size: 20px !important;
   padding: 10px;
   transition: background-color 0.3s linear;
   border-radius: 0px !important;
@@ -385,7 +385,7 @@ input.income {
   background-color: white;
   display: block;
   margin-bottom: 10px;
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-family: sans-serif;
   padding: 10px;
   cursor: pointer;
@@ -444,7 +444,7 @@ input.income {
   .hover-box-container .sub-info .neighborhoods {
     display: inline;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
     line-height: 1.25; }
   .hover-box-container .crime-rate {
     float: right;
@@ -464,7 +464,7 @@ input.income {
     border-radius: 50%;
     vertical-align: middle; }
   .hover-box-container .housing-heading {
-    font-size: 18px !important;
+    font-size: 20px !important;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     font-weight: bold; }
     .hover-box-container .housing-heading span {
@@ -486,14 +486,14 @@ input.income {
     color: #25408F; }
   .hover-box-container .housing-year,
   .hover-box-container .housing-growth {
-    font-size: 18px !important; }
+    font-size: 20px !important; }
   .hover-box-container .housing-number {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     font-size: 22px !important;
     font-weight: bold; }
     @media (max-width: 480px) {
       .hover-box-container .housing-number {
-        font-size: 18px !important; } }
+        font-size: 20px !important; } }
     .hover-box-container .housing-number.house-percent, .hover-box-container .housing-number.condo-percent {
       color: #25408F; }
     .hover-box-container .housing-number--green {
@@ -513,7 +513,7 @@ input.income {
       .hover-box-container .school-list .school-table th {
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
         color: #D1A10D;
-        font-size: 18px !important;
+        font-size: 20px !important;
         text-align: center;
         padding-top: 2.5px;
         font-weight: normal; }
@@ -523,9 +523,9 @@ input.income {
       .hover-box-container .school-list .school-table .name {
         text-align: left;
         color: black;
-        font-size: 18px !important; }
+        font-size: 20px !important; }
       .hover-box-container .school-list .school-table .grade {
-        font-size: 18px !important;
+        font-size: 20px !important;
         font-weight: bold;
         color: #D1A10D; }
       .hover-box-container .school-list .school-table td {
@@ -536,7 +536,7 @@ input.income {
   .hover-box-container .no-school {
     display: none;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
     color: #bbb;
     margin-bottom: 10px;
     text-align: center; }
@@ -588,7 +588,7 @@ input.income {
         background-color: #aaa; }
       .button-container .check-button label span {
         display: block;
-        font-size: 18px !important;
+        font-size: 20px !important;
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
         line-height: 0px;
         padding: 10px; }
@@ -600,16 +600,16 @@ input.income {
 
 .explainer {
   display: none;
-  font-size: 18px !important;
+  font-size: 20px !important;
   line-height: 18px;
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
   text-align: center;
   border-radius: 0.25em; }
   .explainer .first-graf {
-    font-size: 18px !important;
+    font-size: 20px !important;
     line-height: 1.25; }
   .explainer .income-only {
-    font-size: 18px !important;
+    font-size: 20px !important;
     display: block;
     margin: 0px auto;
     margin-bottom: 15px;
@@ -634,7 +634,7 @@ input.income {
 
 .hover-box-container .price-explainer {
   font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
   line-height: 18px; }
 
 .hover-box-container .percent-year {
@@ -711,11 +711,11 @@ input.income {
 .input-container {
   text-align: center; }
   .input-container .income-standfirst {
-    font-size: 18px !important;
+    font-size: 20px !important;
     font-weight: bold;
     font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
   .input-container .income-box {
-    font-size: 18px !important;
+    font-size: 20px !important;
     padding: 10px;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     border: none;
