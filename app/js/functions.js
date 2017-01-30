@@ -1198,7 +1198,7 @@ function writeHoverBox (feature,layer) {
 	var currMonth = layer.feature.properties.currMonth;
 	var currYear = layer.feature.properties.currYear;
 	var prevYear = layer.feature.properties.currYear - 1;
-	var schoolData = layer.feature.properties.school;
+	var schoolData = layer.feature.properties.schools;
 	var neighborhoodNames = layer.feature.properties.neighborhoods;
 	var crimeRate = layer.feature.properties.crime;
 	var schoolGrade = layer.feature.properties.schoolGrade;
@@ -1348,7 +1348,7 @@ function writeHoverBox (feature,layer) {
 		for (var i = 0; i < schoolData.length; i++) {
 			$('.no-school').hide();
 			$('.school-table').show();
-			$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td class="grade">' + schoolData[i].grade2015 + '</td><td class="grade">' + schoolData[i].grade2014 + '</td><td class="grade">' + schoolData[i].grade2013 + '</td></tr>');
+			$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td class="grade">' + schoolData[i].grade2016 + '</td><td class="grade">' + schoolData[i].grade2015 + '</td><td class="grade">' + schoolData[i].grade2014 + '</td></tr>');
 		}
 	}
 
