@@ -563,6 +563,20 @@ input.income {
   .hover-box-container .neighborhood-heading {
     margin-bottom: 15px; }
 
+.share-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px !important;
+  margin-bottom: 15px;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
+
+.share-link {
+  text-align: center;
+  width: 100%;
+  display: inline-block; }
+  .share-link img {
+    width: 50px; }
+
 .button-container {
   margin-bottom: 30px;
   height: auto; }

@@ -1,0 +1,17 @@
+.share-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: $md;
+  margin-bottom: 15px;
+  font-family: $serif;
+}
+
+.share-link {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+
+  img {
+    width: 50px;
+  }
+}
