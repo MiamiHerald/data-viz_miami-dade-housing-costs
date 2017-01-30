@@ -87,7 +87,7 @@
   font-size: 12px !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
+  font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important; }
 
 body, html {
   color: #282828;
@@ -201,7 +201,7 @@ body, html {
   margin: 1em 0; }
 
 .tinyhed {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
   font-size: 20px !important;
   margin: 1em 0 0.5em 0; }
 
@@ -325,7 +325,7 @@ hr {
   text-align: left; }
 
 .question {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
   font-weight: bold;
   font-size: 16px !important; }
 
@@ -385,7 +385,7 @@ input.income {
   display: none; }
 
 .heading.section-main-heading.link {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
   margin-bottom: 15px; }
   .heading.section-main-heading.link a:hover {
     text-decoration: none; }
@@ -553,7 +553,7 @@ input.income {
     margin-bottom: 10px;
     text-align: center; }
   .hover-box-container .table-label {
-    font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+    font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
     text-transform: uppercase;
     font-size: 10px !important;
     font-weight: bold;
@@ -615,7 +615,7 @@ input.income {
       .button-container .check-button label span {
         display: block;
         font-size: 20px !important;
-        font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+        font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
         line-height: 0px;
         padding: 10px; }
       .button-container .check-button label input {
@@ -676,7 +676,7 @@ input.income {
   display: none; }
 
 .interface-selector {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
   text-transform: uppercase;
   display: inline-block;
   padding: 10px;
@@ -727,7 +727,7 @@ input.income {
   margin: 1em 0; }
 
 .labels .label {
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
   font-size: 10px !important;
   display: inline-block;
   padding: 0px;
