@@ -48,15 +48,7 @@ function fixZoom() {
 	if (w > mobile) {
 		return 9.5;
 	} else {
-		return 8.75;
-	}
-}
-
-function controlZoom() {
-	if (w > mobile) {
-		return true;
-	} else {
-		return false;
+		return 9.5;
 	}
 }
 
@@ -73,7 +65,7 @@ var map = new L.Map('map-container', {
 	zoomControl: false,
 	doubleClickZoom: false,
 	VML: true,
-	scrollWheelZoom: controlZoom()
+	scrollWheelZoom: false
 }).addLayer(tiles);
 
 // ADD CONTROLS
