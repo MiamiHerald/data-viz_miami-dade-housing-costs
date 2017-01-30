@@ -346,4 +346,7 @@
 		init();
 	});
 
+  $('.map-button.show-all').click(function() {
+    init();
+  });
 })();
