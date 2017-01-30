@@ -129,9 +129,13 @@
     font-size: $xxs;
     font-family: $serif;
     margin-bottom: 15px;
-    max-height: 200px;
+    max-height: 250px;
     overflow: scroll;
     width: 100%;
+
+    @media (max-height: $screen-xs) {
+      max-height: 200px;
+    }
     .school-table {
       width: 100%;
       th {
