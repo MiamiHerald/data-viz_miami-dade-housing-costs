@@ -386,7 +386,8 @@ input.income {
 
 .heading.section-main-heading.link {
   font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-right: 15px; }
   .heading.section-main-heading.link a:hover {
     text-decoration: none; }
 
@@ -394,7 +395,8 @@ input.income {
   display: inline;
   padding-left: 0;
   text-transform: uppercase;
-  color: #adadad; }
+  color: #adadad;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
 
 .map-button {
   background-color: white;
