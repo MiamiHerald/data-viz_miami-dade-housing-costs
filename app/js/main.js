@@ -347,6 +347,7 @@
 	});
 
   $('.map-button.show-all').click(function() {
+    clearAllLayers();
     init();
   });
 })();
