@@ -1123,7 +1123,7 @@ function buildKey(housing) {
 		}
 		$('.legend-block').css('width', '33.3333%');
 	} else {
-		var yellow = ['rgba(209, 161, 13, 0.2)', 'rgba(209, 161, 13, 0.4)','rgba(209, 161, 13, 0.6)','rgba(209, 161, 13, 0.8)','rgba(209, 161, 13, 1)'];
+		var yellow = ['rgba(209, 161, 13, 1)', 'rgba(209, 161, 13, 0.8)','rgba(209, 161, 13, 0.6)','rgba(209, 161, 13, 0.4)','rgba(209, 161, 13, 0.2)'];
 
 		for (var i = 0; i < yellow.length; i++) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + yellow[i] + '\'</div>');
@@ -2150,7 +2150,7 @@ function buildCrimeMap() {
 
 function buildSchoolMap() {
 
-	var legendColors = ['rgba(209, 161, 13, 0.2)', 'rgba(209, 161, 13, 0.4)', 'rgba(209, 161, 13, 0.6)', 'rgba(209, 161, 13, 0.8)', 'rgba(209, 161, 13, 1)'];
+	var legendColors = ['rgba(209, 161, 13, 1)', 'rgba(209, 161, 13, 0.8)', 'rgba(209, 161, 13, 0.6)', 'rgba(209, 161, 13, 0.4)', 'rgba(209, 161, 13, 0.2)'];
 
 	$('.income-button').attr('disabled', 'disabled');
 	$('.crime-select').removeClass('selected-interface');

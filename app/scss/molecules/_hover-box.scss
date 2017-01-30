@@ -130,7 +130,7 @@
     font-family: $serif;
     margin-bottom: 15px;
     max-height: 250px;
-    overflow: scroll;
+    overflow-y: scroll;
     width: 100%;
 
     @media (max-height: $screen-xs) {

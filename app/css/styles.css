@@ -509,7 +509,7 @@ input.income {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     margin-bottom: 15px;
     max-height: 250px;
-    overflow: scroll;
+    overflow-y: scroll;
     width: 100%; }
     @media (max-height: 480px) {
       .hover-box-container .school-list {
