@@ -1384,24 +1384,11 @@ function onEachFeature(feature, layer) {
 	layer.on({
 
 		mouseover: function(e) {
-			var query = Modernizr.mq('(min-width: 992px)');
-
-			if (query) {
-				$('.schools-row').empty();
-
-				var layer = e.target;
-				layer.setStyle({
-					'color': '#666'
-				});
-				layer.bringToFront();
-
-				var mobile = 992;
-				var w = window.innerWidth;
-
-				if (mobile < w) {
-					writeHoverBox(feature,layer);
-				}
-			}
+			var layer = e.target;
+			layer.setStyle({
+				'color': '#666'
+			});
+			layer.bringToFront();
 		},
 
 		mouseout: function(e) {
@@ -1412,50 +1399,40 @@ function onEachFeature(feature, layer) {
 			endHover();
 		},
 
-		// mousemove: function(e) {},
+		mousemove: function(e) {},
 
 		click: function(e) {
 			var query = Modernizr.mq('(max-width: 992px)');
 
-			if (query) {
-				$('#hover-box-mobile').show();
-				$('.schools-row').empty();
-				var mobile = 992;
-				var w = window.innerWidth;
+			$('#hover-box-mobile').show();
+			$('.schools-row').empty();
 
-				if (mobile > w) {
-					$('#hover-box-mobile').css({
-						'position': 'absolute',
-						'right': 0,
-						'left': 0,
-						'bottom': '0%',
-						'top': '50%',
-						'width': '100%'
-					});
+			$('#hover-box-mobile').css({
+				'position': 'absolute',
+				'right': 0,
+				'left': 0,
+				'bottom': '0%',
+				'top': '50%',
+				'width': '100%'
+			});
 
-					writeHoverBox(feature,layer);
-				}
-			}
+			writeHoverBox(feature,layer);
 		},
 
 		tap: function(e) {
+			$('#hover-box-mobile').show();
 			$('.schools-row').empty();
-			var mobile = 992;
-			var w = window.innerWidth;
 
-			if (mobile > w) {
-				$('#hover-box').css({
-					'margin': 'auto',
-  					'position': 'absolute',
-  					'top': 0,
-  					'left': 0,
-  					'bottom': '23%',
-  					'right': 0,
-  					'height': '245px',
-					'width': '275px'
-				});
-				writeHoverBox(feature,layer);
-			}
+			$('#hover-box-mobile').css({
+				'position': 'absolute',
+				'right': 0,
+				'left': 0,
+				'bottom': '0%',
+				'top': '50%',
+				'width': '100%'
+			});
+
+			writeHoverBox(feature,layer);
 		}
 	});
 }
