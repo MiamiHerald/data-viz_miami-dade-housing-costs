@@ -41,25 +41,55 @@
   border: 2px solid $grey;
   font-weight: bold;
   color: $grey;
+  background-color: white;
+  transition: color 0.3s linear, background-color 0.3s linear;
 
-  &--green.selected-interface {
-    background-color: $green;
-    border-color: $green;
+  &--green {
+    &:hover {
+      color: $white;
+      background-color: transparentize($green, 0.2);
+    }
+
+    &.selected-interface {
+      background-color: $green;
+      border-color: $green;
+    }
   }
 
-  &--blue.selected-interface {
-    background-color: $blue;
-    border-color: $blue;
+  &--blue {
+    &:hover {
+      color: $white;
+      background-color: transparentize($blue, 0.2);
+    }
+
+    &.selected-interface {
+      background-color: $blue;
+      border-color: $blue;
+    }
   }
 
-  &--red.selected-interface {
-    background-color: $red;
-    border-color: $red;
+  &--red {
+    &:hover {
+      color: $white;
+      background-color: transparentize($red, 0.2);
+    }
+
+    &.selected-interface {
+      background-color: $red;
+      border-color: $red;
+    }
   }
 
-  &--yellow.selected-interface {
-    background-color: $yellow;
-    border-color: $yellow;
+  &--yellow {
+    &:hover {
+      color: $white;
+      background-color: transparentize($yellow, 0.2);
+    }
+
+    &.selected-interface {
+      background-color: $yellow;
+      border-color: $yellow;
+    }
   }
 }
 
