@@ -390,6 +390,12 @@ input.income {
   .heading.section-main-heading.link a:hover {
     text-decoration: none; }
 
+.published-date {
+  display: inline;
+  padding-left: 0;
+  text-transform: uppercase;
+  color: #adadad; }
+
 .map-button {
   background-color: white;
   display: block;
