@@ -384,6 +384,10 @@ input.income {
 .reset-button-holder {
   display: none; }
 
+.heading.section-main-heading.link {
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  margin-bottom: 15px; }
+
 .map-button {
   background-color: white;
   display: block;
