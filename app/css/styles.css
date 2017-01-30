@@ -115,10 +115,10 @@ body, html {
 
 .headline {
   font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
-  font-size: 50px !important;
-  line-height: 1em;
+  font-size: 52px !important;
+  line-height: 1.3;
   margin: 5px 0px;
-  font-weight: 700;
+  font-weight: normal;
   text-align: center;
   max-width: 775px; }
 
@@ -396,7 +396,8 @@ input.income {
   padding-left: 0;
   text-transform: uppercase;
   color: #adadad;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
+  font-size: 14px !important; }
 
 .map-button {
   background-color: white;

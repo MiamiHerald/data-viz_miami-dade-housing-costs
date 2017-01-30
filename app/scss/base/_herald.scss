@@ -22,7 +22,7 @@ $xs: 12px !important;
 $xxs: 10px !important;
 
 //CUSTOM SIZES
-$headline: 50px !important;
+$headline: 52px !important;
 
 //FONT SIZE CLASS MIXINS
 @mixin font-size($f, $pct:1) {
@@ -141,9 +141,9 @@ body,html {
 .headline {
   font-family: $serif;
   font-size: $headline;
-  line-height: 1em;
+  line-height: 1.3;
   margin: 5px 0px;
-  font-weight: 700;
+  font-weight: normal;
   text-align: center;
   max-width: 775px;
 }
