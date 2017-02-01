@@ -64,7 +64,7 @@
 								</span>
 								<span class="check-button" id="check-button-savings">
 									<label>
-										<input class="savings" type="checkbox" ng-model="incomeTypeChecked"></input>
+										<input class="savings" type="checkbox" ng-model="savingsTypeChecked"></input>
 										<span><i class="fa fa-money"></i> Max price</span>
 									</label>
 								</span>
@@ -73,7 +73,7 @@
 					</div>
 
 					<div class="col-md-8 col-md-offset-2">
-						<div class="input-container ng-hide" id="input-container" ng-show="incomeTypeChecked">
+						<div ng-show="incomeTypeChecked || savingsTypeChecked" class="input-container ng-hide" id="input-container">
 							<div class="income-standfirst"></div>
 							<input name="income-box" class="income-box" type="text" placeholder="$"></input>
 							<span class="input-group-btn">
