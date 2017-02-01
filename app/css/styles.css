@@ -599,11 +599,16 @@ input.income {
   font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
 
 .share-link {
-  text-align: center;
-  width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 15px; }
+  .share-link:last-child {
+    margin-right: 0; }
   .share-link img {
-    width: 50px; }
+    width: 50px;
+    text-align: center; }
+
+.share-wrapper {
+  text-align: center; }
 
 .button-container {
   margin-bottom: 30px;

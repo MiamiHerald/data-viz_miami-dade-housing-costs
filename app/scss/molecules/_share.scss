@@ -7,11 +7,19 @@
 }
 
 .share-link {
-  text-align: center;
-  width: 100%;
   display: inline-block;
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0; 
+  }
 
   img {
     width: 50px;
+    text-align: center;
   }
+}
+
+.share-wrapper {
+  text-align: center
 }
