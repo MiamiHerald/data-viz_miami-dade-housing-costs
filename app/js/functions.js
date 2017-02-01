@@ -1347,7 +1347,7 @@ function writeHoverBox (feature,layer) {
 		// LOOP THROUGH SCHOOL LIST AND BUILD TABLE
 		for (var i = 0; i < schoolData.length; i++) {
 			$('.no-school').hide();
-			$('.school-table').show(););
+			$('.school-table').show();
 			$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td class="grade">' + schoolData[i].grade2014 + '</td><td class="grade">' + schoolData[i].grade2015 + '</td><td class="grade">' + schoolData[i].grade2016 + '</td></tr>');
 		}
 	}
@@ -1362,6 +1362,7 @@ function writeHoverBox (feature,layer) {
 	}).resize();
 
 	schoolTable.show();
+	$('.hover-instructions').hide();
 
 	$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
 		$('#hover-box-mobile').hide();
@@ -1381,6 +1382,14 @@ function onEachFeature(feature, layer) {
 				'color': '#666'
 			});
 			layer.bringToFront();
+			var x = e.containerPoint.x;
+			var y = e.containerPoint.y;
+			$('.map-tooltip').css({
+				'display': 'block',
+				'top': y +'px',
+				'left': x + 'px'
+			});
+			$('.map-tooltip').html(feature.id);
 		},
 
 		mouseout: function(e) {
@@ -1388,6 +1397,7 @@ function onEachFeature(feature, layer) {
 			layer.setStyle({
 				color: '#fff'
 			});
+			$('.map-tooltip').hide();
 			endHover();
 		},
 
@@ -1395,6 +1405,12 @@ function onEachFeature(feature, layer) {
 
 		click: function(e) {
 			var query = Modernizr.mq('(max-width: 992px)');
+
+			var layer = e.target;
+			layer.setStyle({
+				'color': '#000'
+			});
+			layer.bringToFront();
 
 			$('#hover-box-mobile').show();
 			$('.schools-row').empty();

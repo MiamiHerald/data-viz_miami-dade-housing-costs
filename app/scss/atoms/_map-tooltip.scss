@@ -1,0 +1,10 @@
+.map-tooltip {
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 999;
+  padding: 10px;
+  font-family: $serif;
+  font-weight: bold;
+  font-size: $md;
+}

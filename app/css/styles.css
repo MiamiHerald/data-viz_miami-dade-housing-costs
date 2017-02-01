@@ -419,6 +419,16 @@ input.income {
     z-index: 999;
     transform: translateY(-50%); }
 
+.map-tooltip {
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 999;
+  padding: 10px;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+  font-weight: bold;
+  font-size: 20px !important; }
+
 .footer {
   margin: 3em 0; }
   .footer hr {
