@@ -847,7 +847,7 @@ function getSchoolColor(school, house, condo) {
 			return 'rgba(209, 161, 13, 0.8)';
 		} else if ((income >= house) && ((school >= 3.0) && (school <= 3.9))) {
 			return 'rgba(209, 161, 13, 0.6)';
-		} else if ((income >= house) && ((school > 2.0) && (school <= 2.9))) {
+		} else if ((income >= house) && ((school >= 2.0) && (school <= 2.9))) {
 			return 'rgba(209, 161, 13, 0.4)';
 		} else if ((income >= house) && ((school >= 1.0) && (school <= 1.9))) {
 			return 'rgba(209, 161, 13, 0.2)';
@@ -860,7 +860,7 @@ function getSchoolColor(school, house, condo) {
 			return 'rgba(209, 161, 13, 0.8)';
 		} else if ((income >= condo) && ((school >= 3.0) && (school <= 3.9))) {
 			return 'rgba(209, 161, 13, 0.6)';
-		} else if ((income >= condo) && ((school > 2.0) && (school <= 2.9))) {
+		} else if ((income >= condo) && ((school >= 2.0) && (school <= 2.9))) {
 			return 'rgba(209, 161, 13, 0.4)';
 		} else if ((income >= condo) && ((school >= 1.0) && (school <= 1.9))) {
 			return 'rgba(209, 161, 13, 0.2)';
