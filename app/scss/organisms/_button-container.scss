@@ -29,7 +29,8 @@
       transition: background-color 0.3s linear;
 
       &:hover {
-        background-color: #aaa;
+        background-color: $herald-blue;
+        color: white;
       }
       & span {
         display: block;
@@ -41,8 +42,8 @@
       & input {
         display: none;
         &:checked + span {
-          background-color: #aaa;
-          color: #000;
+          background-color: $herald-blue;
+          color: white;
         }
       }
     }

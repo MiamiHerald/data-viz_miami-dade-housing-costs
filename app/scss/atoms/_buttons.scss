@@ -9,7 +9,9 @@
   color: $herald-blue;
 
   &:hover {
-    background-color: #aaa;
+    background-color: $herald-blue;
+    color: white;
+    border: solid 2px $herald-blue;
   }
 }
 

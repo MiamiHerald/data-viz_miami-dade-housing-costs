@@ -1347,8 +1347,8 @@ function writeHoverBox (feature,layer) {
 		// LOOP THROUGH SCHOOL LIST AND BUILD TABLE
 		for (var i = 0; i < schoolData.length; i++) {
 			$('.no-school').hide();
-			$('.school-table').show();
-			$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td class="grade">' + schoolData[i].grade2016 + '</td><td class="grade">' + schoolData[i].grade2015 + '</td><td class="grade">' + schoolData[i].grade2014 + '</td></tr>');
+			$('.school-table').show(););
+			$('.school-head').after('<tr class=\'schools-row\'><td class=\'name\'>' + schoolData[i].name + '</td><td class="grade">' + schoolData[i].grade2014 + '</td><td class="grade">' + schoolData[i].grade2015 + '</td><td class="grade">' + schoolData[i].grade2016 + '</td></tr>');
 		}
 	}
 

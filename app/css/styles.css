@@ -379,7 +379,9 @@ input.income {
   border: solid 2px #008FD5;
   color: #008FD5; }
   .btn:hover {
-    background-color: #aaa; }
+    background-color: #008FD5;
+    color: white;
+    border: solid 2px #008FD5; }
 
 .reset-button-holder {
   display: none; }
@@ -534,17 +536,18 @@ input.income {
       .hover-box-container .school-list .school-table th {
         font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
         color: #D1A10D;
-        font-size: 20px !important;
+        font-size: 17px;
         text-align: center;
         padding-top: 2.5px;
         font-weight: normal; }
         .hover-box-container .school-list .school-table th.name {
           font-weight: bold;
-          font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
+          font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+          font-size: 20px !important; }
       .hover-box-container .school-list .school-table .name {
         text-align: left;
         color: black;
-        font-size: 20px !important; }
+        font-size: 17px; }
       .hover-box-container .school-list .school-table .grade {
         font-size: 20px !important;
         font-weight: bold;
@@ -620,7 +623,8 @@ input.income {
       cursor: pointer;
       transition: background-color 0.3s linear; }
       .button-container .check-button label:hover {
-        background-color: #aaa; }
+        background-color: #008FD5;
+        color: white; }
       .button-container .check-button label span {
         display: block;
         font-size: 20px !important;
@@ -630,8 +634,8 @@ input.income {
       .button-container .check-button label input {
         display: none; }
         .button-container .check-button label input:checked + span {
-          background-color: #aaa;
-          color: #000; }
+          background-color: #008FD5;
+          color: white; }
 
 .explainer {
   display: none;

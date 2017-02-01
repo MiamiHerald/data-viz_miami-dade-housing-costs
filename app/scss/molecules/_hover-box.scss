@@ -141,7 +141,7 @@
       th {
         font-family: $sans-serif;
         color: $yellow;
-        font-size: $md;
+        font-size: 17px;
         text-align: center;
         padding-top: 2.5px;
         font-weight: normal;
@@ -149,12 +149,13 @@
         &.name {
           font-weight: bold;
           font-family: $serif;
+          font-size: $md;
         }
       }
       .name {
         text-align: left;
         color: black;
-        font-size: $md;
+        font-size: 17px;
       }
       .grade {
         font-size: $md;
