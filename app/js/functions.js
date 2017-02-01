@@ -378,15 +378,15 @@ function getDefaultSchoolBorder (d) {
 
 function getDefaultSchoolColor(d) {
 
-	if (d >= 4) {
+	if (d >= 5) {
 		return 'rgba(209, 161, 13, 1)';
-	} else if ((d >= 3) && (d <= 3.9)) {
+	} else if ((d >= 4) && (d <= 4.9)) {
 		return 'rgba(209, 161, 13, 0.8)';
-	} else if ((d >= 2) && (d <= 2.9)) {
+	} else if ((d >= 3) && (d <= 3.9)) {
 		return 'rgba(209, 161, 13, 0.6)';
-	} else if ((d > 1) && (d <= 1.9)) {
+	} else if ((d > 2) && (d <= 2.9)) {
 		return 'rgba(209, 161, 13, 0.4)';
-	} else if ((d > 0.1) && (d <= 0.9)) {
+	} else if ((d > 1) && (d <= 1.9)) {
 		return 'rgba(209, 161, 13, 0.2)';
 	} else {
 		return '#fff';
@@ -841,28 +841,28 @@ function getSchoolColor(school, house, condo) {
 
 	if ((houseCheck === true) && ((condoCheck === false) && (inputEmpty === false))) {
 
-		if ((income >= house) && (school === 4)) {
+		if ((income >= house) && (school === 5)) {
 			return 'rgba(209, 161, 13, 1)';
-		} else if ((income >= house) && ((school >= 3.0) && (school <= 3.9))) {
+		} else if ((income >= house) && ((school >= 4.0) && (school <= 4.9))) {
 			return 'rgba(209, 161, 13, 0.8)';
-		} else if ((income >= house) && ((school >= 2.0) && (school <= 2.9))) {
+		} else if ((income >= house) && ((school >= 3.0) && (school <= 3.9))) {
 			return 'rgba(209, 161, 13, 0.6)';
-		} else if ((income >= house) && ((school > 1) && (school <= 1.9))) {
+		} else if ((income >= house) && ((school > 2.0) && (school <= 2.9))) {
 			return 'rgba(209, 161, 13, 0.4)';
-		} else if ((income >= house) && ((school >= 0.1) && (school <= 0.9))) {
+		} else if ((income >= house) && ((school >= 1.0) && (school <= 1.9))) {
 			return 'rgba(209, 161, 13, 0.2)';
 		}
 	} else if ((houseCheck === false) && ((condoCheck === true) && (inputEmpty === false))) {
 
-		if ((income >= condo) && (school === 4)) {
+		if ((income >= condo) && (school === 5)) {
 			return 'rgba(209, 161, 13, 1)';
-		} else if ((income >= condo) && ((school >= 3.0) && (school <= 3.9))) {
+		} else if ((income >= condo) && ((school >= 4.0) && (school <= 4.9))) {
 			return 'rgba(209, 161, 13, 0.8)';
-		} else if ((income >= condo) && ((school >= 2.0) && (school <= 2.9))) {
+		} else if ((income >= condo) && ((school >= 3.0) && (school <= 3.9))) {
 			return 'rgba(209, 161, 13, 0.6)';
-		} else if ((income >= condo) && ((school > 1) && (school <= 1.9))) {
+		} else if ((income >= condo) && ((school > 2.0) && (school <= 2.9))) {
 			return 'rgba(209, 161, 13, 0.4)';
-		} else if ((income >= condo) && ((school >= 0.1) && (school <= 0.9))) {
+		} else if ((income >= condo) && ((school >= 1.0) && (school <= 1.9))) {
 			return 'rgba(209, 161, 13, 0.2)';
 		}
 	}
@@ -1104,6 +1104,9 @@ function buildKey(housing) {
 
 		console.log('Build price key');
 
+		$('.key-standfirst').html('Median value');
+		console.log(housing);
+
 	} else if (housing === 'percent') {
 		var blue = ['rgba(37, 64, 143, 0.25)', 'rgba(37, 64, 143, 0.50)', 'rgba(37, 64, 143, 0.75)', 'rgba(37, 64, 143, 1)'];
 
@@ -1115,6 +1118,8 @@ function buildKey(housing) {
 		$('.legend-block').css('width', '25%');
 		console.log('Build percent key');
 
+		$('.key-standfirst').html('Median value change');
+
 	} else if (housing === 'crime') {
 		var red = ['rgba(237, 25, 65, 0.3333)', 'rgba(237, 25, 65, 0.6667)', 'rgba(237, 25, 65, 1)'];
 
@@ -1122,6 +1127,8 @@ function buildKey(housing) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + red[i] + '\'</div>');
 		}
 		$('.legend-block').css('width', '33.3333%');
+
+		$('.key-standfirst').html('Crime rate');
 	} else {
 		var yellow = ['rgba(209, 161, 13, 1)', 'rgba(209, 161, 13, 0.8)','rgba(209, 161, 13, 0.6)','rgba(209, 161, 13, 0.4)','rgba(209, 161, 13, 0.2)'];
 
@@ -1129,6 +1136,8 @@ function buildKey(housing) {
 			$('.key').append('<div class=\'legend-block\' style=\'color:' + yellow[i] + '\'</div>');
 			$('.legend-block').css('width', '20%');
 		}
+
+		$('.key-standfirst').html('Average school grade');
 	}
 }
 
@@ -2118,6 +2127,7 @@ function buildCrimeMap() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
+	$('.key-standfirst').html('Crime rate');
 	$('.housing-type')
 		.html('Crime rates ')
 		.css({

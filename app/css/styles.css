@@ -749,6 +749,11 @@ input.income {
   clear: both;
   margin: 1em 0; }
 
+.key-standfirst {
+  font-size: 20px !important;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+  font-weight: bold; }
+
 .labels .label {
   font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
   font-size: 10px !important;
@@ -820,6 +825,7 @@ input.income {
       font-weight: bold; }
 
 .results-outer {
+  margin-top: 100px;
   margin-bottom: 100px;
   padding-bottom: 200px;
   border-bottom: solid 5px #A6A6A6; }
