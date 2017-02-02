@@ -364,5 +364,6 @@
     clearAllLayers();
     init();
     showAll = true;
+    $('.share-link').addClass('show-all');
   });
 })();
