@@ -1153,8 +1153,8 @@ function showExplainer() {
 			});
 		});
 
-	$('#button-container').slideUp('fast');
-	$('#input-container').slideUp('fast');
+	$('.tool-list-container').slideUp('fast');
+	// $('#input-container').slideUp('fast');
 
 }
 

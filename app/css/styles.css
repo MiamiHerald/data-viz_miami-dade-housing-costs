@@ -150,7 +150,8 @@ body, html {
   font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
   font-size: 16px !important;
   line-height: 1.4;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0; }
   .readout a {
     color: #ED1941; }
     .readout a:hover {
@@ -347,7 +348,8 @@ hr {
 .tool-list-container {
   list-style: decimal;
   list-style-position: inside;
-  padding-left: 0px; }
+  padding-left: 0px;
+  margin-top: 50px; }
   .tool-list-container .item {
     display: block;
     margin: 0 0 20px 0px;
@@ -611,7 +613,6 @@ input.income {
   text-align: center; }
 
 .button-container {
-  margin-bottom: 30px;
   height: auto; }
   .button-container .standfirst {
     font-weight: bold;
@@ -683,11 +684,9 @@ input.income {
   height: 100vh;
   position: relative !important; }
 
-.map-info-container {
-  margin-bottom: 20px; }
-  @media (max-width: 992px) {
-    .map-info-container {
-      margin-bottom: 15px; } }
+@media (max-width: 992px) {
+  .map-info-container {
+    margin-bottom: 15px; } }
 
 .hover-box-container ul {
   padding-left: 0;
@@ -830,7 +829,7 @@ input.income {
       font-weight: bold; }
 
 .results-outer {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
   padding-bottom: 200px;
   border-bottom: solid 5px #A6A6A6; }
