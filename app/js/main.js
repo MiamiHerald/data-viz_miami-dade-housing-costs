@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  var showAll;
+
 	$('.income-box').keyup(function(event) {
 		var inputNumber = $(this).val().replace(/,/gi, '');
 		var newNumber = inputNumber.split(/(?=(?:\d{3})+$)/).join(',');
@@ -113,7 +115,11 @@
 		var condoCheck = (condoCheckbox.is(':checked'));
 		var inputEmpty = (incomeInput === '');
 
-		if ((houseCheck === true && condoCheck === false) && (inputEmpty === false)) {
+    if (showAll === true) {
+      buildDefaultHouse();
+			buildKey(price);
+			console.log('build default house map');
+    } else if ((houseCheck === true && condoCheck === false) && (inputEmpty === false)) {
 			buildHouseMap();
 			buildKey(price);
 			console.log('build house map');
@@ -152,7 +158,7 @@
 		var condoCheck = (condoCheckbox.is(':checked'));
 		var inputEmpty = (incomeInput === '');
 
-		if (((houseCheck === true) && (condoCheck === false)) && (inputEmpty === true)) {
+		if (((houseCheck === true) && (condoCheck === false)) && (inputEmpty === true) || showAll === true) {
 			console.log('build default percent house map');
 			buildDefaultPercentHouse();
 			buildKey(percent);
@@ -200,17 +206,21 @@
 
 		crimeRate.show();
 
-		if ((houseCheck === true && condoCheck === false) && (inputEmpty === false)) {
+		if (showAll === true) {
+			buildKey(crime);
+			buildDefaultCrime();
+			console.log('build default crime map');
+    } else if ((houseCheck === true && condoCheck === false) && (inputEmpty === false)) {
 			buildCrimeMap();
 			console.log('build crime map');
 		} else if ((houseCheck === false && condoCheck === true) && (inputEmpty === false)) {
 			buildCrimeMap();
 			console.log('build crime map');
 		} else {
-			buildKey(crime);
+      buildKey(crime);
 			buildDefaultCrime();
 			console.log('build default crime map');
-		}
+    }
 	});
 
 	$('#interface-container, #interface-container-mobile').on('click touchstart', '.school-select', function(event) {
@@ -233,7 +243,11 @@
 
 		schoolTable.show();
 
-		if ((houseCheck === true && condoCheck === false) && (inputEmpty === false)) {
+		if (showAll === true) {
+      buildKey(school);
+			buildDefaultSchool();
+			console.log('build default school map');
+    } else if((houseCheck === true && condoCheck === false) && (inputEmpty === false)) {
 			buildSchoolMap();
 			buildKey(school);
 			console.log('build school map');
@@ -244,7 +258,7 @@
 		} else {
 			buildKey(school);
 			buildDefaultSchool();
-			console.log('build default crime map');
+			console.log('build default school map');
 		}
 	});
 
@@ -346,8 +360,9 @@
 		init();
 	});
 
-  $('.map-button.show-all').click(function() {
+  $('.map-button.show-all').on('click touchstart', function() {
     clearAllLayers();
     init();
+    showAll = true;
   });
 })();

@@ -1091,7 +1091,6 @@ function checkInput(income) {
 
 // BUILD KEY
 function buildKey(housing) {
-
 	$('.legend-block').remove();
 
 	if (housing === 'price') {
@@ -1154,14 +1153,12 @@ function showExplainer() {
 		});
 
 	$('.tool-list-container').slideUp('fast');
-	// $('#input-container').slideUp('fast');
-
 }
 
 function hideExplainer() {
 	$('.explainer').slideUp('fast');
 	$('#button-container').slideDown('fast');
-	$('#input-container').slideDown('fast');
+	$('.tool-list-container').slideDown('fast');
 }
 
 // CLEAR LAYER FUNCTIONS
@@ -1437,6 +1434,14 @@ function onEachFeature(feature, layer) {
 		},
 
 		tap: function(e) {
+			var query = Modernizr.mq('(max-width: 992px)');
+
+			var layer = e.target;
+			layer.setStyle({
+				'color': '#000'
+			});
+			layer.bringToFront();
+
 			$('#hover-box-mobile').show();
 			$('.schools-row').empty();
 
