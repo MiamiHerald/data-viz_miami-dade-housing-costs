@@ -1121,7 +1121,7 @@ function buildKey(housing) {
 		$('.legend-block').css('width', '25%');
 		console.log('Build percent key');
 
-		$('.key-standfirst').html('Median value change <span class="key-sub">(' + currMonthShort + ' ' + currYear + ' vs. ' + currMonthShort + (currYear - 1) + ')</span>');
+		$('.key-standfirst').html('Median value change <span class="key-sub">(' + currMonthShort + ' ' + currYear + ' vs. ' + currMonthShort + ' ' + (currYear - 1) + ')</span>');
 
 	} else if (housing === 'crime') {
 		var red = ['rgba(237, 25, 65, 0.3333)', 'rgba(237, 25, 65, 0.6667)', 'rgba(237, 25, 65, 1)'];
