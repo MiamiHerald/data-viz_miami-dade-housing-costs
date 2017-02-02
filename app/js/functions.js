@@ -1093,6 +1093,7 @@ function checkInput(income) {
 function buildKey(housing) {
 	var currYear = $zipData[0].features[0].properties.currYear;
 	var currMonth = $zipData[0].features[0].properties.currMonth;
+	var currMonthShort = $zipData[0].features[0].properties.currMonthShort;
 
 	$('.legend-block').remove();
 
@@ -1120,7 +1121,7 @@ function buildKey(housing) {
 		$('.legend-block').css('width', '25%');
 		console.log('Build percent key');
 
-		$('.key-standfirst').html('Median value change');
+		$('.key-standfirst').html('Median value change <span class="key-sub">(' + currMonthShort + ' ' + currYear + ' vs. ' + currMonthShort + (currYear - 1) + ')</span>');
 
 	} else if (housing === 'crime') {
 		var red = ['rgba(237, 25, 65, 0.3333)', 'rgba(237, 25, 65, 0.6667)', 'rgba(237, 25, 65, 1)'];
