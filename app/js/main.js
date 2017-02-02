@@ -348,6 +348,7 @@
 
 		buildDefaultHouse();
     $('.reset-button-holder').hide();
+    showAll = false;
 	});
 
 	// LAUNCH PAD

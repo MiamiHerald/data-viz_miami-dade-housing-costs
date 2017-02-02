@@ -1091,6 +1091,9 @@ function checkInput(income) {
 
 // BUILD KEY
 function buildKey(housing) {
+	var currYear = $zipData[0].features[0].properties.currYear;
+	var currMonth = $zipData[0].features[0].properties.currMonth;
+
 	$('.legend-block').remove();
 
 	if (housing === 'price') {
@@ -1103,7 +1106,7 @@ function buildKey(housing) {
 
 		console.log('Build price key');
 
-		$('.key-standfirst').html('Median value');
+		$('.key-standfirst').html('Median value <span class="key-sub">(' + currMonth + ' ' + currYear + ')</span>');
 		console.log(housing);
 
 	} else if (housing === 'percent') {
@@ -1127,7 +1130,7 @@ function buildKey(housing) {
 		}
 		$('.legend-block').css('width', '33.3333%');
 
-		$('.key-standfirst').html('Crime rate');
+		$('.key-standfirst').html('Crime rate <span class="key-sub">(' + currYear + ')</span>');
 	} else {
 		var yellow = ['rgba(209, 161, 13, 1)', 'rgba(209, 161, 13, 0.8)','rgba(209, 161, 13, 0.6)','rgba(209, 161, 13, 0.4)','rgba(209, 161, 13, 0.2)'];
 
@@ -1136,7 +1139,7 @@ function buildKey(housing) {
 			$('.legend-block').css('width', '20%');
 		}
 
-		$('.key-standfirst').html('Average school grade');
+		$('.key-standfirst').html('Average school grade <span class="key-sub">(' + (currYear - 1) + '-' + currYear + ' school year)</span>');
 	}
 }
 
@@ -2123,7 +2126,7 @@ function buildCondoPercentMap() {
 
 
 function buildCrimeMap() {
-
+	var currYear = $zipData[0].features[0].properties.currYear;
 	var legendColors = ['rgba(237, 25, 65, 0.3333)', 'rgba(237, 25, 65, 0.6667)', 'rgba(237, 25, 65, 1)'];
 
 	$('.income-button').attr('disabled', 'disabled');
@@ -2132,7 +2135,7 @@ function buildCrimeMap() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
-	$('.key-standfirst').html('Crime rate');
+	$('.key-standfirst').html('Average school grade <span class="key-sub">(' + currYear + ')</span>');
 	$('.housing-type')
 		.html('Crime rates ')
 		.css({

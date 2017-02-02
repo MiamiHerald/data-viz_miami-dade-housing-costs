@@ -758,6 +758,10 @@ input.income {
   font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
   font-weight: bold; }
 
+.key-sub {
+  font-weight: normal;
+  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
+
 .labels .label {
   font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;
   font-size: 10px !important;
