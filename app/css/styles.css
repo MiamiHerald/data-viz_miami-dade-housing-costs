@@ -250,7 +250,11 @@ hr {
   text-transform: uppercase;
   text-align: left;
   line-height: 1.5em;
-  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
+  border-bottom: 2px solid #888;
+  display: inline-block;
+  padding-bottom: 3px;
+  margin-bottom: 15px; }
   .byline a {
     color: #008FD5;
     text-transform: lowercase;

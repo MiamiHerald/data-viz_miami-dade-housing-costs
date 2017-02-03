@@ -9,6 +9,10 @@
   text-align: left;
   line-height: 1.5em;
   font-family: $serif;
+  border-bottom: 2px solid #888;
+  display: inline-block;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
   a {
     color: $herald-blue;
     text-transform: lowercase;
