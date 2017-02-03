@@ -1164,10 +1164,16 @@ function showExplainer() {
 }
 
 function hideExplainer() {
-
-	$('.explainer').slideUp('fast');
-	$('#button-container').slideDown('fast');
-	$('.tool-list-container').slideDown('fast');
+	var query = Modernizr.mq('(min-width: 992px)');
+	if (query) {
+		$('.explainer').slideUp('fast');
+		$('#button-container').slideDown('fast');
+		$('.tool-list-container').slideDown('fast');
+	} else {
+		$('.explainer').hide();
+		$('#button-container').show();
+		$('.tool-list-container').show();
+	}
 }
 
 // CLEAR LAYER FUNCTIONS
@@ -1378,6 +1384,11 @@ function writeHoverBox (feature,layer) {
 
 	schoolTable.show();
 	$('.hover-instructions').hide();
+	if (Modernizr.mq('(min-width: 992px)')) {
+		$('.map-button__outer').css({
+			'top': '123px'
+		});
+	}
 
 	$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
 		$('#hover-box-mobile').hide();
