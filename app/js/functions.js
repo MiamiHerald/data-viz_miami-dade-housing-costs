@@ -1387,6 +1387,8 @@ function onEachFeature(feature, layer) {
 	layer.on({
 
 		mouseover: function(e) {
+			var query = Modernizr.mq('(max-width: 992px)');
+
 			var layer = e.target;
 			layer.setStyle({
 				'color': '#666'
@@ -1394,11 +1396,19 @@ function onEachFeature(feature, layer) {
 			layer.bringToFront();
 			var x = e.containerPoint.x;
 			var y = e.containerPoint.y;
-			$('.map-tooltip').css({
-				'display': 'block',
-				'top': y +'px',
-				'left': x + 'px'
-			});
+			if (query) {
+				$('.map-tooltip').css({
+					'display': 'block',
+					'top': y + 100,
+					'left': x + 20
+				});
+			} else {
+				$('.map-tooltip').css({
+					'display': 'block',
+					'top': y,
+					'left': x + 20
+				});
+			}
 			$('.map-tooltip').html(feature.id);
 		},
 
@@ -1411,11 +1421,35 @@ function onEachFeature(feature, layer) {
 			endHover();
 		},
 
-		mousemove: function(e) {},
-
-		click: function(e) {
+		mousemove: function(e) {
 			var query = Modernizr.mq('(max-width: 992px)');
 
+			var layer = e.target;
+			layer.setStyle({
+				'color': '#666'
+			});
+			layer.bringToFront();
+			var x = e.containerPoint.x;
+			var y = e.containerPoint.y;
+
+			if (query) {
+				$('.map-tooltip').css({
+					'display': 'block',
+					'top': y + 100,
+					'left': x + 20
+				});
+			} else {
+				$('.map-tooltip').css({
+					'display': 'block',
+					'top': y,
+					'left': x + 20
+				});
+			}
+
+			$('.map-tooltip').html(feature.id);
+		},
+
+		click: function(e) {
 			var layer = e.target;
 			layer.setStyle({
 				'color': '#000'
@@ -1431,7 +1465,8 @@ function onEachFeature(feature, layer) {
 				'left': 0,
 				'bottom': '0%',
 				'top': '50%',
-				'width': '100%'
+				'width': '100%',
+				'height': '100%'
 			});
 
 			writeHoverBox(feature,layer);

@@ -364,8 +364,11 @@ input.income {
   .map-button__outer {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 30px;
     z-index: 999; }
+    @media (max-width: 992px) {
+      .map-button__outer {
+        top: 160px; } }
 
 .map-tooltip {
   display: none;
@@ -424,7 +427,6 @@ input.income {
         display: none; } }
   .hover-box-container .sub-info .neighborhoods {
     display: inline;
-    font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     font-size: 20px !important;
     line-height: 1.25; }
   .hover-box-container .crime-rate {
@@ -449,7 +451,9 @@ input.income {
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     font-weight: bold; }
     .hover-box-container .housing-heading span {
-      font-weight: normal; }
+      font-family: "Lyon", Georgia, serif !important;
+      font-weight: normal;
+      font-size: 14px !important; }
   .hover-box-container .housing-table {
     text-align: center; }
   .hover-box-container .housing-item {
@@ -486,8 +490,6 @@ input.income {
     font-size: 10px !important;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     margin-bottom: 15px;
-    max-height: 250px;
-    overflow-y: scroll;
     width: 100%; }
     @media (max-height: 480px) {
       .hover-box-container .school-list {
@@ -711,7 +713,8 @@ input.income {
 
 .key-sub {
   font-weight: normal;
-  font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important; }
+  font-family: "Lyon", Georgia, serif !important;
+  font-size: 14px !important; }
 
 .labels .label {
   font-family: "McClatchy Sans Cond", "Roboto Condensed Medium", "HelveticaNeue-CondensedBold", sans-serif !important;

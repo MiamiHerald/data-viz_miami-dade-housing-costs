@@ -45,7 +45,6 @@
   .sub-info {
     .neighborhoods {
       display: inline;
-      font-family: $serif;
       font-size: $md;
       line-height: 1.25;
     }
@@ -75,7 +74,9 @@
     font-weight: bold;
 
     & span {
+      font-family: $lyon;
       font-weight: normal;
+      font-size: $sm;
     }
   }
   .housing-table {
@@ -132,8 +133,8 @@
     font-size: $xxs;
     font-family: $serif;
     margin-bottom: 15px;
-    max-height: 250px;
-    overflow-y: scroll;
+    // max-height: 250px;
+    // overflow-y: scroll;
     width: 100%;
 
     @media (max-height: $screen-xs) {
