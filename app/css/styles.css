@@ -502,9 +502,9 @@ input.income {
       border-radius: 4px;
       background-color: rgba(0, 0, 0, 0.5);
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
-    @media (max-height: 480px) {
+    @media (max-width: 992px) {
       .hover-box-container .school-list {
-        max-height: 200px; } }
+        max-height: none; } }
     .hover-box-container .school-list .school-table {
       width: 100%; }
       .hover-box-container .school-list .school-table th {

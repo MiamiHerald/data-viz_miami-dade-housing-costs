@@ -148,9 +148,10 @@
         -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
     }
 
-    @media (max-height: $screen-xs) {
-      max-height: 200px;
+    @media (max-width: $screen-md) {
+      max-height: none;
     }
+
     .school-table {
       width: 100%;
       th {
