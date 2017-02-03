@@ -1465,7 +1465,7 @@ function onEachFeature(feature, layer) {
 				'bottom': '0%',
 				'top': '50%',
 				'width': '100%',
-				'height': '100%'
+				'height': 'auto'
 			});
 
 			writeHoverBox(feature,layer);
@@ -1489,7 +1489,7 @@ function onEachFeature(feature, layer) {
 				'left': 0,
 				'bottom': '0%',
 				'top': '50%',
-				'width': '100%'
+				'width': 'auto'
 			});
 
 			writeHoverBox(feature,layer);
