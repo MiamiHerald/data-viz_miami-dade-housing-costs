@@ -1472,30 +1472,30 @@ function onEachFeature(feature, layer) {
 			writeHoverBox(feature,layer);
 		},
 
-		tap: function(e) {
-			var query = Modernizr.mq('(max-width: 992px)');
-
-			var layer = e.target;
-			layer.setStyle({
-				'color': '#000'
-			});
-			layer.bringToFront();
-
-			$('#hover-box-mobile').show();
-			$('.schools-row').empty();
-
-			$('#hover-box-mobile').css({
-				'position': 'absolute',
-				'right': 0,
-				'left': 0,
-				'bottom': '0%',
-				'top': '50%',
-				'width': '100%'
-			});
-
-			writeHoverBox(feature,layer);
-		}
-	});
+	// 	tap: function(e) {
+	// 		var query = Modernizr.mq('(max-width: 992px)');
+	//
+	// 		var layer = e.target;
+	// 		layer.setStyle({
+	// 			'color': '#000'
+	// 		});
+	// 		layer.bringToFront();
+	//
+	// 		$('#hover-box-mobile').show();
+	// 		$('.schools-row').empty();
+	//
+	// 		$('#hover-box-mobile').css({
+	// 			'position': 'absolute',
+	// 			'right': 0,
+	// 			'left': 0,
+	// 			'bottom': '0%',
+	// 			'top': '50%',
+	// 			'width': '100%'
+	// 		});
+	//
+	// 		writeHoverBox(feature,layer);
+	// 	}
+	// });
 }
 
 //=============//
