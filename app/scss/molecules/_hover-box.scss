@@ -135,9 +135,18 @@
     font-size: $xxs;
     font-family: $serif;
     margin-bottom: 15px;
-    // max-height: 250px;
-    // overflow-y: scroll;
+    max-height: 275px;
+    overflow-y: scroll;
     width: 100%;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.5);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
 
     @media (max-height: $screen-xs) {
       max-height: 200px;

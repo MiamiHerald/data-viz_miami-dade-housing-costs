@@ -492,7 +492,16 @@ input.income {
     font-size: 10px !important;
     font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important;
     margin-bottom: 15px;
+    max-height: 275px;
+    overflow-y: scroll;
     width: 100%; }
+    .hover-box-container .school-list::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px; }
+    .hover-box-container .school-list::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
     @media (max-height: 480px) {
       .hover-box-container .school-list {
         max-height: 200px; } }
