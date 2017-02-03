@@ -368,7 +368,7 @@ input.income {
     z-index: 999; }
     @media (max-width: 992px) {
       .map-button__outer {
-        top: 126px; } }
+        top: 179px; } }
 
 .map-tooltip {
   display: none;
