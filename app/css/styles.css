@@ -246,11 +246,16 @@ hr {
   text-align: left; }
 
 .byline {
-  font-size: 12px !important;
+  font-size: 14px;
+  text-transform: uppercase;
   text-align: left;
-  line-height: 15px; }
-  .byline .name a {
-    color: #666; }
+  line-height: 1.5em;
+  font-family: "McClatchy Slab", Georgia, Times, "Times New Roman", serif !important; }
+  .byline a {
+    color: #008FD5;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-style: italic; }
   .byline .date {
     font-size: 12px !important; }
 
@@ -318,7 +323,9 @@ input.income {
   transition: background-color 0.3s linear;
   border-radius: 0px !important;
   border: solid 2px #008FD5;
-  color: #008FD5; }
+  color: #008FD5;
+  position: relative;
+  z-index: 9999999; }
   .btn:hover {
     background-color: #008FD5;
     color: white;

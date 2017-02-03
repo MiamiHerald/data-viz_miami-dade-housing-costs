@@ -4,11 +4,16 @@
 }
 
 .byline {
-  font-size: $xs;
+  font-size: 14px;
+  text-transform: uppercase;
   text-align: left;
-  line-height: 15px;
-  .name a {
-    color: $text-gray;
+  line-height: 1.5em;
+  font-family: $serif;
+  a {
+    color: $herald-blue;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-style: italic;
   }
   .date {
     font-size: $xs;
