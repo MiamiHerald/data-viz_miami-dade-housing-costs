@@ -1384,7 +1384,7 @@ function writeHoverBox (feature,layer) {
 
 	schoolTable.show();
 	$('.hover-instructions').hide();
-	if (Modernizr.mq('(min-width: 992px)')) {
+	if (Modernizr.mq('(max-width: 992px)')) {
 		$('.map-button__outer').css({
 			'top': '123px'
 		});
