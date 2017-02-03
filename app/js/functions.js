@@ -1400,13 +1400,13 @@ function onEachFeature(feature, layer) {
 				$('.map-tooltip').css({
 					'display': 'block',
 					'top': y + 100,
-					'left': x + 20
+					'left': x + 40
 				});
 			} else {
 				$('.map-tooltip').css({
 					'display': 'block',
 					'top': y,
-					'left': x + 20
+					'left': x + 40
 				});
 			}
 			$('.map-tooltip').html(feature.id);
@@ -1436,13 +1436,13 @@ function onEachFeature(feature, layer) {
 				$('.map-tooltip').css({
 					'display': 'block',
 					'top': y + 100,
-					'left': x + 20
+					'left': x + 40
 				});
 			} else {
 				$('.map-tooltip').css({
 					'display': 'block',
 					'top': y,
-					'left': x + 20
+					'left': x + 40
 				});
 			}
 
