@@ -1388,6 +1388,10 @@ function writeHoverBox (feature,layer) {
 		$('.map-button__outer').css({
 			'top': '123px'
 		});
+	} else {
+		$('.map-button__outer').css({
+			'top': '10px'
+		});
 	}
 
 	$('#hover-box-mobile').on('click', '.hover-box-close', function(event) {
