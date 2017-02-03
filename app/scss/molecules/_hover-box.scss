@@ -16,7 +16,9 @@
   border-top: dotted $grey 2px;
   padding-top: 30px;
   @media(max-width: $screen-md) {
-    padding-top: 30px;
+    margin-top: 0;
+    border: none;
+    padding-top: 0;
   }
   z-index: 9999;
   height: auto;

@@ -406,7 +406,9 @@ input.income {
   height: auto; }
   @media (max-width: 992px) {
     .hover-box-container {
-      padding-top: 30px; } }
+      margin-top: 0;
+      border: none;
+      padding-top: 0; } }
   .hover-box-container .close-button-wrapper {
     display: none;
     padding: 0;
@@ -636,6 +638,9 @@ input.income {
   width: 100%;
   height: 100vh;
   position: relative !important; }
+  @media (max-width: 992px) {
+    #map-container {
+      height: 50vh; } }
 
 @media (max-width: 992px) {
   .map-info-container {

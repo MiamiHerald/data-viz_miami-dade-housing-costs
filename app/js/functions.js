@@ -1146,20 +1146,25 @@ function buildKey(housing) {
 
 // EXPLAINER FUNCTIONS
 function showExplainer() {
-	$('.explainer')
-		.slideDown('fast')
-		.find('span')
-		.each(function() {
-			$(this).css({
-				'color': '#008FD5',
-				'font-weight': 'bold'
-			});
-		});
+	var query = Modernizr.mq('(min-width: 992px)');
+	if (query) {
+		$('.explainer').slideDown('fast');
+		$('.tool-list-container').slideUp('fast');
+	} else {
+		$('.explainer').show();
+		$('.tool-list-container').hide();
+	}
 
-	$('.tool-list-container').slideUp('fast');
+	$('.explainer').find('span').each(function() {
+		$(this).css({
+			'color': '#008FD5',
+			'font-weight': 'bold'
+		});
+	});
 }
 
 function hideExplainer() {
+
 	$('.explainer').slideUp('fast');
 	$('#button-container').slideDown('fast');
 	$('.tool-list-container').slideDown('fast');
@@ -1459,13 +1464,13 @@ function onEachFeature(feature, layer) {
 			$('.schools-row').empty();
 
 			$('#hover-box-mobile').css({
-				'position': 'absolute',
+				'position': 'relative',
 				'right': 0,
 				'left': 0,
 				'bottom': '0%',
 				'top': '50%',
 				'width': '100%',
-				'height': 'auto'
+				'height': '100%'
 			});
 
 			writeHoverBox(feature,layer);
@@ -1484,12 +1489,13 @@ function onEachFeature(feature, layer) {
 			$('.schools-row').empty();
 
 			$('#hover-box-mobile').css({
-				'position': 'absolute',
+				'position': 'relative',
 				'right': 0,
 				'left': 0,
 				'bottom': '0%',
 				'top': '50%',
-				'width': 'auto'
+				'width': '100%',
+				'height': '100%'
 			});
 
 			writeHoverBox(feature,layer);
@@ -1519,7 +1525,7 @@ function onEachFeature(feature, layer) {
 			$('.schools-row').empty();
 
 			$('#hover-box-mobile').css({
-				'position': 'absolute',
+				'position': 'relative',
 				'right': 0,
 				'left': 0,
 				'bottom': '0%',
