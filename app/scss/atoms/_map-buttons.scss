@@ -1,22 +1,31 @@
 .map-button {
   background-color: white;
   display: block;
-  margin-bottom: 10px;
-  font-size: $md;
+  margin-bottom: 5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  font-size: $sm;
   font-family: sans-serif;
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s linear;
+  font-family: $sans-serif-condensed;
+  color: $grey;
+  border: solid 2px $grey;
+  text-transform: uppercase;
+  text-align: center;
 
   &:hover {
-    background-color: $grey;
+    background-color: $herald-blue;
+    color: white;
   }
 
   &__outer {
     position: absolute;
-    top: 25%;
-    right: 25px;
+    top: 10px;
+    right: 10px;
     z-index: 999;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
   }
 }

@@ -12,6 +12,9 @@
 .hover-box-container {
   background: #fff;
   color: #000;
+  margin-top: 50px;
+  border-top: dotted $grey 2px;
+  padding-top: 30px;
   @media(max-width: $screen-md) {
     padding-top: 30px;
   }

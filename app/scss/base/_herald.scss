@@ -9,7 +9,7 @@
 $sans-serif: 'McClatchy Sans', Georgia, Times, 'Times New Roman', sans-serif !important;
 $sans-serif-condensed: 'McClatchy Sans Cond','Roboto Condensed Medium','HelveticaNeue-CondensedBold',sans-serif !important;
 $serif: 'McClatchy Slab', Georgia, Times, 'Times New Roman', serif !important;
-$raleway: "Raleway", "Helvetica Nueue", Helvetica, Arial, sans-serif !important;
+$lyon: 'Lyon', Georgia, serif !important;
 
 //STANDARD FONT SIZES
 $base: 16px !important;
@@ -186,7 +186,6 @@ body,html {
 .readout {
 	margin: 0.75em auto;
 	display: block;
-	font-family: $serif;
 	font-size: $base;
 	line-height: 1.4;
 	text-align: center;
