@@ -95,7 +95,7 @@
 	});
 
 	$('#check-button-savings').on('change', '.savings:checkbox', function(e) {
-		$('.income-standfirst').text('My maxiumum price is');
+		$('.income-standfirst').text('My maximum price is');
 		$('.income:checkbox').attr('checked', false);
 		$('.income-only').hide();
 	});
