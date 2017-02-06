@@ -1519,7 +1519,6 @@ function onEachFeature(feature, layer) {
 
 	layer.off({
 		click: function(e) {
-			console.log(e);
 			var layer = e.target;
 			layer.setStyle({
 				color: '#fff'
