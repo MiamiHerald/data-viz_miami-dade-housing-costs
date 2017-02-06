@@ -266,7 +266,9 @@
 	// RUN MAP-BUILDING FUNCTIONS
 	$('#input-container').on('click touchstart', '.income-button', function(e) {
     e.preventDefault();
-    
+
+    document.activeElement.blur();
+
 		var incomeInput = $('.income-box').val();
 
 		income = getIncome(incomeInput);
