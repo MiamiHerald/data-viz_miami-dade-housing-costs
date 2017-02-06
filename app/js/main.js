@@ -300,6 +300,8 @@
 		});
 
 		checkInput(income);
+
+    document.getElementById('mapIt').scrollIntoView()
 	});
 
 	$('.reset').on('click touchstart', function() {
