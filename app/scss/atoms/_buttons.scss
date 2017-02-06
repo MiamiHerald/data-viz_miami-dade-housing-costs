@@ -7,8 +7,11 @@
   border-radius: 0px !important;
   border: solid 2px $herald-blue;
   color: $herald-blue;
-  position: relative;
-  z-index: 9999999;
+
+  &.income-button {
+    position: relative !important;
+    z-index: 9999999 !important;
+  }
 
   &:hover {
     background-color: $herald-blue;
