@@ -8,11 +8,6 @@
   border: solid 2px $herald-blue;
   color: $herald-blue;
 
-  &.income-button {
-    position: relative !important;
-    z-index: 9999999 !important;
-  }
-
   &:hover {
     background-color: $herald-blue;
     color: white;

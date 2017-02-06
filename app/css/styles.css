@@ -329,9 +329,6 @@ input.income {
   border-radius: 0px !important;
   border: solid 2px #008FD5;
   color: #008FD5; }
-  .btn.income-button {
-    position: relative !important;
-    z-index: 9999999 !important; }
   .btn:hover {
     background-color: #008FD5;
     color: white;
