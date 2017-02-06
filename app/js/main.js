@@ -264,7 +264,9 @@
 
 	// WHEN EVERYTHING IS GOOD TO GO...
 	// RUN MAP-BUILDING FUNCTIONS
-	$('#input-container').on('click touchstart', '.income-button', function() {
+	$('#input-container').on('click touchstart', '.income-button', function(e) {
+    e.preventDefault();
+    
 		var incomeInput = $('.income-box').val();
 
 		income = getIncome(incomeInput);
