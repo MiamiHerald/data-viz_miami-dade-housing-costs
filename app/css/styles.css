@@ -289,7 +289,8 @@ hr {
   margin: 1px auto;
   text-align: center;
   font-family: "McClatchy Sans", Georgia, Times, "Times New Roman", sans-serif !important;
-  font-size: 12px !important; }
+  font-size: 12px !important;
+  margin-top: 20px; }
   .error .alert {
     padding: 2px !important; }
 
