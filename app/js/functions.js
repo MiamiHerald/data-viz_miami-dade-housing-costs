@@ -40,7 +40,7 @@ function fixPosition() {
 	if (w >= mobile) {
 		return [25.82, -80.25];
 	} else {
-		return [25.50, -80.20];
+		return [25.60, -80.20];
 	}
 }
 
@@ -48,7 +48,7 @@ function fixZoom() {
 	if (w > mobile) {
 		return 9.5;
 	} else {
-		return 9.5;
+		return 8.5;
 	}
 }
 
@@ -1519,6 +1519,7 @@ function onEachFeature(feature, layer) {
 
 	layer.off({
 		click: function(e) {
+			console.log(e);
 			var layer = e.target;
 			layer.setStyle({
 				color: '#fff'
