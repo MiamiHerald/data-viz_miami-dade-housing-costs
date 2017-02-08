@@ -1408,11 +1408,11 @@ function onEachFeature(feature, layer) {
 		mouseover: function(e) {
 			var query = Modernizr.mq('(max-width: 992px)');
 
-			var layer = e.target;
-			layer.setStyle({
-				'color': '#666'
-			});
-			layer.bringToFront();
+			// var layer = e.target;
+			// layer.setStyle({
+			// 	'color': '#666'
+			// });
+			// layer.bringToFront();
 			var x = e.containerPoint.x;
 			var y = e.containerPoint.y;
 			if (query) {
@@ -1432,10 +1432,10 @@ function onEachFeature(feature, layer) {
 		},
 
 		mouseout: function(e) {
-			var layer = e.target;
-			layer.setStyle({
-				color: '#fff'
-			});
+			// var layer = e.target;
+			// layer.setStyle({
+			// 	color: '#fff'
+			// });
 			$('.map-tooltip').hide();
 			endHover();
 		},
@@ -1443,11 +1443,11 @@ function onEachFeature(feature, layer) {
 		mousemove: function(e) {
 			var query = Modernizr.mq('(max-width: 992px)');
 
-			var layer = e.target;
-			layer.setStyle({
-				'color': '#666'
-			});
-			layer.bringToFront();
+			// var layer = e.target;
+			// layer.setStyle({
+			// 	'color': '#666'
+			// });
+			// layer.bringToFront();
 			var x = e.containerPoint.x;
 			var y = e.containerPoint.y;
 
@@ -1469,11 +1469,14 @@ function onEachFeature(feature, layer) {
 		},
 
 		click: function(e) {
-			var layer = e.target;
-			layer.setStyle({
-				'color': '#000'
+			$('path.leaflet-interactive').css({
+				'stroke': '#FFF'
 			});
-			layer.bringToFront();
+
+			$(e.target.getElement()).css({
+				'stroke': '#000'
+			});
+			e.target.bringToFront();
 
 			$('#hover-box-mobile').show();
 			$('.schools-row').empty();
@@ -1511,41 +1514,6 @@ function onEachFeature(feature, layer) {
 				'top': '50%',
 				'width': '100%',
 				'height': '100%'
-			});
-
-			writeHoverBox(feature,layer);
-		}
-	});
-
-	layer.off({
-		click: function(e) {
-			var layer = e.target;
-			layer.setStyle({
-				color: '#fff'
-			});
-			$('.map-tooltip').hide();
-			endHover();
-		},
-
-		tap: function(e) {
-			var query = Modernizr.mq('(max-width: 992px)');
-
-			var layer = e.target;
-			layer.setStyle({
-				'color': '#000'
-			});
-			layer.bringToFront();
-
-			$('#hover-box-mobile').show();
-			$('.schools-row').empty();
-
-			$('#hover-box-mobile').css({
-				'position': 'relative',
-				'right': 0,
-				'left': 0,
-				'bottom': '0%',
-				'top': '50%',
-				'width': '100%'
 			});
 
 			writeHoverBox(feature,layer);
