@@ -352,7 +352,14 @@
 		hideExplainer();
 		removeError();
 
-		buildDefaultHouse();
+    if (houseCheck === true) {
+  		buildDefaultHouse();
+    } else if (condoCheck === true) {
+      buildDefaultCondo();
+    } else {
+      buildDefaultHouse();
+    }
+
     $('.reset-button-holder').hide();
     showAll = false;
 	});
