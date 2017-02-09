@@ -2100,7 +2100,7 @@ function buildHousePercentMap() {
 			'color': '#08519c',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' of single-family houses since 2014 in the ZIP codes you can afford.');
+	$('.housing-explainer').html(' of single-family houses since 2014 in the ZIP Codes you can afford.');
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
@@ -2153,7 +2153,7 @@ function buildCondoPercentMap() {
 			'color': '#08519c',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' for condos and townhouses since 2014 in the ZIP codes you can afford.');
+	$('.housing-explainer').html(' for condos and townhouses since 2014 in the ZIP Codes you can afford.');
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
@@ -2207,7 +2207,7 @@ function buildCrimeMap() {
 			'color': '#a50f15',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' for ZIP codes you can afford.');
+	$('.housing-explainer').html(' for ZIP Codes you can afford.');
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
@@ -2264,7 +2264,7 @@ function buildSchoolMap() {
 			'color': '#54278f',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' for ZIP codes you can afford.');
+	$('.housing-explainer').html(' for ZIP Codes you can afford.');
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
