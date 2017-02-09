@@ -17,9 +17,9 @@ function openPopup(e) {
   text = $(this).data('share') ? $(this).data('share') : '';
 
   if ($(this).hasClass('show-all')) {
-    shareText = "See where you can afford a home in South Florida: " + text;
+    shareText = "See where you can afford a home in Miami-Dade and Broward with this @MiamiHerald #RealEstate tool: " + text;
   } else {
-    shareText = "I can afford to live in " + zipCount + " ZIP Codes in Miami-Dade and Broward. See what you can afford: " + text;
+    shareText = "I can afford a home in " + zipCount + " Miami-Dade and Broward ZIPs. Check this @MiamiHerald #RealEstate tool for your results: " + text;
   }
 
   window.open(this.href + encodeURIComponent(shareText), 'intent', windowOptions + ',width=' + width +
