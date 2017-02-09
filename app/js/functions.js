@@ -78,7 +78,7 @@ control.addTo(map);
 setTimeout(function() {
 	$(window).trigger('resize');
 	console.log('resize triggered');
-}, 20000);
+}, 2000);
 
 // ========================
 // BUILD DEFAULT  GRAY MAP
@@ -442,7 +442,6 @@ function getPriceBorder(d) {
 
 // COLORS
 function getHouseColor(d) {
-
 	if ((d >= 601801) && (d <= 3229000)) {
 
 		if (income >= d) {
@@ -2200,7 +2199,7 @@ function buildCrimeMap() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
-	$('.key-standfirst').html('Average school grade <span class="key-sub">(' + currYear + ')</span>');
+	$('.key-standfirst').html('Crime rate <span class="key-sub">(' + currYear + ')</span>');
 	$('.housing-type')
 		.html('Crime rates ')
 		.css({
