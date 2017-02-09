@@ -37,11 +37,12 @@ $(window).resize(function() {
 // FUNCTIONS TO FIX MAP POSITION
 // AND ZOOM ON PAGE LOAD
 function fixPosition() {
-	if (w >= mobile) {
-		return [25.82, -80.25];
-	} else {
-		return [25.60, -80.20];
-	}
+	return [25.82, -80.25];
+	// if (w >= mobile) {
+	// 	return [25.82, -80.25];
+	// } else {
+	// 	return [25.60, -80.20];
+	// }
 }
 
 function fixZoom() {
@@ -65,7 +66,7 @@ var map = new L.Map('map-container', {
 	zoomControl: false,
 	doubleClickZoom: false,
 	VML: true,
-	scrollWheelZoom: true
+	scrollWheelZoom: false
 }).addLayer(tiles);
 
 // ADD CONTROLS
@@ -77,7 +78,7 @@ control.addTo(map);
 setTimeout(function() {
 	$(window).trigger('resize');
 	console.log('resize triggered');
-}, 500);
+}, 20000);
 
 // ========================
 // BUILD DEFAULT  GRAY MAP
