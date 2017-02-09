@@ -37,17 +37,12 @@ $(window).resize(function() {
 // FUNCTIONS TO FIX MAP POSITION
 // AND ZOOM ON PAGE LOAD
 function fixPosition() {
-	return [25.82, -80.25];
-	// if (w >= mobile) {
-	// 	return [25.82, -80.25];
-	// } else {
-	// 	return [25.60, -80.20];
-	// }
+	return [25.748503, -80.286949];
 }
 
 function fixZoom() {
 	if (w > mobile) {
-		return 9.5;
+		return 10;
 	} else {
 		return 8.5;
 	}
@@ -130,7 +125,7 @@ function getDefaultBorder(d) {
 
 function getDefaultHouseColor(d) {
 
-	if ((d >= 601801) && (d <= 3229000)) {
+	if ((d >= 601801) && (d <= 10000000)) {
 		return 'rgba(114, 191, 68, 1)';
 	} else if ((d >= 425551) && (d <= 601800)) {
 		return 'rgba(114, 191, 68, 0.875)';
@@ -182,7 +177,7 @@ map.addLayer($defaultHouseLayer);
 
 function getDefaultCondoColor(d) {
 
-	if ((d >= 298701) && (d <= 394500)) {
+	if ((d >= 298701) && (d <= 10000000)) {
 		return 'rgba(114, 191, 68, 1)';
 	} else if ((d >= 214401) && (d <= 298700)) {
 		return 'rgba(114, 191, 68, 0.75)';
@@ -442,7 +437,7 @@ function getPriceBorder(d) {
 
 // COLORS
 function getHouseColor(d) {
-	if ((d >= 601801) && (d <= 3229000)) {
+	if ((d >= 601801) && (d <= 10000000)) {
 
 		if (income >= d) {
 			return 'rgba(114, 191, 68, 1)';
@@ -523,7 +518,7 @@ function houseStyle(features, layer) {
 
 function getCondoColor(d) {
 
-	if ((d >= 298701) && (d <= 394500)) {
+	if ((d >= 298701) && (d <= 10000000)) {
 
 		if (income >= d) {
 			return 'rgba(114, 191, 68, 1)';
@@ -1947,14 +1942,16 @@ function buildHouseMap() {
 	// $('#interface-container').slideDown('400');
 	// $('#map-info').css('bottom', '26%');
 
-	d3.csv('http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
+	// d3.json('http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
 
 		var count = 0;
 
-		data.forEach(function(d) {
-			if (income >= d.housePrice) {
-				return count++;
-			}
+		$zipData.forEach(function(d) {
+			d.features.forEach(function(i) {
+				if (income >= i.properties.currHousePrice) {
+					return count++;
+				}
+			})
 		});
 
 		if (count >= 1) {
@@ -1965,7 +1962,7 @@ function buildHouseMap() {
 
 		$('.housing').html('single-family homes');
 		$('.zip-count').html(count);
-	});
+	// });
 
 	$('.money').html('$'+numeral(income).format('0,0'));
 
@@ -2053,13 +2050,15 @@ function buildCondoMap() {
 	$('.d-grade').css('display', 'none');
 	$('.b-grade').css('display', 'none');
 
-	d3.csv('http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
+	// d3.csv('http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
 		var count = 0;
 
-		data.forEach(function(d) {
-			if (income >= d.condoPrice) {
-				return count++;
-			}
+		$zipData.forEach(function(d) {
+			d.features.forEach(function(i) {
+				if (income >= i.properties.currCondoPrice) {
+					return count++;
+				}
+			})
 		});
 
 		if (count >= 1) {
@@ -2074,7 +2073,7 @@ function buildCondoMap() {
 		$('.money').html('$'+numeral(income).format('0,0'));
 
 		console.log('Condos: ' + count);
-	});
+	// });
 
 	buildKey(price);
 	clearAllLayers();
