@@ -65,7 +65,7 @@ var map = new L.Map('map-container', {
 	zoomControl: false,
 	doubleClickZoom: false,
 	VML: true,
-	scrollWheelZoom: false
+	scrollWheelZoom: true
 }).addLayer(tiles);
 
 // ADD CONTROLS
