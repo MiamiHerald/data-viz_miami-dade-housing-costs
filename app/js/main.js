@@ -115,7 +115,7 @@
 		var condoCheck = (condoCheckbox.is(':checked'));
 		var inputEmpty = (incomeInput === '');
 
-    if (showAll === true) {
+    if (showAll === true && houseCheck === true) {
       buildDefaultHouse();
 			buildKey(price);
 			console.log('build default house map');
@@ -376,8 +376,25 @@
 
   $('.map-button.show-all').on('click touchstart', function() {
     clearAllLayers();
-    init();
     showAll = true;
     $('.share-link').addClass('show-all');
+
+    var house_checkbox = $('.house:checkbox');
+		var condo_checkbox = $('.condo:checkbox');
+		var houseCheck = (house_checkbox.is(':checked'));
+		var condoCheck = (condo_checkbox.is(':checked'));
+
+		if (showAll === true && (houseCheck === true && condoCheck === false)) {
+			buildDefaultHouse();
+			console.log('build default house map');
+    } else if (showAll === true && (houseCheck === false && condoCheck === true)) {
+			buildDefaultCondo();
+			console.log('build default condo map');
+		} else {
+			buildDefaultHouse();
+			console.log('build default house map');
+		}
+
+    showAll = false;
   });
 })();

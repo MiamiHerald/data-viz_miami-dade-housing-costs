@@ -1674,8 +1674,6 @@ function buildDefaultPercentHouse() {
 	$('.price-select').removeClass('selected-interface');
 	$('.school-select').removeClass('selected-interface');
 	$('.crime-select').removeClass('selected-interface');
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	var percent = 'percent';
 	var houseCheckbox = $('.house:checkbox');
@@ -1741,8 +1739,6 @@ function buildDefaultPercentCondo() {
 	$('.price-select').removeClass('selected-interface');
 	$('.school-select').removeClass('selected-interface');
 	$('.crime-select').removeClass('selected-interface');
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	var percent = 'percent';
 	var condoCheckbox = $('.condo:checkbox');
@@ -1805,8 +1801,6 @@ function buildDefaultCrime() {
 	$('.crime-select').addClass('selected-interface');
 	$('.price-select').removeClass('selected-interface');
 	$('.percent-select').removeClass('selected-interface');
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	var crime = 'crime';
 	buildKey(crime);
@@ -1858,8 +1852,6 @@ function buildDefaultSchool() {
 	$('.school-select').addClass('selected-interface');
 	$('.price-select').removeClass('selected-interface');
 	$('.percent-select').removeClass('selected-interface');
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	var school = 'school';
 	buildKey(school);
@@ -1939,34 +1931,27 @@ function buildHouseMap() {
 	$('.crime-select').removeClass('selected-interface');
 	$('.school-select').removeClass('selected-interface');
 
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
+	var count = 0;
 
-	// d3.json('http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
+	$zipData.forEach(function(d) {
+		d.features.forEach(function(i) {
+			if (income >= i.properties.currHousePrice) {
+				return count++;
+			}
+		})
+	});
 
-		var count = 0;
+	if (count >= 1) {
+		$('.no-data').hide();
+	}
 
-		$zipData.forEach(function(d) {
-			d.features.forEach(function(i) {
-				if (income >= i.properties.currHousePrice) {
-					return count++;
-				}
-			})
-		});
+	console.log('Houses:' + count);
 
-		if (count >= 1) {
-			$('.no-data').hide();
-		}
-
-		console.log('Houses:' + count);
-
-		$('.housing').html('single-family homes');
-		$('.zip-count').html(count);
-	// });
+	$('.housing').html('single-family homes');
+	$('.zip-count').html(count);
 
 	$('.money').html('$'+numeral(income).format('0,0'));
 
-	// $('#interface-container').slideDown('400');
 	$('.key-holder').css('display', 'block');
 	$('.housing-type')
 		.html('Affordable ')
@@ -2026,8 +2011,6 @@ function buildCondoMap() {
 		});
 	$('.housing-explainer').html(' condos in South Florida.');
 	$('.percent-year').css('display', 'none');
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	$('.label-left')
 		.html('Less expensive')
@@ -2050,30 +2033,27 @@ function buildCondoMap() {
 	$('.d-grade').css('display', 'none');
 	$('.b-grade').css('display', 'none');
 
-	// d3.csv('http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/js/libs/data/zipcodes.csv', function(data) {
-		var count = 0;
+	var count = 0;
 
-		$zipData.forEach(function(d) {
-			d.features.forEach(function(i) {
-				if (income >= i.properties.currCondoPrice) {
-					return count++;
-				}
-			})
-		});
+	$zipData.forEach(function(d) {
+		d.features.forEach(function(i) {
+			if (income >= i.properties.currCondoPrice) {
+				return count++;
+			}
+		})
+	});
 
-		if (count >= 1) {
-			$('.no-data').hide();
-		}
+	if (count >= 1) {
+		$('.no-data').hide();
+	}
 
-		// $('#interface-container').slideDown('400');
-		$('.income').html('$' + numeral(income).format('0,0'));
-		$('.housing').html('condo or townhouse');
-		$('.zip-count').html(count);
+	$('.income').html('$' + numeral(income).format('0,0'));
+	$('.housing').html('condo or townhouse');
+	$('.zip-count').html(count);
 
-		$('.money').html('$'+numeral(income).format('0,0'));
+	$('.money').html('$'+numeral(income).format('0,0'));
 
-		console.log('Condos: ' + count);
-	// });
+	console.log('Condos: ' + count);
 
 	buildKey(price);
 	clearAllLayers();
@@ -2121,9 +2101,6 @@ function buildHousePercentMap() {
 
 	$('.d-grade').css('display', 'none');
 	$('.b-grade').css('display', 'none');
-
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	for (var i = 0; i < legendColors.length; i++) {
 		$('.key').append('<div class=\'legend-block\' style=\'border-color:' + legendColors[i] + '\'</div>');
@@ -2174,9 +2151,6 @@ function buildCondoPercentMap() {
 
 	$('.d-grade').css('display', 'none');
 	$('.b-grade').css('display', 'none');
-
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	for (var i = 0; i < legendColors.length; i++) {
 		$('.key').append('<div class=\'legend-block\' style=\'border-color:' + legendColors[i] + '\'</div>');
@@ -2231,9 +2205,6 @@ function buildCrimeMap() {
 
 	$('.d-grade').css('display', 'none');
 	$('.b-grade').css('display', 'none');
-
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	for (var i = 0; i < legendColors.length; i++) {
 		$('.key').append('<div class=\'legend-block\' style=\'border-color:' + legendColors[i] + '\'</div>');
@@ -2299,9 +2270,6 @@ function buildSchoolMap() {
 			'text-align':'center'
 		})
 		.html('F');
-
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	for (var i = 0; i < legendColors.length; i++) {
 		$('.key').append('<div class=\'legend-block\' style=\'border-color:' + legendColors[i] + '\'</div>');
