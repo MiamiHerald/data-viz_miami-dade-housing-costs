@@ -395,6 +395,6 @@
 			console.log('build default house map');
 		}
 
-    showAll = false;
+    // showAll = false;
   });
 })();

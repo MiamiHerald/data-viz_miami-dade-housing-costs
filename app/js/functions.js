@@ -70,10 +70,6 @@ var control = L.control.zoom({
 });
 control.addTo(map);
 
-setTimeout(function() {
-	$(window).trigger('resize');
-	console.log('resize triggered');
-}, 2000);
 
 // ========================
 // BUILD DEFAULT  GRAY MAP
