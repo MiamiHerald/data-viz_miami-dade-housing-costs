@@ -91,10 +91,6 @@ body, html {
   line-height: 1.4;
   text-align: center;
   margin-bottom: 0; }
-  .readout a {
-    color: #ED1941; }
-    .readout a:hover {
-      cursor: pointer; }
   .readout .single-photo, .readout .double-photo {
     width: 100%; }
   .readout img {
@@ -307,6 +303,13 @@ hr {
 input.income {
   font-weight: bold;
   color: #00AE4D; }
+
+.herald-link {
+  color: #008FD5;
+  text-decoration: none; }
+  .herald-link:hover {
+    color: #008FD5;
+    text-decoration: none; }
 
 .leaflet-bottom.leaflet-left {
   background: #F4F4F4;
