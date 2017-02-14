@@ -119,6 +119,10 @@
       buildDefaultHouse();
 			buildKey(price);
 			console.log('build default house map');
+    } else if (showAll === true && condoCheck === true) {
+      buildDefaultCondo();
+      buildKey(price);
+      console.log('build default condo map');
     } else if ((houseCheck === true && condoCheck === false) && (inputEmpty === false)) {
 			buildHouseMap();
 			buildKey(price);
@@ -129,10 +133,6 @@
 			console.log('build condo map');
 		} else if ((houseCheck === false && condoCheck === true) && (inputEmpty === false)) {
 			buildCondoMap();
-			buildKey(price);
-			console.log('build condo map');
-		} else if ((houseCheck === false && condoCheck === true) && (inputEmpty === true)) {
-			buildDefaultCondo();
 			buildKey(price);
 			console.log('build condo map');
 		} else {
@@ -158,28 +158,22 @@
 		var condoCheck = (condoCheckbox.is(':checked'));
 		var inputEmpty = (incomeInput === '');
 
-		if (((houseCheck === true) && (condoCheck === false)) && (inputEmpty === true) || showAll === true) {
+		if (showAll === true && houseCheck === true) {
 			console.log('build default percent house map');
 			buildDefaultPercentHouse();
 			buildKey(percent);
-
+    } else if (showAll === true && condoCheck === true) {
+      console.log('build default percent condo map');
+      buildDefaultPercentCondo();
+      buildKey(percent);
 		} else if ((houseCheck === true) && ((condoCheck === false) && (inputEmpty === false))) {
 			buildHousePercentMap();
 			buildKey(percent);
 			console.log('build percent house map');
-
-		} else if ((houseCheck === false) && ((condoCheck === true) && (inputEmpty === true))) {
-
-			console.log('build percent condo map');
-
-			buildDefaultPercentCondo();
-			buildKey(percent);
-
 		} else if ((houseCheck === false) && ((condoCheck === true) && (inputEmpty === false))) {
 			buildCondoPercentMap();
 			buildKey(percent);
 			console.log('build percent condo map');
-
 		} else {
 			buildDefaultPercentHouse();
 			buildKey(percent);
