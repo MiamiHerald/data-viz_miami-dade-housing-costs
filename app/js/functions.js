@@ -216,7 +216,7 @@ var $defaultCondoLayer = L.geoJson($zipData, {
 
 // PERCENT HELPERS
 function getDefaultPercentOpacity(d) {
-	if (d > -0.5) {
+	if (d > -5) {
 		return 0.7;
 	}
 	else {
@@ -225,7 +225,7 @@ function getDefaultPercentOpacity(d) {
 }
 
 function getDefaultPercentBorder(d) {
-	if (d > 0.00) {
+	if (d > -5) {
 		return 'white';
 	}
 	else {
@@ -242,7 +242,7 @@ function getDefaultHousePercentColor(d) {
 		return 'rgba(37, 64, 143, 0.75)';
 	} else if ((d >= 0.04) && (d < 0.08)) {
 		return 'rgba(37, 64, 143, 0.5)';
-	} else if ((d >= 0.00) && (d < 0.04)) {
+	} else if ((d >= -5) && (d < 0.10)) {
 		return 'rgba(37, 64, 143, 0.25)';
 	} else {
 		return '#fff';
@@ -276,7 +276,7 @@ function getDefaultCondoPercentColor(d) {
 		return 'rgba(37, 64, 143, 0.75)';
 	} else if ((d >= 0.000) && (d <= 0.056)) {
 		return 'rgba(37, 64, 143, 0.5)';
-	} else if ((d >= -0.03) && (d <= -0.01)) {
+	} else if ((d >= -5) && (d <= -0.01)) {
 		return 'rgba(37, 64, 143, 0.25)';
 	} else {
 		return '#fff';
