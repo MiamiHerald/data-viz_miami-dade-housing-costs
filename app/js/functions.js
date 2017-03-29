@@ -1965,6 +1965,8 @@ function buildCondoMap() {
 	var incomeInput = $('.income-box').val();
 	var income = getIncome(incomeInput);
 
+	$('.income-ammount').html('$' + numeral(incomeInput).format('0,0'));
+	$('.income-spend').html('$' + numeral(income).format('0,0'));
 	$('.income-button').attr('disabled', 'disabled');
 	$('.percent-select').removeClass('selected-interface');
 	$('.price-select').addClass('selected-interface');
