@@ -949,7 +949,7 @@ function getIncome(num) {
 // CHANGE NUMBER TO DOLLAR
 function numberChange(number) {
 	if (number === 'No data') {
-		return 'No data';
+		return 'Sin datos';
 	} else {
 		return '$' + numeral(number).format('0,0');
 	}
@@ -963,7 +963,7 @@ function percentChange(number) {
 		if (percent > 0) {
 			return '+' + percent + '%';
 		} else if (number === 'No data') {
-			return 'No data';
+			return 'Sin datos';
 		} else if (percent === 0) {
 			return 0 + '%';
 		} else {
@@ -974,7 +974,7 @@ function percentChange(number) {
 		if (percent > 0) {
 			return '+' + percent + '%';
 		} else if (number === 'No data') {
-			return 'No data';
+			return 'Sin datos';
 		} else if (percent === 0) {
 			return 0 + '%';
 		} else {
@@ -1086,8 +1086,8 @@ function checkInput(income) {
 // BUILD KEY
 function buildKey(housing) {
 	var currYear = $zipData[0].features[0].properties.currYear;
-	var currMonth = $zipData[0].features[0].properties.currMonth;
-	var currMonthShort = $zipData[0].features[0].properties.currMonthShort;
+	var currMonth = $zipData[0].features[0].properties.currMonthES;
+	var currMonthShort = $zipData[0].features[0].properties.currMonthShortES;
 
 	$('.legend-block').remove();
 
@@ -1101,7 +1101,7 @@ function buildKey(housing) {
 
 		console.log('Build price key');
 
-		$('.key-standfirst').html('Median value <span class="key-sub">(' + currMonth + ' ' + currYear + ')</span>');
+		$('.key-standfirst').html('Precio medio <span class="key-sub">(' + currMonth + ' ' + currYear + ')</span>');
 		console.log(housing);
 
 	} else if (housing === 'percent') {
@@ -1115,7 +1115,7 @@ function buildKey(housing) {
 		$('.legend-block').css('width', '25%');
 		console.log('Build percent key');
 
-		$('.key-standfirst').html('Median value change <span class="key-sub">(' + currMonthShort + ' ' + currYear + ' vs. ' + currMonthShort + ' ' + (currYear - 1) + ')</span>');
+		$('.key-standfirst').html('Cambio promedio del valuación <span class="key-sub">(' + currMonthShort + ' ' + currYear + ' vs ' + currMonthShort + ' ' + (currYear - 1) + ')</span>');
 
 	} else if (housing === 'crime') {
 		var red = ['rgba(237, 25, 65, 0.3333)', 'rgba(237, 25, 65, 0.6667)', 'rgba(237, 25, 65, 1)'];
@@ -1134,7 +1134,7 @@ function buildKey(housing) {
 			$('.legend-block').css('width', '20%');
 		}
 
-		$('.key-standfirst').html('Average school grade <span class="key-sub">(' + (currYear - 1) + '-' + currYear + ' school year)</span>');
+		$('.key-standfirst').html('Grado promedio de la escuela <span class="key-sub">(' + (currYear - 1) + '-' + currYear + ' año escolar)</span>');
 	}
 }
 
@@ -1210,7 +1210,7 @@ function writeHoverBox (feature,layer) {
 	var condoPriceFourteen = layer.feature.properties.prevCondoPrice;
 	var condoPriceFifteen = layer.feature.properties.currCondoPrice;
 	var condoPercent = layer.feature.properties.condoPricePercent;
-	var currMonth = layer.feature.properties.currMonth;
+	var currMonth = layer.feature.properties.currMonthES;
 	var currYear = layer.feature.properties.currYear;
 	var prevYear = layer.feature.properties.currYear - 1;
 	var schoolData = layer.feature.properties.schools;
@@ -1269,7 +1269,7 @@ function writeHoverBox (feature,layer) {
 				'background': 'rgba(237, 25, 65, 0.3333)',
 				'color': '#000'
 			});
-		$('.crime-rate').html('Low crime');
+		$('.crime-rate').html('Baja criminalidad');
 
 	} else if ((crimeRate > 100) && (crimeRate < 200)) {
 		$('.crime-level')
@@ -1277,21 +1277,21 @@ function writeHoverBox (feature,layer) {
 				'background': 'rgba(237, 25, 65, 0.6667)',
 				'color': '#000'
 			});
-		$('.crime-rate').html('Medium crime');
+		$('.crime-rate').html('Criminalidad promedio');
 	} else if (crimeRate > 200) {
 		$('.crime-level')
 			.css({
 				'background': 'rgba(237, 25, 65, 1)',
 				'color': '#000'
 			});
-		$('.crime-rate').html('High crime');
+		$('.crime-rate').html('Alta criminalidad');
 	} else {
 	 	$('.crime-level')
 			.css({
 				'background': '#ccc',
 				'color': '#000'
 			});
-		$('.crime-rate').html('No crime data');
+		$('.crime-rate').html('Sin datos de crimen');
 	}
 
 	// HANDLE CHANGE SCREEN SIZE
@@ -1299,7 +1299,7 @@ function writeHoverBox (feature,layer) {
 	var w = window.innerWidth;
 
 	if (schoolGrade === 'No data') {
-		$('.average-grade').html('no grade available');
+		$('.average-grade').html('sin datos de grado escolar');
 	} else {
 
 		var schoolCount = 0;
@@ -1309,9 +1309,9 @@ function writeHoverBox (feature,layer) {
 		}
 
 		if ((schoolCount === 0) || (schoolCount > 1) ) {
-			$('.school-number').html(schoolCount+ ' schools');
+			$('.school-number').html(schoolCount+ ' escuelas');
 		} else if (schoolCount === 1) {
-			$('.school-number').html(schoolCount + ' school');
+			$('.school-number').html(schoolCount + ' escuela');
 		}
 	}
 
@@ -1326,8 +1326,8 @@ function writeHoverBox (feature,layer) {
 	} else if ((schoolGrade >= 0) && (schoolGrade < 1)){
 		$('.average-grade').html('F');
 	} else {
-		$('.average-grade').html('no grade available');
-	 	$('.school-number').html('0 schools');
+		$('.average-grade').html('sin datos de grado escolar');
+	 	$('.school-number').html('0 escuelas');
 	}
 
 	if (schoolData === 'No data') {
@@ -1539,7 +1539,7 @@ function buildDefaultHouse() {
 	buildKey(price);
 
 	$('.housing-type')
-		.html('Median value of single-family homes')
+		.html('Precio medio of single-family homes')
 		.css({
 			'color': '#006d2c',
 			'font-weight': 'bold'
@@ -1566,7 +1566,7 @@ function buildDefaultHouse() {
 	}
 
 	$('.label-left')
-		.html('Less Expensive')
+		.html('Menos caro')
 		.css({
 			'width': '50%',
 			'text-align': 'left'
@@ -1577,7 +1577,7 @@ function buildDefaultHouse() {
 		.css('display', 'none');
 
 	$('.label-right')
-		.html('More Expensive')
+		.html('Mas caro')
 		.css({
 			'width': '50%',
 			'text-align': 'right'
@@ -1603,7 +1603,7 @@ function buildDefaultCondo() {
 	buildKey(price);
 
 	$('.housing-type')
-		.html('Median value of condos/townhomes')
+		.html('Precio medio de condos/townhomes')
 		.css({
 			'color': '#006d2c',
 			'font-weight': 'bold'
@@ -1612,7 +1612,7 @@ function buildDefaultCondo() {
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
-		.html('Less Expensive')
+		.html('Menos caro')
 		.css({
 			'width': '50%',
 			'text-align': 'left'
@@ -1623,7 +1623,7 @@ function buildDefaultCondo() {
 		.css('display', 'none');
 
 	$('.label-right')
-		.html('More Expensive')
+		.html('Mas caro')
 		.css({
 			'width': '50%',
 			'text-align': 'right'
@@ -1669,12 +1669,12 @@ function buildDefaultPercentHouse() {
 	}
 
 	$('.housing-type')
-		.html('Value change of single-family homes')
+		.html('Cambio de precio de casas')
 		.css({
 			'color': '#08519c',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' in South Florida');
+	$('.housing-explainer').html(' en el sur de la Florida');
 	$('.percent-year').css('display', 'inline');
 
 	$('.label-left')
@@ -1732,7 +1732,7 @@ function buildDefaultPercentCondo() {
 	}
 
 	$('.housing-type')
-		.html('Value change of condos/townhomes')
+		.html('Cambio de precio de condos/townhomes')
 		.css({
 			'color': '#08519c',
 			'font-weight': 'bold'
@@ -1775,7 +1775,7 @@ function buildDefaultCrime() {
 	buildKey(crime);
 
 	$('.label-left')
-		.html('Low')
+		.html('Baja')
 		.css({
 			'width': '33%',
 			'text-align': 'left'
@@ -1783,7 +1783,7 @@ function buildDefaultCrime() {
 		});
 
 	$('.label-middle')
-		.html('Average')
+		.html('Promedio')
 		.css({
 			'display': 'inline-block',
 			'text-align': 'center',
@@ -1791,7 +1791,7 @@ function buildDefaultCrime() {
 		});
 
 	$('.label-right')
-		.html('High')
+		.html('Alta')
 		.css({
 			'width': '33%',
 			'text-align': 'right'
@@ -1802,7 +1802,7 @@ function buildDefaultCrime() {
 	$('.b-grade').css('display', 'none');
 
 	$('.housing-type')
-		.html('Crime rates ')
+		.html('Índices de crimen ')
 		.css({
 			'color': '#a50f15',
 			'font-weight': 'bold'
@@ -1870,7 +1870,7 @@ function buildDefaultSchool() {
 		.html('F');
 
 	$('.housing-type')
-		.html('Average school grade ')
+		.html('Grado promedio de la escuela ')
 		.css({
 			'color': '#54278f',
 			'font-weight': 'bold'
@@ -1916,7 +1916,7 @@ function buildHouseMap() {
 
 	console.log('Houses:' + count);
 
-	$('.housing').html('single-family homes');
+	$('.housing').html('casas');
 	$('.zip-count').html(count);
 
 	$('.money').html('$'+numeral(income).format('0,0'));
@@ -1928,11 +1928,11 @@ function buildHouseMap() {
 			'color': '#006d2c',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' single-family houses in South Florida.');
+	$('.housing-explainer').html(' casas en el Sur de Florida.');
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
-		.html('Less expensive')
+		.html('Menos caro')
 		.css({
 			'width': '50%',
 			'text-align': 'left'
@@ -1943,7 +1943,7 @@ function buildHouseMap() {
 		.css('display', 'none');
 
 	$('.label-right')
-		.html('More expensive')
+		.html('Mas caro')
 		.css({
 			'width': '50%',
 			'text-align': 'right'
@@ -1978,11 +1978,11 @@ function buildCondoMap() {
 			'color': '#006d2c',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' condos in South Florida.');
+	$('.housing-explainer').html(' condos en el sur de Florida.');
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
-		.html('Less expensive')
+		.html('Menos caro')
 		.css({
 			'width': '50%',
 			'text-align': 'left'
@@ -1993,7 +1993,7 @@ function buildCondoMap() {
 		.css('display', 'none');
 
 	$('.label-right')
-		.html('More expensive')
+		.html('Mas caro')
 		.css({
 			'width': '50%',
 			'text-align': 'right'
@@ -2042,12 +2042,12 @@ function buildHousePercentMap() {
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
 	$('.housing-type')
-		.html('Value change ')
+		.html('Cambio de precio ')
 		.css({
 			'color': '#08519c',
 			'font-weight': 'bold'
 		});
-	$('.housing-explainer').html(' of single-family houses since 2014 in the ZIP Codes you can afford.');
+	$('.housing-explainer').html(' of casas since 2014 in the ZIP Codes you can afford.');
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
@@ -2141,7 +2141,7 @@ function buildCrimeMap() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
-	$('.key-standfirst').html('Crime rate <span class="key-sub">(' + currYear + ')</span>');
+	$('.key-standfirst').html('Índice de crimen <span class="key-sub">(' + currYear + ')</span>');
 	$('.housing-type')
 		.html('Crime rates ')
 		.css({
@@ -2152,21 +2152,21 @@ function buildCrimeMap() {
 	$('.percent-year').css('display', 'none');
 
 	$('.label-left')
-		.html('Low')
+		.html('Baja')
 		.css({
 			'width': '33%',
 			'text-align': 'left'
 		});
 
 	$('.label-middle')
-		.html('Average')
+		.html('Promedio')
 		.css({
 			'display': 'inline-block',
 			'width': '33%'
 		});
 
 	$('.label-right')
-		.html('High')
+		.html('Alta')
 		.css({
 			'width': '33%',
 			'text-align': 'right'
@@ -2197,7 +2197,7 @@ function buildSchoolMap() {
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
 	$('.housing-type')
-		.html('Average school grade ')
+		.html('Grado promedio de la escuela ')
 		.css({
 			'color': '#54278f',
 			'font-weight': 'bold'

@@ -89,13 +89,13 @@
 	});
 
 	$('#check-button-income').on('change', '.income:checkbox', function(e) {
-    $('.income-standfirst').text('My annual household income is');
+    $('.income-standfirst').text('Mi ingreso anual es');
 		$('.savings:checkbox').attr('checked', false);
 		$('.income-only').show();
 	});
 
 	$('#check-button-savings').on('change', '.savings:checkbox', function(e) {
-		$('.income-standfirst').text('My maximum price is');
+		$('.income-standfirst').text('Lo más que puedo pagar');
 		$('.income:checkbox').attr('checked', false);
 		$('.income-only').hide();
 	});

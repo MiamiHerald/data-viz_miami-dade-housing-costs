@@ -6,38 +6,38 @@
 	<div ng-controller="HousingFormController">
 		<div class="map-info-container" id="map-info">
 			<h1 class="heading section-main-heading link">
-				<a href="http://www.miamiherald.com/news/business/real-estate-news/">Real Estate News</a>
+				<a href="http://www.elnuevoherald.com/bienes-raices/">Bienes Raíces</a>
 			</h1>
 			<p class="published-date">
-				January 30, 2017 2:17 PM
+				Marzo 30, 2017
 			</p>
-			<div class="headline">See where you can afford a home in South Florida</div>
+			<div class="headline">Vea dónde puede comprar una vivienda en el sur de la Florida</div>
 			<div class="byline">
-				By Nicholas Nehamas and Chris Williams <br></br>
+				Por Nicholas Nehamas y Chris Williams <br></br>
 				<a href="mailto:nnehamas@miamiherald.com">nnehamas@miamiherald.com</a>
 			</div>
 
 			<div class="button-container" id="button-container">
 
-				<p class="readout">Skyrocketing real estate prices make <a class="herald-link" href="http://www.miamiherald.com/news/business/real-estate-news/article131945359.html" target="_blank">finding an affordable home</a> difficult for many South Floridians. This tool shows where you can afford a home and how school quality, safety and annual value growth compare. Here's how to use it:</p>
+				<p class="readout">El alza de los precios en los bienes raíces hace más dificil para algunos encontrar un hogar al alcance de su presupuesto, ya sea para comprar o rentar. Con esta herramienta puede ver dónde puede comprar una casa acorde con su presupuesto, la calidad de las escuelas, seguridad y una comparación del crecimiento de los precios anualmente.</p>
 
 				<div class="tool-list-container readout">
 					<div class="col-md-8 col-md-offset-2">
 						<span class='item'>
 							<div class="standfirst">
-								I'd like to buy a...
+								Me gustaría comprar...
 							</div>
 							<div class="input-group">
 								<span class="check-button" id="check-button-house">
 									<label>
 										<input class="house" type="checkbox" ng-model="houseTypeChecked"></input>
-										<span><i class="fa fa-home"></i> Single-family home</span>
+										<span><i class="fa fa-home"></i> Casa</span>
 									</label>
 								</span>
 								<span class="check-button" id="check-button-condo">
 									<label>
 										<input class="condo" type="checkbox" ng-model="condoTypeChecked"></input>
-										<span><i class="fa fa-building"></i> Condo or townhouse</span>
+										<span><i class="fa fa-building"></i> Condo o townhouse</span>
 									</label>
 								</span>
 							</div>
@@ -47,19 +47,19 @@
 					<div class="col-md-8 col-md-offset-2">
 						<span ng-show="houseTypeChecked || condoTypeChecked" class="item ng-hide">
 							<div class="standfirst">
-								Show ZIP Codes I can afford based on...
+								Códigos postales que van de acuerdo a mi presupuesto basado en...
 							</div>
 							<div class="input-group">
 								<span class="check-button" id="check-button-income">
 									<label>
 										<input class="income" type="checkbox" ng-model="incomeTypeChecked"></input>
-										<span><i class="fa fa-briefcase"></i> My income</span>
+										<span><i class="fa fa-briefcase"></i> Mis ingresos</span>
 									</label>
 								</span>
 								<span class="check-button" id="check-button-savings">
 									<label>
 										<input class="savings" type="checkbox" ng-model="savingsTypeChecked"></input>
-										<span><i class="fa fa-money"></i> Max price</span>
+										<span><i class="fa fa-money"></i> Precio máximo</span>
 									</label>
 								</span>
 							</div>
@@ -71,7 +71,7 @@
 							<div class="income-standfirst"></div>
 							<input name="income-box" class="income-box" type="text" placeholder="$"></input>
 							<span class="input-group-btn">
-								<button class="income-button income-btn btn btn-default btn-lg" type="button" value="Execute"><i class="fa fa-search"></i> Show me the ZIPs</button>
+								<button class="income-button income-btn btn btn-default btn-lg" type="button" value="Execute"><i class="fa fa-search"></i> Ver los códigos postales</button>
 							</span>
 						</div>
 					</div>
@@ -80,7 +80,7 @@
 						<div class="error">
 							<div class="alert alert-danger" role="alert">
 								<i class="fa fa-info-circle"></i>
-								<span class="sr-only">Error:</span> Enter a valid number
+								<span class="sr-only">Error:</span> ingrese un número válido
 							</div>
 						</div>
 					</div>
@@ -91,10 +91,10 @@
 		<div ng-hide="mapIt" id="mapIt">
 			<div class="col-md-8 col-md-offset-2 results-outer">
 				<div class="explainer">
-					<p class="income-only">Experts suggest you pay, at most, three-and-a-half times your annual income on a home. A <span class="income-ammount"></span> income would make your maximum price <span class="income-spend"></span>.</p>
-					<p class="first-graf">There are <span class="zip-count"></span> <span>ZIP Codes</span> in Miami-Dade and Broward counties with <span class="housing"></span> you can afford.</p>
-					<button class="btn btn-default btn-lg" type="button" ng-click="mapIt = true"><i class="fa fa-map-signs"></i> Map It!</button>
-					<button class="reset btn btn-default btn-lg" type="button" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil"></i> Edit search</button>
+					<p class="income-only">Los expertos sugieren que usted paga, como mucho, tres veces y media su ingreso anual en una casa. Un ingreso de <span class="income-ammount"></span> haría que su precio máximo fuera <span class="income-spend"></span>.</p>
+					<p class="first-graf">Hay <span class="zip-count"></span> <span>códigos postales</span> en los condados de Miami-Dade y Broward con <span class="housing"></span> al alcance de su presupuesto.</p>
+					<button class="btn btn-default btn-lg" type="button" ng-click="mapIt = true"><i class="fa fa-map-signs"></i> Ver en el mapa</button>
+					<button class="reset btn btn-default btn-lg" type="button" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil"></i> Editar búsqueda</button>
 				</div>
 			</div>
 		</div>
@@ -105,10 +105,10 @@
 				<div id="interface-container-mobile">
 					<div class="map-interface">
 						<ul>
-							<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
-							<li class="percent-select interface-selector interface-selector--blue">Growth</li>
-							<li class="crime-select interface-selector interface-selector--red">Crime</li>
-							<li class="school-select interface-selector interface-selector--yellow">Schools</li>
+							<li class="price-select interface-selector interface-selector--green selected-interface">Precio</li>
+							<li class="percent-select interface-selector interface-selector--blue">Crecimiento</li>
+							<li class="crime-select interface-selector interface-selector--red">Crimen</li>
+							<li class="school-select interface-selector interface-selector--yellow">Escuelas</li>
 						</ul>
 
 						<div class="key-holder">
@@ -126,14 +126,14 @@
 						<div class="clearfix"></div>
 
 						<p class="readout">
-							<span class="hover-instructions">Click on a ZIP Code for more information.</span>
+							<span class="hover-instructions">Haga clic en un código postal para obtener más información</span>
 						</p>
 					</div>
 				</div>
 				<div id="map-container"></div>
 				<div class="map-button__outer">
-					<div class="map-button reset" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Edit Search</span></div>
-					<div class="map-button show-all"><i class="fa fa-undo" aria-hidden="true"></i> <span>Show all ZIPs</span></div>
+					<div class="map-button reset" value="Reset" ng-click="mapIt = false"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Editar búsqueda</span></div>
+					<div class="map-button show-all"><i class="fa fa-undo" aria-hidden="true"></i> <span>Ver todo</span></div>
 				</div>
 				<div class="hover-box-container" id="hover-box-mobile">
 					<div class="zip-code-heading">
@@ -144,7 +144,7 @@
 
 					<div class="neighborhood-heading">
 						<div class="sub-info">
-							<span class='neighborhoods'>Neighborhoods include:
+							<span class='neighborhoods'>Barrios incluyen:
 								<span class="hoods"></span></span>
 						</div>
 					</div>
@@ -166,7 +166,7 @@
 							</div>
 							<div class="housing-item housing-item--growth col-xs-4">
 								<div class="housing-growth">
-									Growth
+									Crecimiento
 								</div>
 								<div class="housing-number house-percent">
 
@@ -177,7 +177,7 @@
 
 					<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 						<div class="housing-heading">
-							Median value <span>(December)</span>
+							Median value <span></span>
 						</div>
 						<div class="housing-table">
 							<div class="housing-item housing-item--year col-xs-4">
@@ -202,13 +202,13 @@
 					<div class="school-list">
 						<table class='school-table'>
 							<tr class='school-head'>
-								<th class='name'>School grade</th>
+								<th class='name'>Grado escolar</th>
 								<th>2013-14</th>
 								<th>2014-15</th>
 								<th>2015-16</th>
 							</tr>
 						</table>
-						<h4 class="no-school">No school data</h4>
+						<h4 class="no-school">Sin datos escolares</h4>
 					</div>
 
 					<div class="clearfix"></div>
@@ -218,9 +218,9 @@
 							Share this tool
 						</div>
 						<div class="share-wrapper">
-							<a href="https://twitter.com/intent/tweet?text=" class="js-share share-link" data-share="http://hrld.us/housing-costs"><img src="http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/img/twitter-share.png" alt="Share on twitter"></img></a>
-							<a href="https://www.facebook.com/sharer/sharer.php?u=" class="js-share share-link" data-share="http://hrld.us/housing-costs"><img src="http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/img/facebook-share.png" alt="Share on facebook"></img></a>
-							<a href="mailto:?subject=Miami Herald: See where you can afford a home in South Florida&amp;body=See what your money can get you in Miami-Dade and Broward counties: http://hrld.us/housing-costs" class="share-link"><img src="http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/img/email-share.png" alt="Share by email"></img></a>
+							<a href="https://twitter.com/intent/tweet?text=" class="js-share share-link" data-share="http://hrld.us/housing-costs-es"><img src="http://pubsys.miamiherald.com/static/media/projects/2017/housing-prices-update-es/img/twitter-share.png" alt="Share on twitter"></img></a>
+							<a href="https://www.facebook.com/sharer/sharer.php?u=" class="js-share share-link" data-share="http://hrld.us/housing-costs-es"><img src="http://pubsys.miamiherald.com/static/media/projects/2017/housing-prices-update-es/img/facebook-share.png" alt="Share on facebook"></img></a>
+							<a href="mailto:?subject=El Nuevo Herald: Vea dónde puede comprar una vivienda en el sur de la Florida&amp;body=Vea dónde puede comprar una vivienda en el sur de la Florida: http://hrld.us/housing-costs-es-es" class="share-link"><img src="http://pubsys.miamiherald.com/static/media/projects/2017/housing-prices-update-es/img/email-share.png" alt="Share by email"></img></a>
 						</div>
 					</div>
 				</div><!-- END HOVERBOX CONTAINER -->
@@ -229,10 +229,10 @@
 				<div id="interface-container">
 					<div class="map-interface">
 						<ul>
-							<li class="price-select interface-selector interface-selector--green selected-interface">Value</li>
-							<li class="percent-select interface-selector interface-selector--blue">Growth</li>
-							<li class="crime-select interface-selector interface-selector--red">Crime</li>
-							<li class="school-select interface-selector interface-selector--yellow">Schools</li>
+							<li class="price-select interface-selector interface-selector--green selected-interface">Precio</li>
+							<li class="percent-select interface-selector interface-selector--blue">Crecimiento</li>
+							<li class="crime-select interface-selector interface-selector--red">Crimen</li>
+							<li class="school-select interface-selector interface-selector--yellow">Escuelas</li>
 						</ul>
 
 						<div class="key-holder">
@@ -251,7 +251,7 @@
 						<div class="clearfix"></div>
 
 						<p class="readout">
-							<span class="hover-instructions">Click on a ZIP Code for more information.</span>
+							<span class="hover-instructions">Haga clic en un código postal para más información.</span>
 						</p>
 					</div>
 				</div>
@@ -264,7 +264,7 @@
 
 					<div class="neighborhood-heading">
 						<div class="sub-info">
-							<span class='neighborhoods'>Neighborhoods include:
+							<span class='neighborhoods'>Barrios incluyen:
 								<span class="hoods"></span>
 							</span>
 						</div>
@@ -272,7 +272,7 @@
 
 					<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
 						<div class="housing-heading">
-							Median value <span>(December)</span>
+							Precio medio <span class="current-month"></span>
 						</div>
 						<div class="housing-table">
 							<div class="housing-item housing-item--year col-xs-4">
@@ -287,7 +287,7 @@
 							</div>
 							<div class="housing-item housing-item--growth col-xs-4">
 								<div class="housing-growth">
-									Growth
+									Crecimiento
 								</div>
 								<div class="housing-number house-percent">
 
@@ -298,7 +298,7 @@
 
 					<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 						<div class="housing-heading">
-							Median value <span class="current-month"></span>
+							Precio medio <span class="current-month"></span>
 						</div>
 						<div class="housing-table">
 							<div class="housing-item housing-item--year col-xs-4">
@@ -313,7 +313,7 @@
 							</div>
 							<div class="housing-item housing-item--growth col-xs-4">
 								<div class="housing-growth">
-									Growth
+									Crecimiento
 								</div>
 								<div class="housing-number condo-percent"></div>
 							</div>
@@ -323,23 +323,23 @@
 					<div class="school-list">
 						<table class="school-table">
 							<tr class="school-head">
-								<th class='name'>School grade</th>
+								<th class='name'>Grado escolar</th>
 								<th>2013-14</th>
 								<th>2014-15</th>
 								<th>2015-16</th>
 							</tr>
 						</table>
-						<h4 class="no-school">No school data</h4>
+						<h4 class="no-school">Sin datos escolares</h4>
 					</div>
 
 					<div class="share-container">
 						<div class="share-heading">
-							Share this tool
+							Compartir esta herramienta
 						</div>
 						<div class="share-wrapper">
-							<a href="https://twitter.com/intent/tweet?text=" class="js-share share-link" data-share="http://hrld.us/housing-costs"><img src="http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/img/twitter-share.png" alt="Share on twitter"></img></a>
-							<a href="https://www.facebook.com/sharer/sharer.php?u=hrld.us/housing-costs" class="share-link" target="_blank"><img src="http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/img/facebook-share.png" alt="Share on facebook"></img></a>
-							<a href="mailto:?subject=Miami Herald: See where you can afford a home in South Florida&amp;body=See what your money can get you in Miami-Dade and Broward counties: http://hrld.us/housing-costs" class="share-link"><img src="http://pubsys.miamiherald.com/static/media/projects/2016/housing-prices-update/img/email-share.png" alt="Share by email"></img></a>
+							<a href="https://twitter.com/intent/tweet?text=" class="js-share share-link" data-share="http://hrld.us/housing-costs-es"><img src="http://pubsys.miamiherald.com/static/media/projects/2017/housing-prices-update-es/img/twitter-share.png" alt="Compartir en Twitter"></img></a>
+							<a href="https://www.facebook.com/sharer/sharer.php?u=hrld.us/housing-costs-es" class="share-link" target="_blank"><img src="http://pubsys.miamiherald.com/static/media/projects/2017/housing-prices-update-es/img/facebook-share.png" alt="Compartir en Facebook"></img></a>
+							<a href="mailto:?subject=El Nuevo Herald: Vea dónde puede comprar una vivienda en el sur de la Florida&amp;body=Vea dónde puede comprar una vivienda en el sur de la Florida: http://hrld.us/housing-costs-es" class="share-link"><img src="http://pubsys.miamiherald.com/static/media/projects/2017/housing-prices-update-es/img/email-share.png" alt="Compartir en Email"></img></a>
 						</div>
 					</div>
 				</div><!-- END HOVERBOX CONTAINER -->
