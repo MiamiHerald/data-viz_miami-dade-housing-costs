@@ -40,7 +40,7 @@
       
 
 <div ng-app="housingApp">
-	<div ng-controller="HousingFormController">
+	<div ng-controller="HousingFormController" ng-init="mapIt = false">
 		<div class="map-info-container" id="map-info">
 			<h1 class="heading section-main-heading link">
 				<a href="http://www.miamiherald.com/news/business/real-estate-news/">Real Estate News</a>
@@ -54,10 +54,9 @@
 				<a href="mailto:nnehamas@miamiherald.com">nnehamas@miamiherald.com</a>
 			</div>
 
-			<div class="button-container" id="button-container">
+			<p class="readout">Skyrocketing real estate prices make <a class="herald-link" href="http://www.miamiherald.com/news/business/real-estate-news/article131945359.html" target="_blank">finding an affordable home</a> difficult for many South Floridians. This tool shows where you can afford a home and how school quality, safety and annual value growth compare. Here's how to use it:</p>
 
-				<p class="readout">Skyrocketing real estate prices make <a class="herald-link" href="http://www.miamiherald.com/news/business/real-estate-news/article131945359.html" target="_blank">finding an affordable home</a> difficult for many South Floridians. This tool shows where you can afford a home and how school quality, safety and annual value growth compare. Here's how to use it:</p>
-
+			<div class="button-container" id="button-container" ng-hide="mapIt">
 				<div class="tool-list-container readout">
 					<div class="col-md-8 col-md-offset-2">
 						<span class='item'>
@@ -219,7 +218,7 @@
 
 					<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 						<div class="housing-heading">
-							Median value <span></span>
+							Median value <span class="current-month"></span>
 						</div>
 						<div class="housing-table">
 							<div class="housing-item housing-item--year col-xs-4">
@@ -314,7 +313,7 @@
 
 					<div id="house-price" ng-hide="condoTypeChecked" ng-show="houseTypeChecked">
 						<div class="housing-heading">
-							Median value <span></span>
+							Median value <span class="current-month"></span>
 						</div>
 						<div class="housing-table">
 							<div class="housing-item housing-item--year col-xs-4">

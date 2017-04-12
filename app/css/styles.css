@@ -778,7 +778,8 @@ input.income {
   margin-top: 2em; }
 
 .input-container {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 30px; }
   .input-container .income-standfirst {
     font-size: 24px !important;
     font-weight: bold;
