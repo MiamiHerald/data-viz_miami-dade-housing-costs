@@ -1261,7 +1261,7 @@ function writeHoverBox (feature,layer) {
 	$('.hoods').html(neighborhoodNames);
 	$('.housing-year--prev').html(prevYear);
 	$('.housing-year--curr').html(currYear);
-	$('.current-month').html('(' + currMonth + ')');
+	$('.current-month').html('(' + currMonth + ' ' + currYear + ')');
 
 	if ((crimeRate > 0) && (crimeRate < 100)) {
 		$('.crime-level')
