@@ -236,7 +236,7 @@ function getDefaultPercentBorder(d) {
 
 function getDefaultHousePercentColor(d) {
 
-	if ((d >= 0.11) && (d <= 0.27)) {
+	if ((d >= 0.11) && (d <= 0.28)) {
 		return 'rgba(37, 64, 143, 1)';
 	} else if ((d >= 0.08) && (d < 0.11)) {
 		return 'rgba(37, 64, 143, 0.75)';
