@@ -318,6 +318,7 @@
 		} else {
 			clearAllLayers();
 		}
+    
 		$('.school-list').hide();
 
 		var defaultOption = $('.housing-option option[value=\'default\']');

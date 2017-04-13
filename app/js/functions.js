@@ -236,7 +236,7 @@ function getDefaultPercentBorder(d) {
 
 function getDefaultHousePercentColor(d) {
 
-	if ((d >= 0.11) && (d <= 0.27)) {
+	if ((d >= 0.11) && (d <= 0.28)) {
 		return 'rgba(37, 64, 143, 1)';
 	} else if ((d >= 0.08) && (d < 0.11)) {
 		return 'rgba(37, 64, 143, 0.75)';
@@ -1125,7 +1125,7 @@ function buildKey(housing) {
 		}
 		$('.legend-block').css('width', '33.3333%');
 
-		$('.key-standfirst').html('Crime rate <span class="key-sub">(' + currYear + ')</span>');
+		$('.key-standfirst').html('Crime rate <span class="key-sub">(' + (currYear - 1) + ')</span>');
 	} else {
 		var yellow = ['rgba(209, 161, 13, 1)', 'rgba(209, 161, 13, 0.8)','rgba(209, 161, 13, 0.6)','rgba(209, 161, 13, 0.4)','rgba(209, 161, 13, 0.2)'];
 
@@ -1134,7 +1134,7 @@ function buildKey(housing) {
 			$('.legend-block').css('width', '20%');
 		}
 
-		$('.key-standfirst').html('Grado promedio de la escuela <span class="key-sub">(' + (currYear - 1) + '-' + currYear + ' año escolar)</span>');
+		$('.key-standfirst').html('Grado promedio de la escuela <span class="key-sub">(' + (currYear - 1) + ' año escolar)</span>');
 	}
 }
 
@@ -2143,7 +2143,7 @@ function buildCrimeMap() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
-	$('.key-standfirst').html('Índice de crimen <span class="key-sub">(' + currYear + ')</span>');
+	$('.key-standfirst').html('Índice de crimen <span class="key-sub">(' + (currYear - 1) + ')</span>');
 	$('.housing-type')
 		.html('Crime rates ')
 		.css({

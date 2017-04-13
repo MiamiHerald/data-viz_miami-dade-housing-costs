@@ -40,7 +40,7 @@
       
 
 <div ng-app="housingApp">
-	<div ng-controller="HousingFormController">
+	<div ng-controller="HousingFormController" ng-init="mapIt = false">
 		<div class="map-info-container" id="map-info">
 			<h1 class="heading section-main-heading link">
 				<a href="http://www.elnuevoherald.com/bienes-raices/">Bienes Raíces</a>
@@ -54,9 +54,9 @@
 				<a href="mailto:nnehamas@miamiherald.com">nnehamas@miamiherald.com</a>
 			</div>
 
-			<div class="button-container" id="button-container">
+			<p class="readout">El alza de los precios en los bienes raíces hace más dificil para algunos encontrar un hogar al alcance de su presupuesto, ya sea para comprar o rentar. Con esta herramienta puede ver dónde puede comprar una casa acorde con su presupuesto, la calidad de las escuelas, seguridad y una comparación del crecimiento de los precios anualmente.</p>
 
-				<p class="readout">El alza de los precios en los bienes raíces hace más dificil para algunos encontrar un hogar al alcance de su presupuesto, ya sea para comprar o rentar. Con esta herramienta puede ver dónde puede comprar una casa acorde con su presupuesto, la calidad de las escuelas, seguridad y una comparación del crecimiento de los precios anualmente.</p>
+			<div class="button-container" id="button-container" ng-hide="mapIt">
 
 				<div class="tool-list-container readout">
 					<div class="col-md-8 col-md-offset-2">
@@ -75,6 +75,11 @@
 									<label>
 										<input class="condo" type="checkbox" ng-model="condoTypeChecked"></input>
 										<span><i class="fa fa-building"></i> Condo o townhouse</span>
+									</label>
+								</span>
+								<span class="check-button show-all" ng-click="mapIt = true">
+									<label>
+										<span><i class="fa fa-check-circle"></i> Ver todo</span>
 									</label>
 								</span>
 							</div>
@@ -149,6 +154,7 @@
 						</ul>
 
 						<div class="key-holder">
+							<div class="key-standfirst"></div>
 							<div class="key"></div>
 							<div class="clearfix"></div>
 							<div class="labels">
@@ -214,7 +220,7 @@
 
 					<div id="condo-price" ng-hide="houseTypeChecked" ng-show="condoTypeChecked">
 						<div class="housing-heading">
-							Median value <span></span>
+							Median value <span class="current-month"></span>
 						</div>
 						<div class="housing-table">
 							<div class="housing-item housing-item--year col-xs-4">
