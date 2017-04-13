@@ -313,11 +313,12 @@
 		condoCheckbox.attr('disabled', false);
 		houseCheckbox.attr('disabled', false);
 
-		// if ((houseCheck === true || condoCheck === true)) {
-		// 	clearDefaultLayers();
-		// } else {
-		// 	clearAllLayers();
-		// }
+		if ((houseCheck === true || condoCheck === true)) {
+			clearDefaultLayers();
+		} else {
+			clearAllLayers();
+		}
+    
 		$('.school-list').hide();
 
 		var defaultOption = $('.housing-option option[value=\'default\']');

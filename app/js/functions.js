@@ -1125,7 +1125,7 @@ function buildKey(housing) {
 		}
 		$('.legend-block').css('width', '33.3333%');
 
-		$('.key-standfirst').html('Crime rate <span class="key-sub">(' + currYear + ')</span>');
+		$('.key-standfirst').html('Crime rate <span class="key-sub">(' + (currYear - 1) + ')</span>');
 	} else {
 		var yellow = ['rgba(209, 161, 13, 1)', 'rgba(209, 161, 13, 0.8)','rgba(209, 161, 13, 0.6)','rgba(209, 161, 13, 0.4)','rgba(209, 161, 13, 0.2)'];
 
@@ -1134,7 +1134,7 @@ function buildKey(housing) {
 			$('.legend-block').css('width', '20%');
 		}
 
-		$('.key-standfirst').html('Average school grade <span class="key-sub">(' + (currYear - 1) + '-' + currYear + ' school year)</span>');
+		$('.key-standfirst').html('Average school grade <span class="key-sub">(' + (currYear - 1) + ' school year)</span>');
 	}
 }
 
@@ -2143,7 +2143,7 @@ function buildCrimeMap() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.key-holder').css('display', 'block');
 	$('.legend-block').remove();
-	$('.key-standfirst').html('Crime rate <span class="key-sub">(' + currYear + ')</span>');
+	$('.key-standfirst').html('Crime rate <span class="key-sub">(' + (currYear - 1) + ')</span>');
 	$('.housing-type')
 		.html('Crime rates ')
 		.css({
