@@ -236,7 +236,7 @@ function getDefaultPercentBorder(d) {
 
 function getDefaultHousePercentColor(d) {
 
-	if ((d >= 0.11) && (d <= 0.28)) {
+	if ((d >= 0.11) && (d <= 0.29)) {
 		return 'rgba(37, 64, 143, 1)';
 	} else if ((d >= 0.08) && (d < 0.11)) {
 		return 'rgba(37, 64, 143, 0.75)';
@@ -613,7 +613,7 @@ function getPercentBorder(price, d) {
 }
 
 function getHousePercentColor(price, d) {
-	if ((income >= price) && (d >= 0.28)) {
+	if ((income >= price) && (d >= 0.29)) {
 		return 'rgba(37, 64, 143, 1)';
 	} else if ((income >= price) && ((d >= 0.12) && (d <= 0.26))) {
 		return 'rgba(37, 64, 143, 0.75)';
