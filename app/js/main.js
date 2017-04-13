@@ -315,10 +315,11 @@
 
 		if ((houseCheck === true || condoCheck === true)) {
 			clearDefaultLayers();
-		} else {
-			clearAllLayers();
 		}
-    
+    // else {
+		// 	clearAllLayers();
+		// }
+
 		$('.school-list').hide();
 
 		var defaultOption = $('.housing-option option[value=\'default\']');
