@@ -393,4 +393,6 @@
 
     // showAll = false;
   });
+
+  window.dispatchEvent(new Event('resize'));
 })();
