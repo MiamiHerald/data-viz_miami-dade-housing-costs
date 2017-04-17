@@ -1,4 +1,4 @@
-#Miami Herald graphics template
+# Miami Herald graphics template
 
 This is the Miami Herald's template for building interactive graphics online.
 
@@ -6,7 +6,7 @@ The template is an upgrade from a [previous version](https://github.com/chrisalc
 
 The new version, inspired by The Texas Tribune's [graphic template](https://github.com/texastribune/newsapps-graphic-kit), is written in JavaScript with task management handled by [Gulp](http://gulpjs.com/).
 
-###What's in the box
+### What's in the box
 
 CSS:
 
@@ -20,7 +20,7 @@ JS:
 + Bootsrap – Bootstrap components
 + Modernizr – Detection
 + Sinclair – Miami Herald's library
-	
+
 HTML:
 
 + `base.html` – Uniform page. This is where everything but the content is built, including SEO and footer.
@@ -37,7 +37,7 @@ GULP:
 
 More to come...
 
-###How to start building
+### How to start building
 
 Before you begin, make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 
@@ -59,7 +59,7 @@ If all systems go:
 
 7. Once finished. Run `gulp build` to create file. You're done!
 
-###Working with Google Sheets
+### Working with Google Sheets
 
 1. In Google Spreadsheets, copy from this [template](https://docs.google.com/spreadsheets/d/1EB0Xq0mt_MkszaBHeSpIWGdlSnt0errmxo7pQqTdvCw/edit#gid=0) and make a new document.
 
