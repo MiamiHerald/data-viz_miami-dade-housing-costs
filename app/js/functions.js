@@ -670,7 +670,7 @@ function condoPercentStyle(features, layer) {
 // BUILD CRIME MAP
 // ================
 
-//HELPERS
+// HELPERS
 // PERCENT HELPERS
 function getBuiltCrimeOpacity(house, condo, crime) {
 
@@ -909,17 +909,11 @@ function getPos(event) {
 
 // ACTIVATE HOVER
 function initHover() {
-	// if (mobile > w) {
-	// 	$('#hover-box-mobile').show();
-	// } else {
-	// 	$('#hover-box-mobile').hide();
-	// }
 	$(document).bind('mousemove', getPos);
 }
 
 // END HOVER
 function endHover() {
-	// $('#hover-box').hide();
 	$(document).unbind('mousemove', getPos);
 }
 
@@ -1375,12 +1369,6 @@ function onEachFeature(feature, layer) {
 
 		mouseover: function(e) {
 			var query = Modernizr.mq('(max-width: 992px)');
-
-			// var layer = e.target;
-			// layer.setStyle({
-			// 	'color': '#666'
-			// });
-			// layer.bringToFront();
 			var x = e.containerPoint.x;
 			var y = e.containerPoint.y;
 			if (query) {
@@ -1400,22 +1388,12 @@ function onEachFeature(feature, layer) {
 		},
 
 		mouseout: function(e) {
-			// var layer = e.target;
-			// layer.setStyle({
-			// 	color: '#fff'
-			// });
 			$('.map-tooltip').hide();
 			endHover();
 		},
 
 		mousemove: function(e) {
 			var query = Modernizr.mq('(max-width: 992px)');
-
-			// var layer = e.target;
-			// layer.setStyle({
-			// 	'color': '#666'
-			// });
-			// layer.bringToFront();
 			var x = e.containerPoint.x;
 			var y = e.containerPoint.y;
 
@@ -1511,9 +1489,6 @@ function buildDefaultLayer() {
 		'width' : '50%'
 	});
 
-	// $('#interface-container').slideUp('fast');
-	// $('#map-info').css('bottom', '20%');
-
 	$('.income:checkbox').removeAttr('checked');
 	$('.savings:checkbox').removeAttr('checked');
 
@@ -1528,8 +1503,6 @@ function buildDefaultHouse() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.crime-select').removeClass('selected-interface');
 	$('.school-select').removeClass('selected-interface');
-	// $('#interface-container').slideDown('fast');
-	// $('#map-info').css('bottom', '26%');
 
 	var price = 'price';
 	var houseCheckbox = $('.house:checkbox');
@@ -1594,8 +1567,6 @@ function buildDefaultCondo() {
 	$('.percent-select').removeClass('selected-interface');
 	$('.crime-select').removeClass('selected-interface');
 	$('.school-select').removeClass('selected-interface');
-	// $('#interface-container').slideDown('400');
-	// $('#map-info').css('bottom', '26%');
 
 	var price = 'price';
 
