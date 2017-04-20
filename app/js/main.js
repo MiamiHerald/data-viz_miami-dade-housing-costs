@@ -315,10 +315,11 @@
 
 		if ((houseCheck === true || condoCheck === true)) {
 			clearDefaultLayers();
+      clearAllLayers();
 		}
-    // else {
-		// 	clearAllLayers();
-		// }
+    else {
+			clearAllLayers();
+		}
 
 		$('.school-list').hide();
 
