@@ -361,6 +361,30 @@
     showAll = false;
 	});
 
+  $('.map-button.show-all').on('click touchstart', function() {
+    clearAllLayers();
+    showAll = true;
+    $('.share-link').addClass('show-all');
+
+    var house_checkbox = $('.house:checkbox');
+    var condo_checkbox = $('.condo:checkbox');
+    var houseCheck = (house_checkbox.is(':checked'));
+    var condoCheck = (condo_checkbox.is(':checked'));
+
+    if (showAll === true && (houseCheck === true && condoCheck === false)) {
+      buildDefaultHouse();
+      console.log('build default house map');
+    } else if (showAll === true && (houseCheck === false && condoCheck === true)) {
+      buildDefaultCondo();
+      console.log('build default condo map');
+    } else {
+      buildDefaultHouse();
+      console.log('build default house map');
+    }
+
+    // showAll = false;
+  });
+
 	// LAUNCH PAD
 	function init() {
 		setDefaultMap();
@@ -370,30 +394,6 @@
 	$(document).ready(function() {
 		init();
 	});
-
-  $('.map-button.show-all').on('click touchstart', function() {
-    clearAllLayers();
-    showAll = true;
-    $('.share-link').addClass('show-all');
-
-    var house_checkbox = $('.house:checkbox');
-		var condo_checkbox = $('.condo:checkbox');
-		var houseCheck = (house_checkbox.is(':checked'));
-		var condoCheck = (condo_checkbox.is(':checked'));
-
-		if (showAll === true && (houseCheck === true && condoCheck === false)) {
-			buildDefaultHouse();
-			console.log('build default house map');
-    } else if (showAll === true && (houseCheck === false && condoCheck === true)) {
-			buildDefaultCondo();
-			console.log('build default condo map');
-		} else {
-			buildDefaultHouse();
-			console.log('build default house map');
-		}
-
-    // showAll = false;
-  });
 
   window.dispatchEvent(new Event('resize'));
 })();
