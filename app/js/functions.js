@@ -1183,19 +1183,45 @@ function clearDefaultLayers() {
 }
 
 function clearAllLayers() {
-	map.removeLayer($houseLayer);
-	map.removeLayer($condoLayer);
-	map.removeLayer($percentCondoLayer);
-	map.removeLayer($percentHouseLayer);
-	map.removeLayer($crimeLayer);
-	map.removeLayer($schoolLayer);
-	map.removeLayer($defaultLayer);
-	map.removeLayer($defaultHouseLayer);
-	map.removeLayer($defaultCondoLayer);
-	map.removeLayer($defaultPercentHouseLayer);
-	map.removeLayer($defaultPercentCondoLayer);
-	map.removeLayer($defaultCrimeLayer);
-	map.removeLayer($defaultSchoolLayer);
+	if ($houseLayer) {
+		map.removeLayer($houseLayer);
+	}
+	if ($condoLayer) {
+		map.removeLayer($condoLayer);
+	}
+	if ($percentCondoLayer) {
+		map.removeLayer($percentCondoLayer);
+	}
+	if ($percentHouseLayer) {
+		map.removeLayer($percentHouseLayer);
+	}
+	if ($crimeLayer) {
+		map.removeLayer($crimeLayer);
+	}
+	if ($schoolLayer) {
+		map.removeLayer($schoolLayer);
+	}
+	if ($defaultLayer) {
+		map.removeLayer($defaultLayer);
+	}
+	if ($defaultHouseLayer) {
+		map.removeLayer($defaultHouseLayer);
+	}
+	if ($defaultCondoLayer) {
+		map.removeLayer($defaultCondoLayer);
+	}
+	if ($defaultPercentHouseLayer) {
+		map.removeLayer($defaultPercentHouseLayer);
+	}
+	if ($defaultPercentCondoLayer) {
+		map.removeLayer($defaultPercentCondoLayer);
+	}
+	if ($defaultCrimeLayer) {
+		map.removeLayer($defaultCrimeLayer);
+	}
+	if ($defaultSchoolLayer) {
+		map.removeLayer($defaultSchoolLayer);
+	}
 	console.log('Clear everything!');
 }
 
