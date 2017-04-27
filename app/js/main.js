@@ -318,8 +318,8 @@
       clearAllLayers();
 		}
     else {
-			clearAllLayers();
-		}
+      clearAllLayers();
+    }
 
 		$('.school-list').hide();
 
