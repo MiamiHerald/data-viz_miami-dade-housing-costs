@@ -22,7 +22,7 @@
     "nconf": "^0.7.1",
     "marked": "^0.3.3",
     "nunjucks": ">=2.4.3",
-    "open": "^0.0.5",
+    "open": ">=6.0.0",
     "request": "^2.58.0",
     "untildify": "^2.1.0",
     "vinyl-map": "^1.0.1",
